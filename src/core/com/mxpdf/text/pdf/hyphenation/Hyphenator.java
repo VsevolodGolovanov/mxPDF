@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.lowagie.text.pdf.hyphenation;
+package com.mxpdf.text.pdf.hyphenation;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Hashtable;
 
-import com.lowagie.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.BaseFont;
 
 /**
  * This class is the main entry point to the hyphenation package.

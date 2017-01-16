@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,15 +11,15 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.forms.fill;
+package com.mxpdf.examples.forms.fill;
 
 import java.io.FileOutputStream;
 
-import com.lowagie.text.pdf.AcroFields;
-import com.lowagie.text.pdf.FdfReader;
-import com.lowagie.text.pdf.FdfWriter;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfStamper;
+import com.mxpdf.text.pdf.AcroFields;
+import com.mxpdf.text.pdf.FdfReader;
+import com.mxpdf.text.pdf.FdfWriter;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfStamper;
 
 /**
  * How to create an FDF file.

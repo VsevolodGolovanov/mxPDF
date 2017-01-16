@@ -42,10 +42,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -54,9 +54,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.ExceptionConverter;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.error_messages.MessageLocalization;
 /** Supports fast encodings for winansi and PDFDocEncoding.
  * Supports conversions from CJK encodings to CID.
  * Supports custom encodings.

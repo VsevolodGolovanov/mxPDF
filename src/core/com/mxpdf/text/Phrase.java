@@ -44,17 +44,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.HyphenationEvent;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.HyphenationEvent;
 
 /**
  * A <CODE>Phrase</CODE> is a series of <CODE>Chunk</CODE>s.
@@ -245,7 +245,7 @@ public class Phrase extends ArrayList implements TextElementArray {
     }
 	
 	/**
-	 * @see com.lowagie.text.Element#isContent()
+	 * @see com.mxpdf.text.Element#isContent()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isContent() {
@@ -253,7 +253,7 @@ public class Phrase extends ArrayList implements TextElementArray {
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {

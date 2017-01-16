@@ -45,20 +45,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.PdfTemplate;
-import com.lowagie.text.pdf.codec.wmf.InputMeta;
-import com.lowagie.text.pdf.codec.wmf.MetaDo;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfTemplate;
+import com.mxpdf.text.pdf.codec.wmf.InputMeta;
+import com.mxpdf.text.pdf.codec.wmf.MetaDo;
 
 /**
  * An <CODE>ImgWMF</CODE> is the representation of a windows metafile

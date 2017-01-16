@@ -28,7 +28,7 @@
     <site:section name="toc">
     	<site:sectiontitle>Creating a Table of Contents</site:sectiontitle>
     	<div>
-    	  Creating a Table of Contents with the <site:doc class="com.lowagie.text.rtf.field.RtfTableOfContents">RtfTableOfContents</site:doc>
+    	  Creating a Table of Contents with the <site:doc class="com.mxpdf.text.rtf.field.RtfTableOfContents">RtfTableOfContents</site:doc>
     	  is very simple, but comes with three important caveats:
     	  
     	  <ul>
@@ -37,8 +37,8 @@
     	    <li>The RtfWriter2 cannot force the renderer to automatically update the table of contents on loading. The user must do this himself.</li>
     	  </ul><br />
     	  
-    	  To add a table of contents, simply create a <site:doc class="com.lowagie.text.Paragraph">Paragraph</site:doc>
-    	  and add a <site:doc class="com.lowagie.text.rtf.field.RtfTableOfContents">RtfTableOfContetns</site:doc> to it.
+    	  To add a table of contents, simply create a <site:doc class="com.mxpdf.text.Paragraph">Paragraph</site:doc>
+    	  and add a <site:doc class="com.mxpdf.text.rtf.field.RtfTableOfContents">RtfTableOfContetns</site:doc> to it.
     	  The constructor takes one parameter and that is the text that will be initially displayed before the user
     	  updates the table of contents.
     	  
@@ -57,7 +57,7 @@ document.add(par);
     <site:section name="tocentries">
     	<site:sectiontitle>Adding Entries to the Table of Contents</site:sectiontitle>
     	<div>
-          The next step is adding entries to the table of contents. There is a <site:doc class="com.lowagie.text.rtf.field.RtfTOCEntry">RtfTOCEntry</site:doc>
+          The next step is adding entries to the table of contents. There is a <site:doc class="com.mxpdf.text.rtf.field.RtfTOCEntry">RtfTOCEntry</site:doc>
           class, but its use is not recommended. The recommended method is using <site:tutorial chapter="/rtf/features/styles">paragraph stylesheets</site:tutorial>
           to define the different headers. By default header styles for the levels 1 to 3 are provided, but you can add more up to level 6.
           These header styles have a special side effect and that is that they automatically become part of the table of contents,
@@ -79,7 +79,7 @@ for(int j = 1; j &lt;= 3; j++) {
     	<site:sectiontitle>Styling the Table of Contents</site:sectiontitle>
     	<div>
     	  Finally you can use the <site:tutorial chapter="/rtf/features/styles">paragraph stylesheets</site:tutorial> to style
-    	  the resulting table of contents. To do this you must create an <site:doc class="com.lowagie.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
+    	  the resulting table of contents. To do this you must create an <site:doc class="com.mxpdf.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
     	  for each heading level that you will use in the document. These styles must be named <span class="commandline">toc N</span>, where
     	  <span class="commandline">N</span> is the heading level that the style will apply to.
     	  

@@ -42,17 +42,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html.simpleparser;
+package com.mxpdf.text.html.simpleparser;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-import com.lowagie.text.pdf.PdfPCell;
-import com.lowagie.text.pdf.PdfPTable;
+import com.mxpdf.text.pdf.PdfPCell;
+import com.mxpdf.text.pdf.PdfPTable;
 
 /**
  *

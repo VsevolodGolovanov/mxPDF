@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,33 +12,33 @@
  * itext-questions@lists.sourceforge.net
  */
 
-package com.lowagie.examples.objects.bookmarks;
+package com.mxpdf.examples.objects.bookmarks;
 
 import java.awt.Color;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.Font;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.pdf.ColumnText;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfLayer;
-import com.lowagie.text.pdf.PdfLayerMembership;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfOCProperties;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfString;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.pdf.ColumnText;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfLayer;
+import com.mxpdf.text.pdf.PdfLayerMembership;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfOCProperties;
+import com.mxpdf.text.pdf.PdfObject;
+import com.mxpdf.text.pdf.PdfString;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Demonstrates how layers work.
  * 
- * @author blowagie
+
  */
 
 public class Layers {

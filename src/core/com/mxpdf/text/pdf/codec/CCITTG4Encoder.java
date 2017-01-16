@@ -42,13 +42,13 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  *
  * This code is base in the libtiff encoder
  */
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 
-import com.lowagie.text.pdf.ByteBuffer;
+import com.mxpdf.text.pdf.ByteBuffer;
 
 /**
  * Encodes data in the CCITT G4 FAX format.

@@ -1,6 +1,6 @@
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 
-import com.lowagie.text.error_messages.MessageLocalization;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * <p>Encodes and decodes to and from Base64 notation.</p>

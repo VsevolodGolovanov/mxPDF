@@ -42,13 +42,14 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.ArrayList;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 /**
  * An optional content group is a dictionary representing a collection of graphics
  * that can be made visible or invisible dynamically by users of viewer applications.

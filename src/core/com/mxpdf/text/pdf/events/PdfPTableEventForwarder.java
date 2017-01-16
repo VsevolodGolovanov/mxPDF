@@ -44,17 +44,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.events;
+package com.mxpdf.text.pdf.events;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfPTableEvent;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfPTable;
+import com.mxpdf.text.pdf.PdfPTableEvent;
 
 /**
  * If you want to add more than one page event to a PdfPTable,
@@ -77,7 +77,7 @@ public class PdfPTableEventForwarder implements PdfPTableEvent {
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.PdfPTableEvent#tableLayout(com.lowagie.text.pdf.PdfPTable, float[][], float[], int, int, com.lowagie.text.pdf.PdfContentByte[])
+	 * @see com.mxpdf.text.pdf.PdfPTableEvent#tableLayout(com.mxpdf.text.pdf.PdfPTable, float[][], float[], int, int, com.mxpdf.text.pdf.PdfContentByte[])
 	 */
 	public void tableLayout(PdfPTable table, float[][] widths, float[] heights, int headerRows, int rowStart, PdfContentByte[] canvases) {
 		PdfPTableEvent event;

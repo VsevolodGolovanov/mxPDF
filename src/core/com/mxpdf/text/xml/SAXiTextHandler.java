@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.xml;
+package com.mxpdf.text.xml;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -61,33 +61,33 @@ import java.util.Stack;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.lowagie.text.Anchor;
-import com.lowagie.text.Annotation;
-import com.lowagie.text.BadElementException;
-import com.lowagie.text.Cell;
-import com.lowagie.text.Chapter;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.DocListener;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ElementTags;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Font;
-import com.lowagie.text.Image;
-import com.lowagie.text.List;
-import com.lowagie.text.ListItem;
-import com.lowagie.text.Meta;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.Section;
-import com.lowagie.text.Table;
-import com.lowagie.text.TextElementArray;
-import com.lowagie.text.factories.ElementFactory;
-import com.lowagie.text.html.HtmlTagMap;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.draw.LineSeparator;
-import com.lowagie.text.xml.simpleparser.EntitiesToSymbol;
+import com.mxpdf.text.Anchor;
+import com.mxpdf.text.Annotation;
+import com.mxpdf.text.BadElementException;
+import com.mxpdf.text.Cell;
+import com.mxpdf.text.Chapter;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.DocListener;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ElementTags;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.List;
+import com.mxpdf.text.ListItem;
+import com.mxpdf.text.Meta;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.Section;
+import com.mxpdf.text.Table;
+import com.mxpdf.text.TextElementArray;
+import com.mxpdf.text.factories.ElementFactory;
+import com.mxpdf.text.html.HtmlTagMap;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.draw.LineSeparator;
+import com.mxpdf.text.xml.simpleparser.EntitiesToSymbol;
 
 /**
  * This class is a Handler that controls the iText XML to PDF conversion.

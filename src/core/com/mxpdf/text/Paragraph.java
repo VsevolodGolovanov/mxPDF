@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 /**
  * A <CODE>Paragraph</CODE> is a series of <CODE>Chunk</CODE>s and/or <CODE>Phrases</CODE>.
@@ -287,7 +287,7 @@ public class Paragraph extends Phrase {
     }
     
     /**
-     * @see com.lowagie.text.Phrase#setLeading(float)
+     * @see com.mxpdf.text.Phrase#setLeading(float)
      */
     public void setLeading(float fixedLeading) {
         this.leading = fixedLeading;

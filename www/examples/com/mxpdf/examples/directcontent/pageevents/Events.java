@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,7 +11,7 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.directcontent.pageevents;
+package com.mxpdf.examples.directcontent.pageevents;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -24,23 +24,23 @@ import java.util.TreeSet;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.ElementTags;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.TextElementArray;
-import com.lowagie.text.html.Markup;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfPageEventHelper;
-import com.lowagie.text.pdf.PdfTemplate;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.xml.SAXmyHandler;
-import com.lowagie.text.xml.TagMap;
-import com.lowagie.text.xml.XmlPeer;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.ElementTags;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.TextElementArray;
+import com.mxpdf.text.html.Markup;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfPageEventHelper;
+import com.mxpdf.text.pdf.PdfTemplate;
+import com.mxpdf.text.pdf.PdfWriter;
+import com.mxpdf.text.xml.SAXmyHandler;
+import com.mxpdf.text.xml.TagMap;
+import com.mxpdf.text.xml.XmlPeer;
 
 /**
  * Example that takes an XML file, converts it to PDF and adds all kinds of
@@ -74,7 +74,7 @@ public class Events {
 		
 		/**
 		 * Every speaker will be tagged, so that he can be added to the list of speakers.
-		 * @see com.lowagie.text.pdf.PdfPageEventHelper#onGenericTag(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document, com.lowagie.text.Rectangle, java.lang.String)
+		 * @see com.mxpdf.text.pdf.PdfPageEventHelper#onGenericTag(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document, com.mxpdf.text.Rectangle, java.lang.String)
 		 */
 		public void onGenericTag(PdfWriter writer, Document document,
 				Rectangle rect, String text) {
@@ -85,7 +85,7 @@ public class Events {
 		 * The first thing to do when the document is opened, is to define the BaseFont,
 		 * get the Direct Content object and create the template that will hold the final
 		 * number of pages.
-		 * @see com.lowagie.text.pdf.PdfPageEventHelper#onOpenDocument(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document)
+		 * @see com.mxpdf.text.pdf.PdfPageEventHelper#onOpenDocument(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document)
 		 */
 		public void onOpenDocument(PdfWriter writer, Document document) {
 			try {
@@ -101,7 +101,7 @@ public class Events {
 		/**
 		 * Every ACT is seen as a Chapter. We get the title of the act, so that
 		 * we can display it in the header.
-		 * @see com.lowagie.text.pdf.PdfPageEventHelper#onChapter(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document, float, com.lowagie.text.Paragraph)
+		 * @see com.mxpdf.text.pdf.PdfPageEventHelper#onChapter(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document, float, com.mxpdf.text.Paragraph)
 		 */
 		public void onChapter(PdfWriter writer, Document document,
 				float paragraphPosition, Paragraph title) {
@@ -117,7 +117,7 @@ public class Events {
 		 * After the content of the page is written, we put page X of Y
 		 * at the bottom of the page and we add either "Romeo and Juliet"
 		 * of the title of the current act as a header.
-		 * @see com.lowagie.text.pdf.PdfPageEventHelper#onEndPage(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document)
+		 * @see com.mxpdf.text.pdf.PdfPageEventHelper#onEndPage(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document)
 		 */
 		public void onEndPage(PdfWriter writer, Document document) {
 			int pageN = writer.getPageNumber();
@@ -143,7 +143,7 @@ public class Events {
 		/**
 		 * Just before the document is closed, we add the final number of pages to
 		 * the template.
-		 * @see com.lowagie.text.pdf.PdfPageEventHelper#onCloseDocument(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document)
+		 * @see com.mxpdf.text.pdf.PdfPageEventHelper#onCloseDocument(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document)
 		 */
 		public void onCloseDocument(PdfWriter writer, Document document) {
 			template.beginText();

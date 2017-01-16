@@ -44,15 +44,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.awt.Color;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.Rectangle;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.Rectangle;
 /** Base class containing properties and methods common to all
  * barcode types.
  *

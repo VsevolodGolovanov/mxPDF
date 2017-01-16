@@ -44,19 +44,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
- */
-package com.lowagie.text.pdf;
 
-import com.lowagie.text.BadElementException;
-import com.lowagie.text.Image;
-import com.lowagie.text.pdf.codec.CCITTG4Encoder;
+ */
+package com.mxpdf.text.pdf;
+
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.image.MemoryImageSource;
 import java.util.Arrays;
 import java.io.UnsupportedEncodingException;
 import java.util.Hashtable;
+
+import com.mxpdf.text.BadElementException;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.pdf.codec.CCITTG4Encoder;
 
 /**
  * A DataMatrix 2D barcode generator.

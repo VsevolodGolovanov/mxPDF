@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,21 +12,21 @@
  * itext-questions@lists.sourceforge.net
  */
 
-package com.lowagie.examples.objects.bookmarks;
+package com.mxpdf.examples.objects.bookmarks;
 
 import java.io.FileOutputStream;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfDestination;
-import com.lowagie.text.pdf.PdfOutline;
-import com.lowagie.text.pdf.PdfTemplate;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfDestination;
+import com.mxpdf.text.pdf.PdfOutline;
+import com.mxpdf.text.pdf.PdfTemplate;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Creates a document with some goto actions.
  * 
- * @author blowagie
+
  */
 
 public class Destinations {

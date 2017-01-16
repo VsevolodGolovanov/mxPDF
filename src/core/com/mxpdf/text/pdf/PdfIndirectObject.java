@@ -45,15 +45,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.OutputStream;
 
-import com.lowagie.text.DocWriter;
+import com.mxpdf.text.DocWriter;
 
 /**
  * <CODE>PdfIndirectObject</CODE> is the Pdf indirect object.

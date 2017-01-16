@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.xml.xmp;
+package com.mxpdf.text.xml.xmp;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -60,8 +60,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.xml.XmlDomWriter;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.xml.XmlDomWriter;
 
 /**
  * Reads an XMP stream into an org.w3c.dom.Document objects.

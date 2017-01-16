@@ -44,7 +44,7 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  *
  * The values used in this class are based on class org.apache.xercis.util.EncodingMap
  * http://svn.apache.org/viewvc/xerces/java/trunk/src/org/apache/xerces/util/EncodingMap.java?view=markup
@@ -65,7 +65,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.lowagie.text.xml.simpleparser;
+package com.mxpdf.text.xml.simpleparser;
 
 import java.util.HashMap;
 

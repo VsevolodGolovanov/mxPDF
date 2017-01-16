@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,18 +11,18 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.directcontent.pageevents;
+package com.mxpdf.examples.directcontent.pageevents;
 
 import java.io.FileOutputStream;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfPageEventHelper;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.pdf.PdfPTable;
+import com.mxpdf.text.pdf.PdfPageEventHelper;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Demonstrates the use of PageEvents.
@@ -52,7 +52,7 @@ public class EndPage extends PdfPageEventHelper {
     }
     
     /**
-     * @see com.lowagie.text.pdf.PdfPageEventHelper#onEndPage(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document)
+     * @see com.mxpdf.text.pdf.PdfPageEventHelper#onEndPage(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document)
      */
     public void onEndPage(PdfWriter writer, Document document) {
         try {

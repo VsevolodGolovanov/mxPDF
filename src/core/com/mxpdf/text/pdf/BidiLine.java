@@ -43,15 +43,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.ArrayList;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Utilities;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Utilities;
 
 /** Does all the line bidirectional processing with PdfChunk assembly.
  *

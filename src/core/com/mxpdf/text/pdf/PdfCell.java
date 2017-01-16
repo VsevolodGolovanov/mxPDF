@@ -44,39 +44,39 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.lowagie.text.Anchor;
-import com.lowagie.text.Cell;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Element;
-import com.lowagie.text.Image;
-import com.lowagie.text.List;
-import com.lowagie.text.ListItem;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
+import com.mxpdf.text.Anchor;
+import com.mxpdf.text.Cell;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.List;
+import com.mxpdf.text.ListItem;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
 
 /**
  * A <CODE>PdfCell</CODE> is the PDF translation of a <CODE>Cell</CODE>.
  * <P>
  * A <CODE>PdfCell</CODE> is an <CODE>ArrayList</CODE> of <CODE>PdfLine</CODE>s.
  * <P>
- * When using variable borders ({@link com.lowagie.text.Rectangle#isUseVariableBorders isUseVariableBorders()} == true),
+ * When using variable borders ({@link com.mxpdf.text.Rectangle#isUseVariableBorders isUseVariableBorders()} == true),
  * the borders are drawn completely inside the cell Rectangle
  * so that adjacent cell borders will not overlap.
  * Otherwise, the borders are drawn on top of the edges of the
  * cell Rectangle and will overlap the borders of adjacent
  * cells.
  *
- * @see		com.lowagie.text.Rectangle
- * @see		com.lowagie.text.Cell
+ * @see		com.mxpdf.text.Rectangle
+ * @see		com.mxpdf.text.Cell
  * @see		PdfLine
  * @see		PdfTable
  */
@@ -483,7 +483,7 @@ public class PdfCell extends Rectangle {
      * Gets the amount of the border for the specified side that is inside the Rectangle.
      * For non-variable width borders this is only 1/2 the border width on that side.  This
      * always returns 0 if {@link #useBorderPadding} is false;
-     * @param side the side to check.  One of the side constants in {@link com.lowagie.text.Rectangle}
+     * @param side the side to check.  One of the side constants in {@link com.mxpdf.text.Rectangle}
      * @return the borderwidth inside the cell
      */
     private float getBorderWidthInside(int side) {

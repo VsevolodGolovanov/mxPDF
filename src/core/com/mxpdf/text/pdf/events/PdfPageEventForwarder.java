@@ -44,19 +44,19 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.events;
+package com.mxpdf.text.pdf.events;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.PdfPageEvent;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.pdf.PdfPageEvent;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * If you want to add more than one page event to a PdfWriter,

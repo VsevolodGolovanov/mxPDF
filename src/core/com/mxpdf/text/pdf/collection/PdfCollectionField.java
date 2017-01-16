@@ -1,16 +1,16 @@
-package com.lowagie.text.pdf.collection;
+package com.mxpdf.text.pdf.collection;
 
-import com.lowagie.text.pdf.PdfBoolean;
-import com.lowagie.text.pdf.PdfDate;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfNumber;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfString;
-import com.lowagie.text.error_messages.MessageLocalization;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfBoolean;
+import com.mxpdf.text.pdf.PdfDate;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfNumber;
+import com.mxpdf.text.pdf.PdfObject;
+import com.mxpdf.text.pdf.PdfString;
 
 /**
- * @author blowagie
+
  *
  */
 public class PdfCollectionField extends PdfDictionary {

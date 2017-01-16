@@ -44,13 +44,13 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.interfaces;
+package com.mxpdf.text.pdf.interfaces;
 
-import com.lowagie.text.pdf.PdfDeveloperExtension;
-import com.lowagie.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfDeveloperExtension;
+import com.mxpdf.text.pdf.PdfName;
 
 /**
  * The PDF version is described in the PDF Reference 1.7 p92

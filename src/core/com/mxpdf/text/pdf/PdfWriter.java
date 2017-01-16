@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.awt.Color;
 import java.awt.color.ICC_Profile;
@@ -63,32 +63,33 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import java.security.cert.Certificate;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocListener;
-import com.lowagie.text.DocWriter;
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.ImgJBIG2;
-import com.lowagie.text.ImgWMF;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.Table;
-import com.lowagie.text.pdf.collection.PdfCollection;
-import com.lowagie.text.pdf.events.PdfPageEventForwarder;
-import com.lowagie.text.pdf.interfaces.PdfAnnotations;
-import com.lowagie.text.pdf.interfaces.PdfDocumentActions;
-import com.lowagie.text.pdf.interfaces.PdfEncryptionSettings;
-import com.lowagie.text.pdf.interfaces.PdfPageActions;
-import com.lowagie.text.pdf.interfaces.PdfVersion;
-import com.lowagie.text.pdf.interfaces.PdfViewerPreferences;
-import com.lowagie.text.pdf.interfaces.PdfXConformance;
-import com.lowagie.text.pdf.interfaces.PdfRunDirection;
-import com.lowagie.text.pdf.internal.PdfVersionImp;
-import com.lowagie.text.pdf.internal.PdfXConformanceImp;
-import com.lowagie.text.xml.xmp.XmpWriter;
+import com.mxpdf.text.DocListener;
+import com.mxpdf.text.DocWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.ImgJBIG2;
+import com.mxpdf.text.ImgWMF;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.Table;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.collection.PdfCollection;
+import com.mxpdf.text.pdf.events.PdfPageEventForwarder;
+import com.mxpdf.text.pdf.interfaces.PdfAnnotations;
+import com.mxpdf.text.pdf.interfaces.PdfDocumentActions;
+import com.mxpdf.text.pdf.interfaces.PdfEncryptionSettings;
+import com.mxpdf.text.pdf.interfaces.PdfPageActions;
+import com.mxpdf.text.pdf.interfaces.PdfRunDirection;
+import com.mxpdf.text.pdf.interfaces.PdfVersion;
+import com.mxpdf.text.pdf.interfaces.PdfViewerPreferences;
+import com.mxpdf.text.pdf.interfaces.PdfXConformance;
+import com.mxpdf.text.pdf.internal.PdfVersionImp;
+import com.mxpdf.text.pdf.internal.PdfXConformanceImp;
+import com.mxpdf.text.xml.xmp.XmpWriter;
+
+import java.security.cert.Certificate;
 
 /**
  * A <CODE>DocWriter</CODE> class for PDF.
@@ -1131,7 +1132,7 @@ public class PdfWriter extends DocWriter implements
      * <P>
      * When this method is called, the PDF-document header is
      * written to the outputstream.
-     * @see com.lowagie.text.DocWriter#open()
+     * @see com.mxpdf.text.DocWriter#open()
      */
     public void open() {
         super.open();
@@ -1161,7 +1162,7 @@ public class PdfWriter extends DocWriter implements
      * A Catalog is constructed, as well as an Info-object,
      * the reference table is composed and everything is written
      * to the outputstream embedded in a Trailer.
-     * @see com.lowagie.text.DocWriter#close()
+     * @see com.mxpdf.text.DocWriter#close()
      */
     public void close() {
         if (open) {
@@ -1381,23 +1382,23 @@ public class PdfWriter extends DocWriter implements
     /** Stores the version information for the header and the catalog. */
     protected PdfVersionImp pdf_version = new PdfVersionImp();
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfVersion#setPdfVersion(char) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfVersion#setPdfVersion(char) */
     public void setPdfVersion(char version) {
         pdf_version.setPdfVersion(version);
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfVersion#setAtLeastPdfVersion(char) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfVersion#setAtLeastPdfVersion(char) */
     public void setAtLeastPdfVersion(char version) {
     	pdf_version.setAtLeastPdfVersion(version);
     }
 
-	/** @see com.lowagie.text.pdf.interfaces.PdfVersion#setPdfVersion(com.lowagie.text.pdf.PdfName) */
+	/** @see com.mxpdf.text.pdf.interfaces.PdfVersion#setPdfVersion(com.mxpdf.text.pdf.PdfName) */
 	public void setPdfVersion(PdfName version) {
 		pdf_version.setPdfVersion(version);
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfVersion#addDeveloperExtension(com.lowagie.text.pdf.PdfDeveloperExtension)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfVersion#addDeveloperExtension(com.mxpdf.text.pdf.PdfDeveloperExtension)
 	 * @since	2.1.6
 	 */
 	public void addDeveloperExtension(PdfDeveloperExtension de) {
@@ -1475,12 +1476,12 @@ public class PdfWriter extends DocWriter implements
     /** A viewer preference */
     public static final int PrintScalingNone = 1 << 24;
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfViewerPreferences#setViewerPreferences(int) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfViewerPreferences#setViewerPreferences(int) */
     public void setViewerPreferences(int preferences) {
         pdf.setViewerPreferences(preferences);
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfViewerPreferences#addViewerPreference(com.lowagie.text.pdf.PdfName, com.lowagie.text.pdf.PdfObject) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfViewerPreferences#addViewerPreference(com.mxpdf.text.pdf.PdfName, com.mxpdf.text.pdf.PdfObject) */
     public void addViewerPreference(PdfName key, PdfObject value) {
     	pdf.addViewerPreference(key, value);
     }
@@ -1640,17 +1641,17 @@ public class PdfWriter extends DocWriter implements
      /** action value */
      public static final PdfName DID_PRINT = PdfName.DP;
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfDocumentActions#setOpenAction(java.lang.String) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfDocumentActions#setOpenAction(java.lang.String) */
     public void setOpenAction(String name) {
          pdf.setOpenAction(name);
      }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfDocumentActions#setOpenAction(com.lowagie.text.pdf.PdfAction) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfDocumentActions#setOpenAction(com.mxpdf.text.pdf.PdfAction) */
     public void setOpenAction(PdfAction action) {
          pdf.setOpenAction(action);
      }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfDocumentActions#setAdditionalAction(com.lowagie.text.pdf.PdfName, com.lowagie.text.pdf.PdfAction) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfDocumentActions#setAdditionalAction(com.mxpdf.text.pdf.PdfName, com.mxpdf.text.pdf.PdfAction) */
     public void setAdditionalAction(PdfName actionType, PdfAction action) throws DocumentException {
          if (!(actionType.equals(DOCUMENT_CLOSE) ||
          actionType.equals(WILL_SAVE) ||
@@ -1680,12 +1681,12 @@ public class PdfWriter extends DocWriter implements
     /** signature value */
     public static final int SIGNATURE_APPEND_ONLY = 2;
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfAnnotations#getAcroForm() */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfAnnotations#getAcroForm() */
     public PdfAcroForm getAcroForm() {
         return pdf.getAcroForm();
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfAnnotations#addAnnotation(com.lowagie.text.pdf.PdfAnnotation) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfAnnotations#addAnnotation(com.mxpdf.text.pdf.PdfAnnotation) */
     public void addAnnotation(PdfAnnotation annot) {
         pdf.addAnnotation(annot);
     }
@@ -1694,12 +1695,12 @@ public class PdfWriter extends DocWriter implements
         addAnnotation(annot);
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfAnnotations#addCalculationOrder(com.lowagie.text.pdf.PdfFormField) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfAnnotations#addCalculationOrder(com.mxpdf.text.pdf.PdfFormField) */
     public void addCalculationOrder(PdfFormField annot) {
         pdf.addCalculationOrder(annot);
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfAnnotations#setSigFlags(int) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfAnnotations#setSigFlags(int) */
     public void setSigFlags(int f) {
         pdf.setSigFlags(f);
     }
@@ -1763,7 +1764,7 @@ public class PdfWriter extends DocWriter implements
     /** Stores the PDF/X level. */
     private PdfXConformanceImp pdfxConformance = new PdfXConformanceImp();
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfXConformance#setPDFXConformance(int) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfXConformance#setPDFXConformance(int) */
     public void setPDFXConformance(int pdfx) {
         if (pdfxConformance.getPDFXConformance() == pdfx)
             return;
@@ -1778,12 +1779,12 @@ public class PdfWriter extends DocWriter implements
         pdfxConformance.setPDFXConformance(pdfx);
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfXConformance#getPDFXConformance() */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfXConformance#getPDFXConformance() */
     public int getPDFXConformance() {
         return pdfxConformance.getPDFXConformance();
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfXConformance#isPdfX() */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfXConformance#isPdfX() */
     public boolean isPdfX() {
         return pdfxConformance.isPdfX();
     }
@@ -1991,7 +1992,7 @@ public class PdfWriter extends DocWriter implements
         return crypto;
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfEncryptionSettings#setEncryption(byte[], byte[], int, int) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfEncryptionSettings#setEncryption(byte[], byte[], int, int) */
     public void setEncryption(byte userPassword[], byte ownerPassword[], int permissions, int encryptionType) throws DocumentException {
         if (pdf.isOpen())
             throw new DocumentException(MessageLocalization.getComposedMessage("encryption.can.only.be.added.before.opening.the.document"));
@@ -2000,7 +2001,7 @@ public class PdfWriter extends DocWriter implements
         crypto.setupAllKeys(userPassword, ownerPassword, permissions);
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfEncryptionSettings#setEncryption(java.security.cert.Certificate[], int[], int) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfEncryptionSettings#setEncryption(java.security.cert.Certificate[], int[], int) */
     public void setEncryption(Certificate[] certs, int[] permissions, int encryptionType) throws DocumentException {
         if (pdf.isOpen())
             throw new DocumentException(MessageLocalization.getComposedMessage("encryption.can.only.be.added.before.opening.the.document"));
@@ -2667,19 +2668,19 @@ public class PdfWriter extends DocWriter implements
     /** action value */
     public static final PdfName PAGE_CLOSE = PdfName.C;
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfPageActions#setPageAction(com.lowagie.text.pdf.PdfName, com.lowagie.text.pdf.PdfAction) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfPageActions#setPageAction(com.mxpdf.text.pdf.PdfName, com.mxpdf.text.pdf.PdfAction) */
     public void setPageAction(PdfName actionType, PdfAction action) throws DocumentException {
           if (!actionType.equals(PAGE_OPEN) && !actionType.equals(PAGE_CLOSE))
               throw new DocumentException(MessageLocalization.getComposedMessage("invalid.page.additional.action.type.1", actionType.toString()));
           pdf.setPageAction(actionType, action);
       }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfPageActions#setDuration(int) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfPageActions#setDuration(int) */
     public void setDuration(int seconds) {
          pdf.setDuration(seconds);
      }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfPageActions#setTransition(com.lowagie.text.pdf.PdfTransition) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfPageActions#setTransition(com.mxpdf.text.pdf.PdfTransition) */
     public void setTransition(PdfTransition transition) {
          pdf.setTransition(transition);
      }

@@ -44,19 +44,19 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Utilities;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Utilities;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /** Represents a True Type font with Unicode encoding. All the character
  * in the font can be used directly by using the encoding Identity-H or

@@ -47,9 +47,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.factories;
+package com.mxpdf.text.factories;
 
 import java.awt.Color;
 import java.io.IOException;
@@ -57,27 +57,27 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.StringTokenizer;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Anchor;
-import com.lowagie.text.Annotation;
-import com.lowagie.text.BadElementException;
-import com.lowagie.text.Cell;
-import com.lowagie.text.ChapterAutoNumber;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.ElementTags;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.Image;
-import com.lowagie.text.List;
-import com.lowagie.text.ListItem;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.Section;
-import com.lowagie.text.Table;
-import com.lowagie.text.Utilities;
-import com.lowagie.text.html.Markup;
+import com.mxpdf.text.Anchor;
+import com.mxpdf.text.Annotation;
+import com.mxpdf.text.BadElementException;
+import com.mxpdf.text.Cell;
+import com.mxpdf.text.ChapterAutoNumber;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.ElementTags;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.List;
+import com.mxpdf.text.ListItem;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.Section;
+import com.mxpdf.text.Table;
+import com.mxpdf.text.Utilities;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.html.Markup;
 
 /**
  * This class is able to create Element objects based on a list of properties.

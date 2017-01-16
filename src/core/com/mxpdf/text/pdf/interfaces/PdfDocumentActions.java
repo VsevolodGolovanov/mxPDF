@@ -44,14 +44,14 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.interfaces;
+package com.mxpdf.text.pdf.interfaces;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.pdf.PdfAction;
-import com.lowagie.text.pdf.PdfName;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.pdf.PdfAction;
+import com.mxpdf.text.pdf.PdfName;
 
 /**
  * A PDF document can have an open action and other additional actions.

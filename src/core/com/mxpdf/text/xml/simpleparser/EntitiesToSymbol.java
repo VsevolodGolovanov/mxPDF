@@ -44,15 +44,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.xml.simpleparser;
+package com.mxpdf.text.xml.simpleparser;
 
 import java.util.HashMap;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Font;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Font;
 
 /**
  * This class contains entities that can be used in an entity tag.

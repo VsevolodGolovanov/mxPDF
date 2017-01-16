@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -74,7 +74,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import com.lowagie.text.error_messages.MessageLocalization;
 
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1EncodableVector;
@@ -100,7 +99,7 @@ import org.bouncycastle.asn1.ocsp.BasicOCSPResponse;
 import org.bouncycastle.asn1.ocsp.OCSPObjectIdentifiers;
 import org.bouncycastle.jce.provider.X509CRLParser;
 import org.bouncycastle.jce.provider.X509CertParser;
-import com.lowagie.text.ExceptionConverter;
+
 import java.security.cert.CertificateParsingException;
 import java.util.Date;
 import org.bouncycastle.asn1.ASN1OctetString;
@@ -112,6 +111,9 @@ import org.bouncycastle.ocsp.BasicOCSPResp;
 import org.bouncycastle.ocsp.CertificateID;
 import org.bouncycastle.ocsp.SingleResp;
 import org.bouncycastle.tsp.TimeStampToken;
+
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * This class does all the processing related to signing and verifying a PKCS#7

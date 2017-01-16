@@ -15,18 +15,18 @@
  * This class demonstrates copying a PDF file using iText.
  * @author Mark Thompson
  */
-package com.lowagie.examples.general.copystamp;
+package com.mxpdf.examples.general.copystamp;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.pdf.PRAcroForm;
-import com.lowagie.text.pdf.PdfCopy;
-import com.lowagie.text.pdf.PdfImportedPage;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.SimpleBookmark;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.pdf.PRAcroForm;
+import com.mxpdf.text.pdf.PdfCopy;
+import com.mxpdf.text.pdf.PdfImportedPage;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.SimpleBookmark;
 
 /**
  * Tool that can be used to concatenate existing PDF files.

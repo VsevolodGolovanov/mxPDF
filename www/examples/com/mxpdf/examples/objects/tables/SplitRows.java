@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,16 +11,16 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.objects.tables;
+package com.mxpdf.examples.objects.tables;
 
 import java.io.FileOutputStream;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.pdf.PdfPCell;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.pdf.PdfPCell;
+import com.mxpdf.text.pdf.PdfPTable;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Add a table to a PDF with document.add() and if the cell doesn't fit, the row is split in two parts.

@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,22 +11,22 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.objects.tables.alternatives;
+package com.mxpdf.examples.objects.tables.alternatives;
 
 import java.awt.Color;
 import java.io.FileOutputStream;
 
-import com.lowagie.text.Cell;
-import com.lowagie.text.Document;
-import com.lowagie.text.Element;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.Table;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Cell;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.Table;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Shows how a table is split if it doesn't fit the page.
@@ -105,19 +105,19 @@ public class RepeatingTable {
                 datatable.addCell("Yes");
                 
             }
-            document.add(new Paragraph("com.lowagie.text.Table - Cells split"));
+            document.add(new Paragraph("com.mxpdf.text.Table - Cells split"));
             document.add(datatable);
             document.newPage();
-            document.add(new Paragraph("com.lowagie.text.pdf.PdfPTable - Cells split\n\n"));
+            document.add(new Paragraph("com.mxpdf.text.pdf.PdfPTable - Cells split\n\n"));
             datatable.setConvert2pdfptable(true);
             document.add(datatable);
             document.newPage();
-            document.add(new Paragraph("com.lowagie.text.Table - Cells kept together"));
+            document.add(new Paragraph("com.mxpdf.text.Table - Cells kept together"));
             datatable.setConvert2pdfptable(false);
             datatable.setCellsFitPage(true);
             document.add(datatable);
             document.newPage();
-            document.add(new Paragraph("com.lowagie.text.pdf.PdfPTable - Cells kept together\n\n"));
+            document.add(new Paragraph("com.mxpdf.text.pdf.PdfPTable - Cells kept together\n\n"));
             datatable.setConvert2pdfptable(true);
             document.add(datatable);
         }

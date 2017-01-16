@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -56,9 +56,9 @@ import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.RandomAccessFileOrArray;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.RandomAccessFileOrArray;
 
 /**
  * Class to read a JBIG2 file at a basic level: understand all the segments, 

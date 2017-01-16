@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -55,7 +55,7 @@ import java.io.OutputStream;
 import java.util.Iterator;
 import java.util.Properties;
 
-import com.lowagie.text.pdf.OutputStreamCounter;
+import com.mxpdf.text.pdf.OutputStreamCounter;
 
 /**
  * An abstract <CODE>Writer</CODE> class for documents.
@@ -471,14 +471,14 @@ public abstract class DocWriter implements DocListener {
     }
     
     /**
-     * @see com.lowagie.text.DocListener#setMarginMirroring(boolean)
+     * @see com.mxpdf.text.DocListener#setMarginMirroring(boolean)
      */
     public boolean setMarginMirroring(boolean MarginMirroring) {
         return false;
     }
     
     /**
-     * @see com.lowagie.text.DocListener#setMarginMirroring(boolean)
+     * @see com.mxpdf.text.DocListener#setMarginMirroring(boolean)
      * @since	2.1.6
      */
     public boolean setMarginMirroringTopBottom(boolean MarginMirroring) {

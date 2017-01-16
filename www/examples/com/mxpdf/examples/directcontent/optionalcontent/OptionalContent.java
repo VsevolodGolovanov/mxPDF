@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,30 +11,30 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.directcontent.optionalcontent;
+package com.mxpdf.examples.directcontent.optionalcontent;
 
 import java.awt.Color;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.Element;
-import com.lowagie.text.Font;
-import com.lowagie.text.Image;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.ColumnText;
-import com.lowagie.text.pdf.PdfAction;
-import com.lowagie.text.pdf.PdfBorderDictionary;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfFormField;
-import com.lowagie.text.pdf.PdfLayer;
-import com.lowagie.text.pdf.PdfLayerMembership;
-import com.lowagie.text.pdf.PdfTemplate;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.pdf.TextField;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.pdf.ColumnText;
+import com.mxpdf.text.pdf.PdfAction;
+import com.mxpdf.text.pdf.PdfBorderDictionary;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfFormField;
+import com.mxpdf.text.pdf.PdfLayer;
+import com.mxpdf.text.pdf.PdfLayerMembership;
+import com.mxpdf.text.pdf.PdfTemplate;
+import com.mxpdf.text.pdf.PdfWriter;
+import com.mxpdf.text.pdf.TextField;
 
 /**
  * Demonstrates the use of layers.

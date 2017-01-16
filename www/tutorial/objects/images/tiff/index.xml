@@ -106,19 +106,19 @@ With the OddEven-example/tool, you can do the same to combine both files into on
 <div>iText also comes with a number of classes that generate barcodes.
 The following types are supported:
 <ul>
-<li><site:doc class="com.lowagie.text.pdf.Barcode39">Barcode39:</site:doc> code 39 and code 39 extended</li>
-<li><site:doc class="com.lowagie.text.pdf.Barcode128">Barcode128:</site:doc>
+<li><site:doc class="com.mxpdf.text.pdf.Barcode39">Barcode39:</site:doc> code 39 and code 39 extended</li>
+<li><site:doc class="com.mxpdf.text.pdf.Barcode128">Barcode128:</site:doc>
 <ul>
 <li><b>CODE128</b> - plain barcode 128.</li>
 <li><b>CODE128_UCC</b> - support for UCC/EAN-128 with a full list of AI.</li>
 <li><b>CODE128_RAW</b> - raw mode. The code attribute has the actual codes from 0 to 105 followed by '&#92;uffff' and the human readable text.</li>
 </ul></li>
-<li><site:doc class="com.lowagie.text.pdf.BarcodeEAN">BarcodeEAN:</site:doc> EAN13, EAN8, UPCA, UPCE, and EAN with supplemental 5, EAN with supplemental 5, EAN with supplemental 2</li>
-<li><site:doc class="com.lowagie.text.pdf.BarcodeEANSUPP">BarcodeEANSUPP:</site:doc> takes 2 barcodes, an EAN/UPC and a supplemental</li>
-<li><site:doc class="com.lowagie.text.pdf.BarcodeInter25">BarcodeInter25:</site:doc> interleaved 2 of 5</li>
-<li><site:doc class="com.lowagie.text.pdf.BarcodePostnet">BarcodePostnet:</site:doc> postnet and planet</li>
-<li><site:doc class="com.lowagie.text.pdf.BarcodePDF417">BarcodePDF417:</site:doc> the 2D barcode PDF417</li>
-<li><site:doc class="com.lowagie.text.pdf.BarcodeCodabar">BarcodeCodabar:</site:doc> codabar</li>
+<li><site:doc class="com.mxpdf.text.pdf.BarcodeEAN">BarcodeEAN:</site:doc> EAN13, EAN8, UPCA, UPCE, and EAN with supplemental 5, EAN with supplemental 5, EAN with supplemental 2</li>
+<li><site:doc class="com.mxpdf.text.pdf.BarcodeEANSUPP">BarcodeEANSUPP:</site:doc> takes 2 barcodes, an EAN/UPC and a supplemental</li>
+<li><site:doc class="com.mxpdf.text.pdf.BarcodeInter25">BarcodeInter25:</site:doc> interleaved 2 of 5</li>
+<li><site:doc class="com.mxpdf.text.pdf.BarcodePostnet">BarcodePostnet:</site:doc> postnet and planet</li>
+<li><site:doc class="com.mxpdf.text.pdf.BarcodePDF417">BarcodePDF417:</site:doc> the 2D barcode PDF417</li>
+<li><site:doc class="com.mxpdf.text.pdf.BarcodeCodabar">BarcodeCodabar:</site:doc> codabar</li>
 </ul>
 This is an code example to generate an EAN-barcode with value 9780201615883:
 <pre class="commandline">PdfContentByte cb = writer.getDirectContent();
@@ -131,12 +131,12 @@ document.add(new Phrase(new Chunk(imageEAN, 0, 0)));</pre>
 <site:source class="ExampleEAN128" />
 <site:source class="ExamplePDF417" />
 All barcode classes implement the abstract class
-<site:doc class="com.lowagie.text.pdf.Barcode">Barcode</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.Barcode">Barcode</site:doc>.
 Please read the API documentation to see the defaults for every specific barcode type,
 and for the different methods to change the 'look' of the barcode.
 To add a barcode to a document with iText, convert it to an Image or PdfTemplate object
-using <site:doc class="com.lowagie.text.pdf.Barcode" target="createImageWithBarcode(com.lowagie.text.pdf.PdfContentByte,%20java.awt.Color,%20java.awt.Color)">createImageWithBarcode(com.lowagie.text.pdf.PdfContentByte, java.awt.Color, java.awt.Color)</site:doc>
-or <site:doc class="com.lowagie.text.pdf.Barcode" target="createTemplateWithBarcode(com.lowagie.text.pdf.PdfContentByte,%20java.awt.Color,%20java.awt.Color)">createTemplateWithBarcode(com.lowagie.text.pdf.PdfContentByte, java.awt.Color, java.awt.Color)</site:doc>.
+using <site:doc class="com.mxpdf.text.pdf.Barcode" target="createImageWithBarcode(com.mxpdf.text.pdf.PdfContentByte,%20java.awt.Color,%20java.awt.Color)">createImageWithBarcode(com.mxpdf.text.pdf.PdfContentByte, java.awt.Color, java.awt.Color)</site:doc>
+or <site:doc class="com.mxpdf.text.pdf.Barcode" target="createTemplateWithBarcode(com.mxpdf.text.pdf.PdfContentByte,%20java.awt.Color,%20java.awt.Color)">createTemplateWithBarcode(com.mxpdf.text.pdf.PdfContentByte, java.awt.Color, java.awt.Color)</site:doc>.
 The colors specify the color of the bars and text are:
 <table border="1">
 <tr>
@@ -166,10 +166,10 @@ The colors specify the color of the bars and text are:
 </tr>
 </table>
 If you want a barcode without any text, just set the font to <span class="commandline">null</span>
-with <site:doc class="com.lowagie.text.pdf.Barcode" target="setFont(com.lowagie.text.pdf.BaseFont)">setFont(com.lowagie.text.pdf.BaseFont)</site:doc>
+with <site:doc class="com.mxpdf.text.pdf.Barcode" target="setFont(com.mxpdf.text.pdf.BaseFont)">setFont(com.mxpdf.text.pdf.BaseFont)</site:doc>
 <br />
 Note that you also can create a textless java.awt.Image of the barcode object with
-<site:doc class="com.lowagie.text.pdf.Barcode" target="createAwtImage(java.awt.Color,%20java.awt.Color)">createAwtImage(java.awt.Color, java.awt.Color)</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.Barcode" target="createAwtImage(java.awt.Color,%20java.awt.Color)">createAwtImage(java.awt.Color, java.awt.Color)</site:doc>.
 </div>
 	</site:section>
 	</site:chapter>

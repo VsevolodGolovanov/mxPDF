@@ -42,7 +42,7 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  * 
  * This code was originally released in 2001 by SUN (see class
  * com.sun.media.imageioimpl.plugins.bmp.BMPImageReader.java)
@@ -86,7 +86,7 @@
  * use in the design, construction, operation or maintenance of any 
  * nuclear facility.
  */
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -94,18 +94,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.HashMap;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.BadElementException;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.ImgRaw;
-import com.lowagie.text.Utilities;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfNumber;
-import com.lowagie.text.pdf.PdfString;
+import com.mxpdf.text.BadElementException;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.ImgRaw;
+import com.mxpdf.text.Utilities;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfNumber;
+import com.mxpdf.text.pdf.PdfString;
 
 /** Reads a BMP image. All types of BMP can be read.
  * <p>

@@ -85,9 +85,9 @@ If you need to fit some text into a certain area, you may want to know the width
 height of some textstring in advance. You can ask the width from class
 <site:tutorial chapter="objects/chunk" section="measure">Chunk</site:tutorial>,
 but you can also ask a basefont for its dimensions, using
-<site:doc class="com.lowagie.text.pdf.BaseFont" target="getWidthPoint(java.lang.String,%20float)">BaseFont.getWidthPoint(java.lang.String, float)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.BaseFont" target="getAscentPoint(java.lang.String,%20float)">BaseFont.getAscentPoint(java.lang.String, float)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.BaseFont" target="getDescentPoint(java.lang.String,%20float)">getDescentPoint(java.lang.String, float)</site:doc>.<br />
+<site:doc class="com.mxpdf.text.pdf.BaseFont" target="getWidthPoint(java.lang.String,%20float)">BaseFont.getWidthPoint(java.lang.String, float)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.BaseFont" target="getAscentPoint(java.lang.String,%20float)">BaseFont.getAscentPoint(java.lang.String, float)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.BaseFont" target="getDescentPoint(java.lang.String,%20float)">getDescentPoint(java.lang.String, float)</site:doc>.<br />
 Text is written on a 'baseline'. The ascent is the maximum height above reached by the glyphs in your text
 above this baseline. It is always a positive value. The descent is the maximum depth below the baseline.
 It is always a negative value. The height of your text is (ascent - descent).
@@ -95,8 +95,8 @@ Take a look at the example below to see how the basic methods work
 and check the API if you need some more methods to get widths, ascents and descents.
 <site:source class="WidthHeight" />
 In some cases you may want full control over the width of each glyph.
-No problem, just use <site:doc class="com.lowagie.text.pdf.BaseFont" target="getWidths()">BaseFont.getWidths()</site:doc>,
-change the widths and and force the basefont to use these changed widths with <site:doc class="com.lowagie.text.pdf.BaseFont" target="setForceWidthsOutput(boolean)">BaseFont.setForceWidthsOutput(boolean)</site:doc>.
+No problem, just use <site:doc class="com.mxpdf.text.pdf.BaseFont" target="getWidths()">BaseFont.getWidths()</site:doc>,
+change the widths and and force the basefont to use these changed widths with <site:doc class="com.mxpdf.text.pdf.BaseFont" target="setForceWidthsOutput(boolean)">BaseFont.setForceWidthsOutput(boolean)</site:doc>.
 <site:source class="FixedFontWidth" />
 </div>
 	</site:section>
@@ -130,7 +130,7 @@ myPhrase.add(
   new Phrase("This is the end of the sentence.\n",
     new Font(Font.TIMES_ROMAN, 8, Font.ITALIC)));</pre>
 As you can see, 'This is the end of the sentence' is italic, but not bold. The font wasn't propagated.
-The same applies if you use <site:doc class="com.lowagie.text.FontFactory">FontFactory</site:doc>
+The same applies if you use <site:doc class="com.mxpdf.text.FontFactory">FontFactory</site:doc>
 to get the Font-object. This is because the FontFactory uses another technique to construct a font.
 <pre class="commandline">myPhrase =
   new Phrase("Hello 3! ",
@@ -146,19 +146,19 @@ regardless of the font style that was used before. Font Propagation can be usefu
 <site:source class="FontStylePropagation"/>
 <div class="subtitle">Underline and strike through</div>
 Allthough underlining and striking through text isn't really font-related,
-both 'style-types' are added to the <site:doc class="com.lowagie.text.Font">Font</site:doc>-class:
-<site:doc class="com.lowagie.text.Font" target="UNDERLINE">Font.UNDERLINE</site:doc> and
-<site:doc class="com.lowagie.text.Font" target="STRIKETHRU">Font.STRIKETHRU</site:doc>.
+both 'style-types' are added to the <site:doc class="com.mxpdf.text.Font">Font</site:doc>-class:
+<site:doc class="com.mxpdf.text.Font" target="UNDERLINE">Font.UNDERLINE</site:doc> and
+<site:doc class="com.mxpdf.text.Font" target="STRIKETHRU">Font.STRIKETHRU</site:doc>.
 In the example, we generate PDF, RTF and HTML. If however, you only need to generate PDF,
 it is much better to use <site:tutorial chapter="/objects/chunk" section="underline">Chunk-functionality</site:tutorial>.
 Font.UNDERLINE and Font.STRIKETHRU use some default values of this functionality.
 If you want complete control over the height, width, color,... of the line,
-you should use the method <site:doc class="com.lowagie.text.Chunk" target="setUnderline(java.awt.Color,%20float,%20float,%20float,%20float,%20int)">Chunk.setUnderline</site:doc>
+you should use the method <site:doc class="com.mxpdf.text.Chunk" target="setUnderline(java.awt.Color,%20float,%20float,%20float,%20float,%20int)">Chunk.setUnderline</site:doc>
 as described in the chapter on <site:tutorial chapter="/objects/chunk" section="underline">Chunks</site:tutorial>.
 <site:source class="ExtraStyles" />
 <div class="subtitle">Font Color</div>
 If you want to change the font color, just ask the
-<site:doc class="com.lowagie.text.FontFactory">FontFactory</site:doc>
+<site:doc class="com.mxpdf.text.FontFactory">FontFactory</site:doc>
 for another font with the color of your choice:
 <pre class="commandline">font red =
   FontFactory.getFont(
@@ -169,11 +169,11 @@ for another font with the color of your choice:
 It's a little more complicated if you want to change the color of some
 text you want to add at an <site:tutorial chapter="" section="part4">absolute position</site:tutorial>.
 As you can read in the <site:tutorial chapter="/directcontent/text" section="text">Text State chapter</site:tutorial>,
-you have to use class <site:doc class="com.lowagie.text.pdf.BaseFont">BaseFont</site:doc>
+you have to use class <site:doc class="com.mxpdf.text.pdf.BaseFont">BaseFont</site:doc>
 and this class doesn't have a color value. In this case, you have to know that, according to
 the PDF specs, characters are seen as 'shapes'. Those shapes are filled with a certain color.
 So if you want to change the color of the font, you need to change the color with the 'ColorFill'
-of your choice in <site:doc class="com.lowagie.text.pdf.PdfContentByte">PdfContentByte</site:doc>:
+of your choice in <site:doc class="com.mxpdf.text.pdf.PdfContentByte">PdfContentByte</site:doc>:
 <pre class="commandline">BaseFont bf =
   FontFactory.getFont(FontFactory.COURIER).getCalculatedBaseFont();
 cb.beginText();
@@ -197,14 +197,14 @@ There are two objects in iText that allow you to change the run direction of the
 <site:tutorial chapter="/objects/tables">tables</site:tutorial>
 and <site:tutorial chapter="/objects/columns">columns</site:tutorial>.
 Both objects have a method
-(<site:doc class="com.lowagie.text.pdf.ColumnText" target="setRunDirection(int)">ColumnText.setRunDirection(int)</site:doc>
-and <site:doc class="com.lowagie.text.pdf.PdfPTable" target="setRunDirection(int)">PdfPTable.setRunDirection(int)</site:doc>)
+(<site:doc class="com.mxpdf.text.pdf.ColumnText" target="setRunDirection(int)">ColumnText.setRunDirection(int)</site:doc>
+and <site:doc class="com.mxpdf.text.pdf.PdfPTable" target="setRunDirection(int)">PdfPTable.setRunDirection(int)</site:doc>)
 to change the run direction to one of the following values:
 <ul>
-<li><site:doc class="com.lowagie.text.pdf.PdfWriter" target="RUN_DIRECTION_DEFAULT">PdfWriter.RUN_DIRECTION_DEFAULT:</site:doc> the default run direction</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfWriter" target="RUN_DIRECTION_NO_BIDI">PdfWriter.RUN_DIRECTION_NO_BIDI:</site:doc> do not use bidirectional reordering</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfWriter" target="RUN_DIRECTION_LTR">PdfWriter.RUN_DIRECTION_LTR:</site:doc> use bidirectional reordering with left-to-right preferential run direction.</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfWriter" target="RUN_DIRECTION_RTL">PdfWriter.RUN_DIRECTION_RTL:</site:doc> use bidirectional reordering with right-to-left preferential run direction.</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfWriter" target="RUN_DIRECTION_DEFAULT">PdfWriter.RUN_DIRECTION_DEFAULT:</site:doc> the default run direction</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfWriter" target="RUN_DIRECTION_NO_BIDI">PdfWriter.RUN_DIRECTION_NO_BIDI:</site:doc> do not use bidirectional reordering</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfWriter" target="RUN_DIRECTION_LTR">PdfWriter.RUN_DIRECTION_LTR:</site:doc> use bidirectional reordering with left-to-right preferential run direction.</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfWriter" target="RUN_DIRECTION_RTL">PdfWriter.RUN_DIRECTION_RTL:</site:doc> use bidirectional reordering with right-to-left preferential run direction.</li>
 </ul>
 In the following example, the use of NO_BIDI and RTL is demonstrated with ColumnText (first page)
 and PdfPTable (second page).
@@ -214,7 +214,7 @@ In the next example, some RTL text is added with a rotation of 20 degrees.
 <site:source class="ComplexText" />
 <div class="subtitle">Vertical text</div>
 If you want to add vertical text to a PDF document, you will have to use the
-<site:doc class="com.lowagie.text.pdf.VerticalText">VerticalText</site:doc> object.
+<site:doc class="com.mxpdf.text.pdf.VerticalText">VerticalText</site:doc> object.
 It writes Text vertically. Note that the naming is done according to horizontal text although it referrs to vertical text. A line with the alignment Element.LEFT_ALIGN will actually be top aligned.
 Take a look at the example to see how it's done:
 <site:source class="Vertical" />

@@ -42,7 +42,7 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  *
  * The code to recognize the encoding in this class and in the convenience class IanaEncodings was taken from Apache Xerces published under the following license:
  * Licensed to the Apache Software Foundation (ASF) under one or more
@@ -73,7 +73,7 @@
  * Apache Software Foundation under the Apache Software License; now being
  * used in iText under the MPL.
  */
-package com.lowagie.text.xml.simpleparser;
+package com.mxpdf.text.xml.simpleparser;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -83,7 +83,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.HashMap;
 import java.util.Stack;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * A simple XML and HTML parser.  This parser is, like the SAX parser,

@@ -45,10 +45,10 @@
  * 
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html.simpleparser;
+package com.mxpdf.text.html.simpleparser;
 
 import java.io.File;
 import java.io.IOException;
@@ -58,26 +58,26 @@ import java.util.HashMap;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-import com.lowagie.text.html.HtmlTags;
-import com.lowagie.text.html.Markup;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.DocListener;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ElementTags;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.HeaderFooter;
-import com.lowagie.text.Image;
-import com.lowagie.text.ListItem;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.TextElementArray;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.draw.LineSeparator;
-import com.lowagie.text.FontProvider;
-import com.lowagie.text.xml.simpleparser.SimpleXMLDocHandler;
-import com.lowagie.text.xml.simpleparser.SimpleXMLParser;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.DocListener;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ElementTags;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.FontProvider;
+import com.mxpdf.text.HeaderFooter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.ListItem;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.TextElementArray;
+import com.mxpdf.text.html.HtmlTags;
+import com.mxpdf.text.html.Markup;
+import com.mxpdf.text.pdf.PdfPTable;
+import com.mxpdf.text.pdf.draw.LineSeparator;
+import com.mxpdf.text.xml.simpleparser.SimpleXMLDocHandler;
+import com.mxpdf.text.xml.simpleparser.SimpleXMLParser;
 
 public class HTMLWorker implements SimpleXMLDocHandler, DocListener {
 
@@ -366,7 +366,7 @@ public class HTMLWorker implements SimpleXMLDocHandler, DocListener {
 					endElement(HtmlTags.LISTITEM);
 				skipText = true;
 				cprops.addToChain(tag, h);
-				com.lowagie.text.List list = new com.lowagie.text.List(false);
+				com.mxpdf.text.List list = new com.mxpdf.text.List(false);
 				try{
 					list.setIndentationLeft(new Float(cprops.getProperty("indent")).floatValue());
 				}catch (Exception e) {
@@ -381,7 +381,7 @@ public class HTMLWorker implements SimpleXMLDocHandler, DocListener {
 					endElement(HtmlTags.LISTITEM);
 				skipText = true;
 				cprops.addToChain(tag, h);
-				com.lowagie.text.List list = new com.lowagie.text.List(true);
+				com.mxpdf.text.List list = new com.mxpdf.text.List(true);
 				try{
 					list.setIndentationLeft(new Float(cprops.getProperty("indent")).floatValue());
 				}catch (Exception e) {
@@ -510,7 +510,7 @@ public class HTMLWorker implements SimpleXMLDocHandler, DocListener {
 				if (stack.empty())
 					return;
 				Object obj = stack.pop();
-				if (!(obj instanceof com.lowagie.text.List)) {
+				if (!(obj instanceof com.mxpdf.text.List)) {
 					stack.push(obj);
 					return;
 				}
@@ -536,12 +536,12 @@ public class HTMLWorker implements SimpleXMLDocHandler, DocListener {
 					return;
 				}
 				Object list = stack.pop();
-				if (!(list instanceof com.lowagie.text.List)) {
+				if (!(list instanceof com.mxpdf.text.List)) {
 					stack.push(list);
 					return;
 				}
 				ListItem item = (ListItem) obj;
-				((com.lowagie.text.List) list).add(item);
+				((com.mxpdf.text.List) list).add(item);
 				ArrayList cks = item.getChunks();
 				if (!cks.isEmpty())
 					item.getListSymbol()
@@ -705,7 +705,7 @@ public class HTMLWorker implements SimpleXMLDocHandler, DocListener {
 	}
 
 	/**
-     * @see com.lowagie.text.DocListener#setMarginMirroring(boolean)
+     * @see com.mxpdf.text.DocListener#setMarginMirroring(boolean)
 	 * @since	2.1.6
 	 */
 	public boolean setMarginMirroringTopBottom(boolean marginMirroring) {

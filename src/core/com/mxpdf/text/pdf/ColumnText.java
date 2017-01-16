@@ -44,26 +44,26 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Stack;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.ListItem;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.SimpleTable;
-import com.lowagie.text.pdf.draw.DrawInterface;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.ListItem;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.SimpleTable;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.draw.DrawInterface;
 
 /**
  * Formats text in a columnwise form. The text is bound
@@ -1215,7 +1215,7 @@ public class ColumnText {
                 }
             }
             else if (element.type() == Element.LIST) {
-                com.lowagie.text.List list = (com.lowagie.text.List)element;
+                com.mxpdf.text.List list = (com.mxpdf.text.List)element;
                 ArrayList items = list.getItems();
                 ListItem item = null;
                 float listIndentation = list.getIndentationLeft();
@@ -1230,9 +1230,9 @@ public class ColumnText {
                         }
                         else ++count;
                     }
-                    else if (obj instanceof com.lowagie.text.List) {
+                    else if (obj instanceof com.mxpdf.text.List) {
                         stack.push(new Object[]{list, new Integer(k), new Float(listIndentation)});
-                        list = (com.lowagie.text.List)obj;
+                        list = (com.mxpdf.text.List)obj;
                         items = list.getItems();
                         listIndentation += list.getIndentationLeft();
                         k = -1;
@@ -1241,7 +1241,7 @@ public class ColumnText {
                     if (k == items.size() - 1) {
                         if (!stack.isEmpty()) {
                             Object objs[] = (Object[])stack.pop();
-                            list = (com.lowagie.text.List)objs[0];
+                            list = (com.mxpdf.text.List)objs[0];
                             items = list.getItems();
                             k = ((Integer)objs[1]).intValue();
                             listIndentation = ((Float)objs[2]).floatValue();

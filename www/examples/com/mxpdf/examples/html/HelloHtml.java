@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,20 +12,20 @@
  * itext-questions@lists.sourceforge.net
  */
 
-package com.lowagie.examples.html;
+package com.mxpdf.examples.html;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.html.HtmlWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.html.HtmlWriter;
 
 /**
  * Generates a simple 'Hello World' HTML page.
  * 
- * @author blowagie
+
  */
 
 public class HelloHtml {

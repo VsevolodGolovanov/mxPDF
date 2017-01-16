@@ -42,13 +42,13 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf.parser;
+package com.mxpdf.text.pdf.parser;
 
 import java.util.ArrayList;
 
-import com.lowagie.text.pdf.PdfLiteral;
+import com.mxpdf.text.pdf.PdfLiteral;
 
 /**
  * Interface implemented by a series of content operators

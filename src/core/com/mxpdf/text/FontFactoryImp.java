@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.awt.Color;
 import java.io.File;
@@ -59,8 +59,8 @@ import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 
-import com.lowagie.text.html.Markup;
-import com.lowagie.text.pdf.BaseFont;
+import com.mxpdf.text.html.Markup;
+import com.mxpdf.text.pdf.BaseFont;
 
 /**
  * If you are using True Type fonts, you can declare the paths of the different ttf- and ttc-files

@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.xml;
+package com.mxpdf.text.xml;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -61,7 +61,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.lowagie.text.ExceptionConverter;
+import com.mxpdf.text.ExceptionConverter;
 
 /**
  * The <CODE>Tags</CODE>-class maps several XHTML-tags to iText-objects.

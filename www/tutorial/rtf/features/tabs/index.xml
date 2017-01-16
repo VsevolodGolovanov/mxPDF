@@ -35,12 +35,12 @@
     	<site:sectiontitle>Tab support</site:sectiontitle>
     	<div>
     	  To support creating more complex RTF documents with tabular data, the
-    	  <site:doc class="com.lowagie.text.rtf.text.RtfTab">RtfTab</site:doc> provides support
+    	  <site:doc class="com.mxpdf.text.rtf.text.RtfTab">RtfTab</site:doc> provides support
     	  for defining tab stops.<br /><br />
     	  
-    	  To do this, simply add one or more <site:doc class="com.lowagie.text.rtf.text.RtfTab">RtfTab</site:doc>
-    	  objects to the <site:doc class="com.lowagie.text.Paragraph">Paragraph</site:doc>. Then in
-    	  the <site:doc class="com.lowagie.text.Chunk">Chunks</site:doc> use the &quot;\t&quot; tab
+    	  To do this, simply add one or more <site:doc class="com.mxpdf.text.rtf.text.RtfTab">RtfTab</site:doc>
+    	  objects to the <site:doc class="com.mxpdf.text.Paragraph">Paragraph</site:doc>. Then in
+    	  the <site:doc class="com.mxpdf.text.Chunk">Chunks</site:doc> use the &quot;\t&quot; tab
     	  character to specify where to place the tab stops.
     	  
     	  <pre class="commandline">
@@ -81,14 +81,14 @@ par.add("\tFirst the text on the left-hand side\tThis text is right aligned.");
     <site:section name="tabgroups">
     	<site:sectiontitle>Tab groups</site:sectiontitle>
     	<div>
-    	  When repeatedly using the same grouping of <site:doc class="com.lowagie.text.rtf.text.RtfTab">RtfTabs</site:doc>
-    	  in multiple <site:doc class="com.lowagie.text.Paragraph">Paragraphs</site:doc>, creating and
+    	  When repeatedly using the same grouping of <site:doc class="com.mxpdf.text.rtf.text.RtfTab">RtfTabs</site:doc>
+    	  in multiple <site:doc class="com.mxpdf.text.Paragraph">Paragraphs</site:doc>, creating and
     	  adding them to each Paragraph is a lot of work. To simplify this, the
-    	  <site:doc class="com.lowagie.text.rtf.text.RtfTabGroup">RtfTabGroup</site:doc> class is provided.
+    	  <site:doc class="com.mxpdf.text.rtf.text.RtfTabGroup">RtfTabGroup</site:doc> class is provided.
     	  It groups a set of RtfTab objects, that can then easily be added to multiple Paragraphs.<br /><br />
     	  
-    	  Its use is very simple. Create a new <site:doc class="com.lowagie.text.rtf.text.RtfTabGroup">RtfTabGroup</site:doc>
-    	  object and then add the <site:doc class="com.lowagie.text.rtf.text.RtfTab">RtfTab</site:doc>
+    	  Its use is very simple. Create a new <site:doc class="com.mxpdf.text.rtf.text.RtfTabGroup">RtfTabGroup</site:doc>
+    	  object and then add the <site:doc class="com.mxpdf.text.rtf.text.RtfTab">RtfTab</site:doc>
     	  to it using the <span class="commandline">RtfTabGroup.add(RtfTab)</span> method.
     	  
     	  <pre class="commandline">

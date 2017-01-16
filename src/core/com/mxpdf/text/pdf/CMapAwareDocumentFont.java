@@ -42,16 +42,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.fonts.cmaps.CMap;
-import com.lowagie.text.pdf.fonts.cmaps.CMapParser;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.fonts.cmaps.CMap;
+import com.mxpdf.text.pdf.fonts.cmaps.CMapParser;
 
 
 /**
@@ -157,7 +157,7 @@ public class CMapAwareDocumentFont extends DocumentFont {
     /**
      * @since 2.1.5
      * Override to allow special handling for fonts that don't specify width of space character
-     * @see com.lowagie.text.pdf.DocumentFont#getWidth(int)
+     * @see com.mxpdf.text.pdf.DocumentFont#getWidth(int)
      */
     public int getWidth(int char1) {
         if (char1 == ' ')

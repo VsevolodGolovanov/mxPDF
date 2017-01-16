@@ -44,16 +44,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.xml;
+package com.mxpdf.text.xml;
 
 import java.util.Properties;
 
 import org.xml.sax.Attributes;
 
-import com.lowagie.text.ElementTags;
+import com.mxpdf.text.ElementTags;
 
 /**
  * This interface is implemented by the peer of all the iText objects.

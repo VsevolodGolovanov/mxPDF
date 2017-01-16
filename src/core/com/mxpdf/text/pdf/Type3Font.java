@@ -42,15 +42,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.HashMap;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocumentException;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * A class to support Type3 fonts.
@@ -198,7 +198,7 @@ public class Type3Font extends BaseFont {
     public void setPostscriptFontName(String name) {
     }
     
-    void writeFont(PdfWriter writer, PdfIndirectReference ref, Object[] params) throws com.lowagie.text.DocumentException, java.io.IOException {
+    void writeFont(PdfWriter writer, PdfIndirectReference ref, Object[] params) throws com.mxpdf.text.DocumentException, java.io.IOException {
         if (this.writer != writer)
             throw new IllegalArgumentException(MessageLocalization.getComposedMessage("type3.font.used.with.the.wrong.pdfwriter"));
         

@@ -44,18 +44,18 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.codec.wmf;
-import com.lowagie.text.Document;
+package com.mxpdf.text.pdf.codec.wmf;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.pdf.BaseFont;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.pdf.BaseFont;
 
 public class MetaFont extends MetaObject {
     static final String fontNames[] = {

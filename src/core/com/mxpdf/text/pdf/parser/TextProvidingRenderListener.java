@@ -3,7 +3,7 @@
  * (c) 2009 Trumpet, Inc.
  *
  */
-package com.lowagie.text.pdf.parser;
+package com.mxpdf.text.pdf.parser;
 
 /**
  * Defines an interface for {@link RenderListener}s that can return text

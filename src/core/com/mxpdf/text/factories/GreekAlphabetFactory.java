@@ -44,11 +44,11 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
- */
-package com.lowagie.text.factories;
 
-import com.lowagie.text.SpecialSymbol;
+ */
+package com.mxpdf.text.factories;
+
+import com.mxpdf.text.SpecialSymbol;
 
 /**
  * This class can produce String combinations representing a number built with

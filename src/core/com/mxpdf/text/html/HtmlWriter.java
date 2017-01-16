@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html;
+package com.mxpdf.text.html;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -58,35 +58,35 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Stack;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Anchor;
-import com.lowagie.text.Annotation;
-import com.lowagie.text.BadElementException;
-import com.lowagie.text.Cell;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.DocWriter;
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Font;
-import com.lowagie.text.Header;
-import com.lowagie.text.HeaderFooter;
-import com.lowagie.text.Image;
-import com.lowagie.text.List;
-import com.lowagie.text.ListItem;
-import com.lowagie.text.MarkedObject;
-import com.lowagie.text.MarkedSection;
-import com.lowagie.text.Meta;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.Row;
-import com.lowagie.text.Section;
-import com.lowagie.text.SimpleTable;
-import com.lowagie.text.Table;
-import com.lowagie.text.pdf.BaseFont;
+import com.mxpdf.text.Anchor;
+import com.mxpdf.text.Annotation;
+import com.mxpdf.text.BadElementException;
+import com.mxpdf.text.Cell;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.DocWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Header;
+import com.mxpdf.text.HeaderFooter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.List;
+import com.mxpdf.text.ListItem;
+import com.mxpdf.text.MarkedObject;
+import com.mxpdf.text.MarkedSection;
+import com.mxpdf.text.Meta;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.Row;
+import com.mxpdf.text.Section;
+import com.mxpdf.text.SimpleTable;
+import com.mxpdf.text.Table;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.BaseFont;
 
 /**
  * A <CODE>DocWriter</CODE> class for HTML.

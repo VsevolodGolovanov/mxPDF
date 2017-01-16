@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 /** Represents a pattern. Can be used in high-level constructs (Paragraph, Cell, etc.).
  */

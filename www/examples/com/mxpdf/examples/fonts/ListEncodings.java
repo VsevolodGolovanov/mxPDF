@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,14 +11,14 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.fonts;
+package com.mxpdf.examples.fonts;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.pdf.BaseFont;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.pdf.BaseFont;
 
 /**
  * Listing the encodings of font comic

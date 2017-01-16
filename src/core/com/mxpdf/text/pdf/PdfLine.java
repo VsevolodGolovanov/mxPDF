@@ -44,17 +44,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Element;
-import com.lowagie.text.ListItem;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ListItem;
 
 /**
  * <CODE>PdfLine</CODE> defines an array with <CODE>PdfChunk</CODE>-objects

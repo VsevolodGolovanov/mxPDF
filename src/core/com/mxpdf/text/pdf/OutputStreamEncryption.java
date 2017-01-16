@@ -44,15 +44,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.pdf.crypto.AESCipher;
-import com.lowagie.text.pdf.crypto.IVGenerator;
-import com.lowagie.text.pdf.crypto.ARCFOUREncryption;
+package com.mxpdf.text.pdf;
 import java.io.IOException;
 import java.io.OutputStream;
+
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.pdf.crypto.AESCipher;
+import com.mxpdf.text.pdf.crypto.ARCFOUREncryption;
+import com.mxpdf.text.pdf.crypto.IVGenerator;
 
 public class OutputStreamEncryption extends OutputStream {
     

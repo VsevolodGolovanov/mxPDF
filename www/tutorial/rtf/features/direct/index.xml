@@ -29,12 +29,12 @@
     	<site:sectiontitle>Direct Content</site:sectiontitle>
     	<div>
     	  The RtfWriter2 provides components for most of the RTF specification,
-    	  but not for everything. This is where the <site:doc class="com.lowagie.text.rtf.direct.RtfDirectContent">RtfDirectContent</site:doc>
+    	  but not for everything. This is where the <site:doc class="com.mxpdf.text.rtf.direct.RtfDirectContent">RtfDirectContent</site:doc>
     	  comes into play. Using this object arbitrary RTF code can be added into the document "as is". The
-    	  <site:doc class="com.lowagie.text.rtf.direct.RtfDirectContent">RtfDirectContent</site:doc> provides no further
+    	  <site:doc class="com.mxpdf.text.rtf.direct.RtfDirectContent">RtfDirectContent</site:doc> provides no further
     	  support for adding RTF content and it is up to the creator to specify correct RTF code.<br /><br />
     	  
-    	  The <site:doc class="com.lowagie.text.rtf.direct.RtfDirectContent">RtfDirectContent</site:doc> provides
+    	  The <site:doc class="com.mxpdf.text.rtf.direct.RtfDirectContent">RtfDirectContent</site:doc> provides
     	  one predefined constant and that is the RTF code for a soft line-break.
     	  
     	  <pre class="commandline">
@@ -61,7 +61,7 @@ par.add("just before the just.");
     	    <li><b>RtfWriter2.importRtfDocument</b>: Imports a complete RTF document. Will attempt
     	      to automagically translate the font and colour numbers in the original RTF document
     	      into the font and colour numbers used in the new RTF document.</li>
-    	    <li><b>RtfWriter2.importRtfFragment</b>: Imports an RTF fragment. A <site:doc class="com.lowagie.text.rtf.direct.RtfImportMappings">RtfImportMappings</site:doc>
+    	    <li><b>RtfWriter2.importRtfFragment</b>: Imports an RTF fragment. A <site:doc class="com.mxpdf.text.rtf.direct.RtfImportMappings">RtfImportMappings</site:doc>
     	      must be provided that describes the mappings between the font and colour numbers in the imported
     	      RTF fragment to actual colours and font names.</li>
     	  </ul><br />

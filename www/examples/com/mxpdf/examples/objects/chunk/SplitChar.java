@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,25 +12,25 @@
  * itext-questions@lists.sourceforge.net
  */
 
-package com.lowagie.examples.objects.chunk;
+package com.mxpdf.examples.objects.chunk;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.SplitCharacter;
-import com.lowagie.text.pdf.PdfChunk;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.SplitCharacter;
+import com.mxpdf.text.pdf.PdfChunk;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Demonstrates the use of the splitcharacter.
  * 
- * @author blowagie
+
  */
 
 public class SplitChar implements SplitCharacter {
@@ -81,7 +81,7 @@ public class SplitChar implements SplitCharacter {
 	}
 
 	/**
-	 * @see com.lowagie.text.SplitCharacter#isSplitCharacter(int, int, int, char[], com.lowagie.text.pdf.PdfChunk[])
+	 * @see com.mxpdf.text.SplitCharacter#isSplitCharacter(int, int, int, char[], com.mxpdf.text.pdf.PdfChunk[])
 	 */
 	public boolean isSplitCharacter(int start, int current, int end, char[] cc, PdfChunk[] ck) {
         char c;

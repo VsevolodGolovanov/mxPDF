@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.util.ArrayList;
 import java.util.Properties;
@@ -117,7 +117,7 @@ public class MarkedObject implements Element {
 	}
 	
 	/**
-	 * @see com.lowagie.text.Element#isContent()
+	 * @see com.mxpdf.text.Element#isContent()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isContent() {
@@ -125,7 +125,7 @@ public class MarkedObject implements Element {
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {

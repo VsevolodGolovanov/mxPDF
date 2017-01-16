@@ -44,23 +44,23 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.xml.xmp;
+package com.mxpdf.text.xml.xmp;
 
-import com.lowagie.text.pdf.PdfWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.lowagie.text.pdf.PdfDate;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfString;
+import com.mxpdf.text.pdf.PdfDate;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfObject;
+import com.mxpdf.text.pdf.PdfString;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * With this class you can create an Xmp Stream that can be used for adding

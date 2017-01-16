@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,7 +12,7 @@
  * itext-questions@lists.sourceforge.net
  */
 
-package com.lowagie.examples.forms;
+package com.mxpdf.examples.forms;
 
 
 import java.io.FileOutputStream;
@@ -20,12 +20,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
-import com.lowagie.text.*;
-import com.lowagie.text.pdf.*;
+import com.mxpdf.text.*;
+import com.mxpdf.text.pdf.*;
 
 /**
  * Generates an Acroform with a List
- * @author blowagie
+
  */
 public class FormList {
     /**

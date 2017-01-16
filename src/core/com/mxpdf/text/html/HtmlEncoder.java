@@ -44,14 +44,14 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html;
+package com.mxpdf.text.html;
 
 import java.awt.Color;
 
-import com.lowagie.text.Element;
+import com.mxpdf.text.Element;
 
 /**
  * This class converts a <CODE>String</CODE> to the HTML-format of a String.

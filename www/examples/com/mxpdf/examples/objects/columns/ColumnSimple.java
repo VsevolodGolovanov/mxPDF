@@ -3,7 +3,7 @@
  * 
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  * 
  * This code is distributed in the hope that it will be useful, but WITHOUT ANY
  * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
@@ -11,20 +11,20 @@
  * 
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.objects.columns;
+package com.mxpdf.examples.objects.columns;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.Font;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.ColumnText;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.ColumnText;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Writes text in a column that can be added at an absolute position.

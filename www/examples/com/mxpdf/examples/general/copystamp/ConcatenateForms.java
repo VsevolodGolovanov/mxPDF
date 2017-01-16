@@ -10,12 +10,12 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
-package com.lowagie.examples.general.copystamp;
+package com.mxpdf.examples.general.copystamp;
 
 import java.io.FileOutputStream;
 
-import com.lowagie.text.pdf.PdfCopyFields;
-import com.lowagie.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfCopyFields;
+import com.mxpdf.text.pdf.PdfReader;
 
 /**
  * Concatenates 2 PDF files with forms. The resulting PDF has 1 merged AcroForm.

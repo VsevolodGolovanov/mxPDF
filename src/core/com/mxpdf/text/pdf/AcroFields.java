@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.awt.Color;
 import java.io.IOException;
@@ -56,16 +56,16 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import com.lowagie.text.error_messages.MessageLocalization;
 
 import org.w3c.dom.Node;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.codec.Base64;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.codec.Base64;
 
 /**
  * Query and change fields in existing documents either by method
@@ -1212,7 +1212,7 @@ public class AcroFields {
      * 
      * @param n the top node of the data structure
      * @throws java.io.IOException on error
-     * @throws com.lowagie.text.DocumentException o error
+     * @throws com.mxpdf.text.DocumentException o error
      */
     public void mergeXfaData(Node n) throws IOException, DocumentException {
         XfaForm.Xml2SomDatasets data = new XfaForm.Xml2SomDatasets(n);

@@ -44,15 +44,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.internal;
+package com.mxpdf.text.pdf.internal;
 
 import java.awt.geom.AffineTransform;
 import java.awt.geom.PathIterator;
 import java.util.NoSuchElementException;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 /**
  * PathIterator for PolylineShape.
  * This class was originally written by wil - amristar.com.au

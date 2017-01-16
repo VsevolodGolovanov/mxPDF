@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf.parser;
+package com.mxpdf.text.pdf.parser;
 
 
 /**
@@ -103,12 +103,12 @@ public class SimpleTextExtractingPdfContentRenderListener implements TextProvidi
      * @param gs    The current graphics state, including the current font and various spacings needed to compute glyph widths
      * @param renderInto The rectangle that the result will be rendered into
      * @param spaceWidth The scaled width of a space character in the current font
-     * @see com.lowagie.text.pdf.parser.RenderListener#renderText(String, GraphicsState, Rectangle)
+     * @see com.mxpdf.text.pdf.parser.RenderListener#renderText(String, GraphicsState, Rectangle)
      */
 
     /**
      * Captures text using a simplified algorithm for inserting hard returns and spaces
-     * @see com.lowagie.text.pdf.parser.AbstractRenderListener#renderText(java.lang.String, com.lowagie.text.pdf.parser.GraphicsState, com.lowagie.text.pdf.parser.Matrix, com.lowagie.text.pdf.parser.Matrix)
+     * @see com.mxpdf.text.pdf.parser.AbstractRenderListener#renderText(java.lang.String, com.mxpdf.text.pdf.parser.GraphicsState, com.mxpdf.text.pdf.parser.Matrix, com.mxpdf.text.pdf.parser.Matrix)
      */
     public void renderText(TextRenderInfo renderInfo) {
         boolean firstRender = result.length() == 0;

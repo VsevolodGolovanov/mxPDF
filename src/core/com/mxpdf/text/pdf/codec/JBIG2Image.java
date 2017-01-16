@@ -44,16 +44,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.ImgJBIG2;
-import com.lowagie.text.pdf.RandomAccessFileOrArray;
-import com.lowagie.text.error_messages.MessageLocalization;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.ImgJBIG2;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.RandomAccessFileOrArray;
 
 /**
  * Support for JBIG2 Images.

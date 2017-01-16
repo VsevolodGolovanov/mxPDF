@@ -44,18 +44,18 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.draw;
+package com.mxpdf.text.pdf.draw;
 
 import java.util.ArrayList;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ElementListener;
-import com.lowagie.text.pdf.PdfContentByte;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ElementListener;
+import com.mxpdf.text.pdf.PdfContentByte;
 
 /**
  * Helper class implementing the DrawInterface. Can be used to add
@@ -91,7 +91,7 @@ public class VerticalPositionMark implements DrawInterface, Element {
 	}
 	
 	/**
-	 * @see com.lowagie.text.pdf.draw.DrawInterface#draw(com.lowagie.text.pdf.PdfContentByte, float, float, float, float, float)
+	 * @see com.mxpdf.text.pdf.draw.DrawInterface#draw(com.mxpdf.text.pdf.PdfContentByte, float, float, float, float, float)
 	 */
 	public void draw(PdfContentByte canvas, float llx, float lly, float urx, float ury, float y) {
 		if (drawInterface != null) {
@@ -100,7 +100,7 @@ public class VerticalPositionMark implements DrawInterface, Element {
 	}
 	
     /**
-     * @see com.lowagie.text.Element#process(com.lowagie.text.ElementListener)
+     * @see com.mxpdf.text.Element#process(com.mxpdf.text.ElementListener)
      */
     public boolean process(ElementListener listener) {
 		try {
@@ -111,28 +111,28 @@ public class VerticalPositionMark implements DrawInterface, Element {
     }
 
     /**
-     * @see com.lowagie.text.Element#type()
+     * @see com.mxpdf.text.Element#type()
      */
     public int type() {
         return Element.YMARK;
     }
 
     /**
-     * @see com.lowagie.text.Element#isContent()
+     * @see com.mxpdf.text.Element#isContent()
      */
     public boolean isContent() {
         return true;
     }
 
     /**
-     * @see com.lowagie.text.Element#isNestable()
+     * @see com.mxpdf.text.Element#isNestable()
      */
     public boolean isNestable() {
         return false;
     }
 
     /**
-     * @see com.lowagie.text.Element#getChunks()
+     * @see com.mxpdf.text.Element#getChunks()
      */
     public ArrayList getChunks() {
     	ArrayList list = new ArrayList();

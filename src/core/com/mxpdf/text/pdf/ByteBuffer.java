@@ -45,19 +45,19 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocWriter;
+import com.mxpdf.text.DocWriter;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * Acts like a <CODE>StringBuffer</CODE> but works with <CODE>byte</CODE> arrays.

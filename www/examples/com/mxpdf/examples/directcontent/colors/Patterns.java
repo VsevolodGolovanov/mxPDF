@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,21 +11,21 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.directcontent.colors;
+package com.mxpdf.examples.directcontent.colors;
 
 import java.io.FileOutputStream;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.Image;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.GrayColor;
-import com.lowagie.text.pdf.PatternColor;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfPatternPainter;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.GrayColor;
+import com.mxpdf.text.pdf.PatternColor;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfPatternPainter;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Painting patterns

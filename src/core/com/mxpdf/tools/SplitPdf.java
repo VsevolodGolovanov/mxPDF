@@ -45,20 +45,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.tools;
+package com.mxpdf.tools;
 
 import java.io.FileOutputStream;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfImportedPage;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfImportedPage;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * This class demonstrates how to split a PDF file using iText.

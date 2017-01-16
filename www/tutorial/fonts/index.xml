@@ -83,8 +83,8 @@ are considered to be different fonts. This is an issue that shall recur in the s
 <site chapter="/fonts/getting" section="files">getting fonts from files</site> and <site chapter="fonts/styles" section="styles">font styles</site>.
 iText tries to make these differences more transparant, by asking you
 for the font 'family' (Courier, Helvetica, Times Roman) and the font style (normal, bold, italic).<br />
-You can construct a Base 14 <site:doc class="com.lowagie.text.Font">Font</site:doc>-object with one
-of the simple <site:doc class="com.lowagie.text.Font" target="constructor_summary">constructors</site:doc>
+You can construct a Base 14 <site:doc class="com.mxpdf.text.Font">Font</site:doc>-object with one
+of the simple <site:doc class="com.mxpdf.text.Font" target="constructor_summary">constructors</site:doc>
 as is done in the next example:
 <pre class="commandline">fonts[0] =
   new Font(Font.COURIER, Font.DEFAULTSIZE, Font.NORMAL);
@@ -102,8 +102,8 @@ fonts[9] =
 	<site:section name="fontfactory">
 		<site:sectiontitle>The FontFactory-class</site:sectiontitle>
 <div>
-In the next example, we use the class <site:doc class="com.lowagie.text.FontFactory">FontFactory</site:doc> to create a Font,
-as this is the easiest way to get a new <site:doc class="com.lowagie.text.Font">Font</site:doc>-object
+In the next example, we use the class <site:doc class="com.mxpdf.text.FontFactory">FontFactory</site:doc> to create a Font,
+as this is the easiest way to get a new <site:doc class="com.mxpdf.text.Font">Font</site:doc>-object
 (unless you want to use the mechanism of <site:tutorial chapter="/fonts/styles" section="styles">Font Propagation</site:tutorial>).
 If you read the chapter on <site:tutorial chapter="/fonts/getting">getting fonts</site:tutorial>,
 you will see that there are different kinds of font 'sources'. Fontfactory has an API
@@ -140,12 +140,12 @@ fonts[9] =
 	<site:section name="basefont">
 		<site:sectiontitle>The BaseFont-class</site:sectiontitle>
 <div>
-The <site:doc class="com.lowagie.text.Font">Font</site:doc>-object returned by
-the <site:doc class="com.lowagie.text.FontFactory">FontFactory</site:doc>
+The <site:doc class="com.mxpdf.text.Font">Font</site:doc>-object returned by
+the <site:doc class="com.mxpdf.text.FontFactory">FontFactory</site:doc>
 is in many cases just a wrapper class for the more complex class
-<site:doc class="com.lowagie.text.pdf.BaseFont">BaseFont</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.BaseFont">BaseFont</site:doc>.
 You can create such a basefont directly by using one of the
-<site:doc class="com.lowagie.text.pdf.BaseFont" target="createFont(java.lang.String,%20java.lang.String,%20boolean)">BaseFont.createFont</site:doc> methods:
+<site:doc class="com.mxpdf.text.pdf.BaseFont" target="createFont(java.lang.String,%20java.lang.String,%20boolean)">BaseFont.createFont</site:doc> methods:
 <pre class="commandline">BaseFont helvetica =
   BaseFont.createFont(
     BaseFont.HELVETICA,
@@ -173,17 +173,17 @@ The encoding is the association between the character codes (obtained from text 
 The same Java character in a Java String object can be rendered in many different ways, depending on the encoding.
 Basefont has some default values, but you could use any of the encodings that are available in the font you are using.
 <table border="1">
-<tr><td><site:doc class="com.lowagie.text.pdf.BaseFont" target="WINANSI">BaseFont.WINANSI</site:doc> = <site:doc class="com.lowagie.text.pdf.BaseFont" target="CP1252">BaseFont.CP1252</site:doc></td><td>Latin 1</td></tr>
-<tr><td><site:doc class="com.lowagie.text.pdf.BaseFont" target="CP1250">BaseFont.CP1250</site:doc></td><td>Latin 2: Eastern Europe</td></tr>
-<tr><td><site:doc class="com.lowagie.text.pdf.BaseFont" target="CP1257">BaseFont.CP1257</site:doc>1257</td><td>Windows Baltic</td></tr>
-<tr><td><site:doc class="com.lowagie.text.pdf.BaseFont" target="MACROMAN">BaseFont.MACROMAN</site:doc></td><td>MacRomanEncoding</td></tr>
+<tr><td><site:doc class="com.mxpdf.text.pdf.BaseFont" target="WINANSI">BaseFont.WINANSI</site:doc> = <site:doc class="com.mxpdf.text.pdf.BaseFont" target="CP1252">BaseFont.CP1252</site:doc></td><td>Latin 1</td></tr>
+<tr><td><site:doc class="com.mxpdf.text.pdf.BaseFont" target="CP1250">BaseFont.CP1250</site:doc></td><td>Latin 2: Eastern Europe</td></tr>
+<tr><td><site:doc class="com.mxpdf.text.pdf.BaseFont" target="CP1257">BaseFont.CP1257</site:doc>1257</td><td>Windows Baltic</td></tr>
+<tr><td><site:doc class="com.mxpdf.text.pdf.BaseFont" target="MACROMAN">BaseFont.MACROMAN</site:doc></td><td>MacRomanEncoding</td></tr>
 <tr><td colspan="2">You could easily extend the list with "1251" (Cyrillic), "1253" (Greek), "1254" (Turkish)</td></tr>
 </table>
 You can ask a font for its encodings as is done in the next example:
 <site:source class="ListEncodings" />
 Note that not all fonts contain all the encodings you want. Just go looking for the font that is best suited for your needs.
 <site:source class="FontEncoding" />
-In the next example, we are passing the value <site:doc class="com.lowagie.text.pdf.BaseFont" target="IDENTITY_H">IDENTITY_H</site:doc>
+In the next example, we are passing the value <site:doc class="com.mxpdf.text.pdf.BaseFont" target="IDENTITY_H">IDENTITY_H</site:doc>
 as <i>encoding</i>. BaseFont.IDENTITY_H and BaseFont.IDENTITY_V are not really encodings.
 They indicate that the unicode character wil be looked up in the font
 and stored as-is, taking two bytes of space. It's the only way to have

@@ -42,13 +42,13 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
-import com.lowagie.text.pdf.hyphenation.Hyphenation;
-import com.lowagie.text.pdf.hyphenation.Hyphenator;
+import com.mxpdf.text.pdf.hyphenation.Hyphenation;
+import com.mxpdf.text.pdf.hyphenation.Hyphenator;
 
 /** Hyphenates words automatically accordingly to the language and country.
  * The hyphenator engine was taken from FOP and uses the TEX patterns. If a language

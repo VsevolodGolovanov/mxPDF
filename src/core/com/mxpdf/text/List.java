@@ -44,15 +44,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.lowagie.text.factories.RomanAlphabetFactory;
+import com.mxpdf.text.factories.RomanAlphabetFactory;
 
 /**
  * A <CODE>List</CODE> contains several <CODE>ListItem</CODE>s.
@@ -534,7 +534,7 @@ public class List implements TextElementArray {
 		return symbolIndent;
 	}
 	/**
-	 * @see com.lowagie.text.Element#isContent()
+	 * @see com.mxpdf.text.Element#isContent()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isContent() {
@@ -542,7 +542,7 @@ public class List implements TextElementArray {
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {

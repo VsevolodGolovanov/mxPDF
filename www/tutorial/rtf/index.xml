@@ -34,7 +34,7 @@
 		  Writer.
 		</div>
 		<div>
-		  The main class for generating RTF documents is the <site:doc class="com.lowagie.text.rtf.RtfWriter2">RtfWriter2</site:doc>.
+		  The main class for generating RTF documents is the <site:doc class="com.mxpdf.text.rtf.RtfWriter2">RtfWriter2</site:doc>.
 		  It supports most of iText's features with the exception of those features listed
 		  under the <a href="#unsupported">unsupported features</a>. In addition to this
 		  there are a number of extensions to the core iText classes that provide access

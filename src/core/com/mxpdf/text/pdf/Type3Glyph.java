@@ -42,13 +42,13 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Image;
-import com.lowagie.text.error_messages.MessageLocalization;
+package com.mxpdf.text.pdf;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.error_messages.MessageLocalization;
 /**
  * The content where Type3 glyphs are written to.
  */

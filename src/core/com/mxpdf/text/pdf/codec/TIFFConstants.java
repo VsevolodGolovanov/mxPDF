@@ -26,7 +26,7 @@
  * LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE 
  * OF THIS SOFTWARE.
  */
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 
 /**
  * A list of constants used in class TIFFImage.

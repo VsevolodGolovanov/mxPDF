@@ -44,11 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
- */
-package com.lowagie.text.error_messages;
 
-import com.lowagie.text.pdf.BaseFont;
+ */
+package com.mxpdf.text.error_messages;
+
 import java.io.BufferedReader;
 import java.io.Reader;
 import java.io.IOException;
@@ -56,9 +55,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
+import com.mxpdf.text.pdf.BaseFont;
+
 /**
  * Localizes error messages. The messages are located in the package
- * com.lowagie.text.error_messages in the form language_country.lng.
+ * com.mxpdf.text.error_messages in the form language_country.lng.
  * The internal file encoding is UTF-8 without any escape chars, it's not a
  * normal property file. See en.lng for more information on the internal format.
  * @author Paulo Soares (psoares@glintt.com)

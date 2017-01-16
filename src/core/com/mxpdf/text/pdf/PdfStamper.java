@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -55,16 +55,17 @@ import java.security.SignatureException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocWriter;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.collection.PdfCollection;
-import com.lowagie.text.pdf.interfaces.PdfEncryptionSettings;
-import com.lowagie.text.pdf.interfaces.PdfViewerPreferences;
+import com.mxpdf.text.DocWriter;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.collection.PdfCollection;
+import com.mxpdf.text.pdf.interfaces.PdfEncryptionSettings;
+import com.mxpdf.text.pdf.interfaces.PdfViewerPreferences;
+
 import java.security.cert.Certificate;
 
 /** Applies extra content to the pages of a PDF document.

@@ -130,7 +130,7 @@ Also related are the chapters on <site:tutorial chapter="/objects/anchors">Ancho
 	<site:section name="paragraph">
 		<site:sectiontitle>The Paragraph object</site:sectiontitle>
 <div>
-<site:doc class="com.lowagie.text.Paragraph">Paragraph</site:doc> is the text object you are likely to use the most.
+<site:doc class="com.mxpdf.text.Paragraph">Paragraph</site:doc> is the text object you are likely to use the most.
 It is an ArrayList of one or more other high level elements, such as Chunk, Phrase, List, Image,...
 Unlike a Chunk, a Paragraph can contain text in different fonts.
 <site:source class="DifferentFonts" />
@@ -138,7 +138,7 @@ The most important thing you need to know about paragraph, is that they have a <
 and that every new Paragraph starts on a <site:tutorial chapter="/objects/chunk" section="endline">new line</site:tutorial>.
 <site:source class="Paragraphs" />
 You can set the aligment of a Paragraph with the method
-<site:doc class="com.lowagie.text.Paragraph" target="setAlignment(int)">setAlignment(int alignment)</site:doc>.
+<site:doc class="com.mxpdf.text.Paragraph" target="setAlignment(int)">setAlignment(int alignment)</site:doc>.
 The alignment can be one of the following values:
 <ul>
 <li>Element.ALIGN_LEFT</li>
@@ -149,19 +149,19 @@ The alignment can be one of the following values:
 If you want the alignment to be justified, the space between the words can
 be stretched, as well as the space between the characters of a word.
 The default ratio of this word-char space is 2.5. You can change this
-ratio with <site:doc class="com.lowagie.text.pdf.PdfWriter" target="setSpaceCharRatio(float)">setSpaceCharRatio</site:doc>.
+ratio with <site:doc class="com.mxpdf.text.pdf.PdfWriter" target="setSpaceCharRatio(float)">setSpaceCharRatio</site:doc>.
 For instance, if you don't want the space between the characters of a word to be stretched, just do:
 <pre class="commandline">writer.setSpaceCharRatio(PdfWriter.NO_SPACE_CHAR_RATIO);</pre>
 The effect can be seen in the next example (compare page 1 and page 2 of the resulting PDF).
 <site:source class="SpaceWordRatio" />
 The following methods need no further explanation, they are pretty straightforward:
 <ul>
-<li><site:doc class="com.lowagie.text.Paragraph" target="setIndentationLeft(float)">setIndentationLeft(float indentation)</site:doc></li>
-<li><site:doc class="com.lowagie.text.Paragraph" target="setIndentationRight(float)">setIndentationRight(float indentation)</site:doc></li>
-<li><site:doc class="com.lowagie.text.Paragraph" target="setSpacingBefore(float)">setSpacingBefore(float spacing)</site:doc></li>
-<li><site:doc class="com.lowagie.text.Paragraph" target="setSpacingAfter(float)">setSpacingAfter(float spacing)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.Paragraph" target="setIndentationLeft(float)">setIndentationLeft(float indentation)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.Paragraph" target="setIndentationRight(float)">setIndentationRight(float indentation)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.Paragraph" target="setSpacingBefore(float)">setSpacingBefore(float spacing)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.Paragraph" target="setSpacingAfter(float)">setSpacingAfter(float spacing)</site:doc></li>
 </ul>
-Remark: the method <site:doc class="com.lowagie.text.Paragraph" target="setFirstLineIndent(float)">setFirstLineIndent(float firstLineIndent)</site:doc>
+Remark: the method <site:doc class="com.mxpdf.text.Paragraph" target="setFirstLineIndent(float)">setFirstLineIndent(float firstLineIndent)</site:doc>
 only works for paragraphs inside a ColumnText or PdfPTable object.
 <site:source class="ParagraphAttributes" />
 </div>
@@ -170,17 +170,17 @@ only works for paragraphs inside a ColumnText or PdfPTable object.
 	<site:section name="phrase">
 		<site:sectiontitle>The Phrase Object</site:sectiontitle>
 <div>
-This extra section deals with the somewhat quirky class <site:doc class="com.lowagie.text.Phrase">Phrase</site:doc>
-for the sake of completeness. In most cases you will prefer to use the class <site:doc class="com.lowagie.text.Paragraph">Paragraph</site:doc>.
+This extra section deals with the somewhat quirky class <site:doc class="com.mxpdf.text.Phrase">Phrase</site:doc>
+for the sake of completeness. In most cases you will prefer to use the class <site:doc class="com.mxpdf.text.Paragraph">Paragraph</site:doc>.
 <site:source class="Phrases" />
 The 'leading' parameter is very important for all other High Level Objects in iText, it's the space between two line and should therefore be a positive value.
 <site:source class="NegativeLeading" />
-You can use a <site:doc class="com.lowagie.text.Phrase" target="constructor_summary">constructor</site:doc> to create a Phrase-object,
-but if you have special symbols in your text-string, you can use <site:doc class="com.lowagie.text.Phrase" target="getInstance(String)">Phrase.getInstance</site:doc>
+You can use a <site:doc class="com.mxpdf.text.Phrase" target="constructor_summary">constructor</site:doc> to create a Phrase-object,
+but if you have special symbols in your text-string, you can use <site:doc class="com.mxpdf.text.Phrase" target="getInstance(String)">Phrase.getInstance</site:doc>
 to have your special symbols substituted (this only works with the base 14 fonts, Symbol and ZapfDingBats not included).
 <site:source class="SymbolSubstitution" />
 A more safe way to do font substitution, is be using class
-<site:doc class="com.lowagie.text.pdf.FontSelector">FontSelector</site:doc>:
+<site:doc class="com.mxpdf.text.pdf.FontSelector">FontSelector</site:doc>:
 <site:source class="FontSelection" />
 </div>
 	</site:section>
@@ -188,29 +188,29 @@ A more safe way to do font substitution, is be using class
 	<site:section name="list">
 		<site:sectiontitle>The List object</site:sectiontitle>
 <div>
-The <site:doc class="com.lowagie.text.List">List object</site:doc> gives you functionality that is
+The <site:doc class="com.mxpdf.text.List">List object</site:doc> gives you functionality that is
 very similar to the &lt;UL&gt; or &lt;OL&gt; tags in HTML. The iText equivalent of &lt;LI&gt; is
-<site:doc class="com.lowagie.text.ListItem">ListItem</site:doc>.<br />
+<site:doc class="com.mxpdf.text.ListItem">ListItem</site:doc>.<br />
 The type of List is chosen with the parameters <span class="commandline">numbered</span>
-and <span class="commandline">lettered</span> in the <site:doc class="com.lowagie.text.List" target="constructor_summary">constructor</site:doc>.
+and <span class="commandline">lettered</span> in the <site:doc class="com.mxpdf.text.List" target="constructor_summary">constructor</site:doc>.
 You also have to specify a parameter <span class="commandline">symbolIndent</span>. This is the space that will be reserved for the list symbol.
 For unordered lists, you can choose any Chunk or String as list symbol with methods
-<site:doc class="com.lowagie.text.List" target="setListSymbol(com.lowagie.text.Chunk)">setListSymbol(Chunk symbol)</site:doc> or
-<site:doc class="com.lowagie.text.List" target="setListSymbol(java.lang.String)">setListSymbol(String symbol)</site:doc>.
+<site:doc class="com.mxpdf.text.List" target="setListSymbol(com.mxpdf.text.Chunk)">setListSymbol(Chunk symbol)</site:doc> or
+<site:doc class="com.mxpdf.text.List" target="setListSymbol(java.lang.String)">setListSymbol(String symbol)</site:doc>.
 A numbered list always starts with '1', unless you change the first number with
-<site:doc class="com.lowagie.text.List" target="setFirst(int)">setFirst(int first)</site:doc>.
+<site:doc class="com.mxpdf.text.List" target="setFirst(int)">setFirst(int first)</site:doc>.
 The default first character for lists that are ordered with letters is 'A' (uppercase),
 you can change it to lower case with method
-<site:doc class="com.lowagie.text.List" target="setFirst(char)">setFirst(char first)</site:doc> and pass 'a' as parameter.
+<site:doc class="com.mxpdf.text.List" target="setFirst(char)">setFirst(char first)</site:doc> and pass 'a' as parameter.
 <pre class="commandline">List list = new List(true, 20);
 list.add(new ListItem("First line"));</pre>
 <site:source class="Lists" />
-There are some extra classes derived from the <site:doc class="com.lowagie.text.List">List object</site:doc>
+There are some extra classes derived from the <site:doc class="com.mxpdf.text.List">List object</site:doc>
 that allow you to generate more fancy lists:
-<site:doc class="com.lowagie.text.RomanList">RomanList</site:doc>,
-<site:doc class="com.lowagie.text.GreekList">GreekList</site:doc>,
-<site:doc class="com.lowagie.text.ZapfDingbatsList">ZapfDingbatsList</site:doc> and
-<site:doc class="com.lowagie.text.ZapfDingbatsNumberList">ZapfDingbatsNumberList</site:doc>.
+<site:doc class="com.mxpdf.text.RomanList">RomanList</site:doc>,
+<site:doc class="com.mxpdf.text.GreekList">GreekList</site:doc>,
+<site:doc class="com.mxpdf.text.ZapfDingbatsList">ZapfDingbatsList</site:doc> and
+<site:doc class="com.mxpdf.text.ZapfDingbatsNumberList">ZapfDingbatsNumberList</site:doc>.
 Their usage is pretty straightforward:
 <site:source class="FancyLists" />
 </div>

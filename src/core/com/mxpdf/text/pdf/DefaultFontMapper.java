@@ -42,15 +42,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.awt.Font;
 import java.io.File;
 import java.util.HashMap;
 
-import com.lowagie.text.ExceptionConverter;
+import com.mxpdf.text.ExceptionConverter;
 /** Default class to map awt fonts to BaseFont.
  * @author Paulo Soares (psoares@consiste.pt)
  */
@@ -111,6 +111,8 @@ public class DefaultFontMapper implements FontMapper {
             String fontKey = null;
             String logicalName = font.getName();
 
+            System.out.println(logicalName);
+            
             if (logicalName.equalsIgnoreCase("DialogInput") || logicalName.equalsIgnoreCase("Monospaced") || logicalName.equalsIgnoreCase("Courier")) {
 
                 if (font.isItalic()) {

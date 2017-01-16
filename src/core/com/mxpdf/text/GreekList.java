@@ -42,17 +42,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
- */
-package com.lowagie.text;
 
-import com.lowagie.text.factories.GreekAlphabetFactory;
+ */
+package com.mxpdf.text;
+
+import com.mxpdf.text.factories.GreekAlphabetFactory;
 
 /**
  * 
  * A special-version of <CODE>LIST</CODE> which use greek-letters.
  * 
- * @see com.lowagie.text.List
+ * @see com.mxpdf.text.List
  */
 
 public class GreekList extends List {

@@ -44,12 +44,12 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.draw;
+package com.mxpdf.text.pdf.draw;
 
-import com.lowagie.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfContentByte;
 
 /**
  * Interface for an Element that allows you to draw something at the current

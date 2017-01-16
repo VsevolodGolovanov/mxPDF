@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,17 +11,17 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.fonts.getting;
+package com.mxpdf.examples.fonts.getting;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Changing the style of a FontFactory Font.

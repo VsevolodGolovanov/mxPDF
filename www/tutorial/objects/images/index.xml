@@ -139,20 +139,20 @@ iText supports different kinds of image formats (even formats that aren't limite
 <li><b>WMF:</b> Windows Metafile Format. A vector graphics format for Windows-compatible computers used mostly for word-processing clip art.</li>
 <li>basic support for <b>EPS:</b> Encapsulated PostScript; a graphics format that describes an image in the PostScript language.</li>
 <li><b>java.awt.Image:</b> a JAVA object that is in the JDK from SUN</li>
-<li><b>com.lowagie.text.pdf.PdfTemplate:</b> a sequence of PDF syntax, defined in a PdfTemplate can be wrapped in an Image</li>
-<li><b>com.lowagie.text.pdf.Barcode:</b> an abstract class, check the <site:tutorial chapter="/objects/images/tiff" section="barcode">implementing classes</site:tutorial> to know what types of barcodes are supported</li>
+<li><b>com.mxpdf.text.pdf.PdfTemplate:</b> a sequence of PDF syntax, defined in a PdfTemplate can be wrapped in an Image</li>
+<li><b>com.mxpdf.text.pdf.Barcode:</b> an abstract class, check the <site:tutorial chapter="/objects/images/tiff" section="barcode">implementing classes</site:tutorial> to know what types of barcodes are supported</li>
 </ul>
 An Image can be created with one of the
-<site:doc class="com.lowagie.text.Image" target="getInstance(java.lang.String)">getInstance</site:doc>-methods.
-<site:doc class="com.lowagie.text.Image">Image</site:doc> is an abstract class, so the getInstance method will detect the type of the given image (Jpeg, WMF,...) and return the corresponding object (<site:doc class="com.lowagie.text.Jpeg">Jpeg</site:doc>, <site:doc class="com.lowagie.text.ImgWMF">ImgWMF</site:doc>,...).
+<site:doc class="com.mxpdf.text.Image" target="getInstance(java.lang.String)">getInstance</site:doc>-methods.
+<site:doc class="com.mxpdf.text.Image">Image</site:doc> is an abstract class, so the getInstance method will detect the type of the given image (Jpeg, WMF,...) and return the corresponding object (<site:doc class="com.mxpdf.text.Jpeg">Jpeg</site:doc>, <site:doc class="com.mxpdf.text.ImgWMF">ImgWMF</site:doc>,...).
 Lots of PDF libraries decompress images and change them into a Bitmap-like format before adding them to the PDF-file. This approach is avoided in iText, because it results in huge PDF files. The size of the resulting file is tens of times larger than the sum of the different images. This is not the case with iText. Identical Images are also reused (there's only one Image XObject) to save space.
 <site:source class="Images" />
-The most common way to get an Image instance, is to use the path to the file (<site:doc class="com.lowagie.text.Image" target="getInstance(java.lang.String)">getInstance(java.lang.String)</site:doc>) or the URL (<site:doc class="com.lowagie.text.Image" target="getInstance(java.net.URL)">getInstance(java.net.URL)</site:doc>),
+The most common way to get an Image instance, is to use the path to the file (<site:doc class="com.mxpdf.text.Image" target="getInstance(java.lang.String)">getInstance(java.lang.String)</site:doc>) or the URL (<site:doc class="com.mxpdf.text.Image" target="getInstance(java.net.URL)">getInstance(java.net.URL)</site:doc>),
 but you can also create an Image using the raw image data (for instance if you have an Image stored in a database):
 <site:source class="RawData" />
 As iText is a JAVA library, the java.awt.Image object is also supported, but be careful when you are using this functionality on UNIX/Linux systems.
 As you know you may need some special X requirements when using the java.awt.Toolkit for creating a java.awt.Image.
-If you stick to com.lowagie.text.Image, you don't need this extra requirement; you can use com.lowagie.text.Image on every platform.
+If you stick to com.mxpdf.text.Image, you don't need this extra requirement; you can use com.mxpdf.text.Image on every platform.
 <site:source class="AwtImage" />
 </div>
 	</site:section>
@@ -160,15 +160,15 @@ If you stick to com.lowagie.text.Image, you don't need this extra requirement; y
 		<site:sectiontitle>Image alignment</site:sectiontitle>
 <div>
 You can set the alignment of an image with
-<site:doc class="com.lowagie.text.Image" target="setAlignment(int)">setAlignment(int)</site:doc>.
+<site:doc class="com.mxpdf.text.Image" target="setAlignment(int)">setAlignment(int)</site:doc>.
 As parameter, you can use one of the self explaining constants
-<site:doc class="com.lowagie.text.Image" target="LEFT">LEFT</site:doc>,
-<site:doc class="com.lowagie.text.Image" target="RIGHT">RIGHT</site:doc> or
-<site:doc class="com.lowagie.text.Image" target="MIDDLE">MIDDLE</site:doc>
+<site:doc class="com.mxpdf.text.Image" target="LEFT">LEFT</site:doc>,
+<site:doc class="com.mxpdf.text.Image" target="RIGHT">RIGHT</site:doc> or
+<site:doc class="com.mxpdf.text.Image" target="MIDDLE">MIDDLE</site:doc>
 <site:source class="Alignment" />
 You can combine these alignment constants with
-<site:doc class="com.lowagie.text.Image" target="TEXTWRAP">TEXTWRAP</site:doc> or
-<site:doc class="com.lowagie.text.Image" target="UNDERLYING">UNDERLYING</site:doc>.
+<site:doc class="com.mxpdf.text.Image" target="TEXTWRAP">TEXTWRAP</site:doc> or
+<site:doc class="com.mxpdf.text.Image" target="UNDERLYING">UNDERLYING</site:doc>.
 With the first constant, you can have the text wrapped around the image.
 With the second constant, you specify that the text should cover the image.
 Both constants are illustrated in the following example:
@@ -195,14 +195,14 @@ simple translations, some scaling or basic rotating.<br /><br />
 <div class="subtitle">Translation</div>
 One thing you must know about the coordinate system is the place of the origin:
 it's in the lower left corner. The parameters of the method
-<site:doc class="com.lowagie.text.Image" target="setAbsolutePosition(float,%20float)">setAbsolutePosition(float, float)</site:doc>
+<site:doc class="com.mxpdf.text.Image" target="setAbsolutePosition(float,%20float)">setAbsolutePosition(float, float)</site:doc>
 define the lowerleft corner of the image.
 <site:source class="AbsolutePositions" />
 <div class="subtitle">Scaling</div>
 If you want to scale the image to a size of your own choice, use on of the
-<site:doc class="com.lowagie.text.Image" target="scaleAbsolute(float,%20float)">scaleAbsolute[Width|Height]</site:doc>-methods.
+<site:doc class="com.mxpdf.text.Image" target="scaleAbsolute(float,%20float)">scaleAbsolute[Width|Height]</site:doc>-methods.
 If you want to scale the image to a certain percentage, use on of the
-<site:doc class="com.lowagie.text.Image" target="scalePercent(float)">scalePercent</site:doc>-methods.<br />
+<site:doc class="com.mxpdf.text.Image" target="scalePercent(float)">scalePercent</site:doc>-methods.<br />
 Note that the resolution of an image that is added without scaling will be 72dpi by default.
 If an image is placed with a scaling of 50% the the resolution will be 144.
 With lower scalings the resolution will increase because the pixels are the same but the size will be smaller.
@@ -212,15 +212,15 @@ in the pdf with a scaling of 24% (72/300 = 0.24), the image in the pdf will be 5
 The image will always be 1500X1500 pixel whatever the size.
 <site:source class="Scaling" />
 Another useful method for scaling is
-<site:doc class="com.lowagie.text.Image" target="scaleToFit(float,%20float)">scaleToFit</site:doc>.
+<site:doc class="com.mxpdf.text.Image" target="scaleToFit(float,%20float)">scaleToFit</site:doc>.
 This method will scale the image to fit a rectangle, but will keep the XY-ratio intact.
 Note that the Images used for the next example are not my own. They are used by courtesy of
 <a href="http://www.bigfoto.com">www.bigfoto.com</a>.
 <site:source class="DvdCover" />
 <div class="subtitle">Rotating</div>
 You can rotate an Image with one of these methods:
-<site:doc class="com.lowagie.text.Image" target="setRotation(float)">setRotation(float)</site:doc> (angle in radians) or
-<site:doc class="com.lowagie.text.Image" target="setRotationDegrees(float)">setRotationDegrees(float)</site:doc> (angle in degrees).
+<site:doc class="com.mxpdf.text.Image" target="setRotation(float)">setRotation(float)</site:doc> (angle in radians) or
+<site:doc class="com.mxpdf.text.Image" target="setRotationDegrees(float)">setRotationDegrees(float)</site:doc> (angle in degrees).
 <site:source class="Rotating" />
 </div>
 	</site:section>
@@ -230,12 +230,12 @@ You can rotate an Image with one of these methods:
 <div>
 <div class="subtitle">Clickable images</div>
 If you want a clickable image or you want to add an annotation to an image, you have to construct an Annotation-object and add it to the image. You don't need to specify a position (you can take 0, 0, 0, 0). The position will be internally updated to fit the image.
-See the method <site:doc class="com.lowagie.text.Image" target="setAnnotation(com.lowagie.text.Annotation)">setAnnotation(com.lowagie.text.Annotation)</site:doc>
+See the method <site:doc class="com.mxpdf.text.Image" target="setAnnotation(com.mxpdf.text.Annotation)">setAnnotation(com.mxpdf.text.Annotation)</site:doc>
 and the chapter on <site:tutorial chapter="/objects/anchors" section="annotation">annotations</site:tutorial>.
 <site:source class="AnnotatedImage" />
 <div class="subtitle">Image inside a Chunk</div>
  In some cases it can be handy to wrap an image inside a <site:tutorial chapter="/objects/chunk">Chunk</site:tutorial>. Just create a Chunk with an image and an offset
- with one of the <site:doc class="com.lowagie.text.Chunk" target="Chunk(com.lowagie.text.Image,%20float,%20float)">Chunk constructors</site:doc> that take an Image as parameter.
+ with one of the <site:doc class="com.mxpdf.text.Chunk" target="Chunk(com.mxpdf.text.Image,%20float,%20float)">Chunk constructors</site:doc> that take an Image as parameter.
 <site:source class="ImageChunks" />
 <div class="subtitle">Image masks</div>
 You can create an Image that can be used as mask, making another image transparent:
@@ -330,7 +330,7 @@ You can create an Image that can be used as mask, making another image transpare
 </tr>
 </table>
 This image has a size of 8 by 8 pixels, 1 component and 1 byte per component.
-Using the method <site:doc class="com.lowagie.text.Image" target="makeMask()">makeMask()</site:doc>, it can be turned into a mask:
+Using the method <site:doc class="com.mxpdf.text.Image" target="makeMask()">makeMask()</site:doc>, it can be turned into a mask:
 <pre class="commandline">byte maskr[] =
    {(byte)0x3c,
     (byte)0x7e,

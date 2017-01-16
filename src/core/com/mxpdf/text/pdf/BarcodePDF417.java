@@ -43,20 +43,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.image.MemoryImageSource;
 import java.util.ArrayList;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.BadElementException;
-import com.lowagie.text.Image;
-import com.lowagie.text.pdf.codec.CCITTG4Encoder;
+import com.mxpdf.text.BadElementException;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.codec.CCITTG4Encoder;
 
 /** Generates the 2D barcode PDF417. Supports dimensioning auto-sizing, fixed
  * and variable sizes, automatic and manual error levels, raw codeword input,

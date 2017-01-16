@@ -44,14 +44,14 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.interfaces;
+package com.mxpdf.text.pdf.interfaces;
 
-import com.lowagie.text.pdf.PdfAcroForm;
-import com.lowagie.text.pdf.PdfAnnotation;
-import com.lowagie.text.pdf.PdfFormField;
+import com.mxpdf.text.pdf.PdfAcroForm;
+import com.mxpdf.text.pdf.PdfAnnotation;
+import com.mxpdf.text.pdf.PdfFormField;
 
 public interface PdfAnnotations {
 

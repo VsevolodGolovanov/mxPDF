@@ -42,17 +42,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.ArrayList;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Font;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Utilities;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Utilities;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /** Selects the appropriate fonts that contain the glyphs needed to
  * render text correctly. The fonts are checked in order until the 

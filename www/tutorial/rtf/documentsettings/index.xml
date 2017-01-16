@@ -51,7 +51,7 @@
     	      to characters being displayed incorrectly.</dd>
     	    <dt style="font-weight: bold;">dataCacheStyle (Integer)</dt>
     	    <dd>Specifies where the RTF document is cached during document generation. Valid
-    	      values are specified in the <site:doc class="com.lowagie.text.rtf.document.output.RtfDataCache">RtfDataCache</site:doc>.
+    	      values are specified in the <site:doc class="com.mxpdf.text.rtf.document.output.RtfDataCache">RtfDataCache</site:doc>.
     	      <ul>
     	        <li>CACHE_MEMORY: The default keeps the whole document in memory. This increases
     	          the generation speed, but places a maximum size on the document.</li>
@@ -108,7 +108,7 @@ document.close();
     <site:section name="shortcuts">
     	<site:sectiontitle>Viewer version settings</site:sectiontitle>
     	<div>
-    	  The <site:doc class="com.lowagie.text.rtf.document.RtfDocumentSettings">RtfDocumentSettings</site:doc> also provides a number of
+    	  The <site:doc class="com.mxpdf.text.rtf.document.RtfDocumentSettings">RtfDocumentSettings</site:doc> also provides a number of
     	  methods to set generation options for specific viewers. These act as shortcuts to
     	  set a number of the generation settings listed above. Methods for the following viewers
     	  are provided

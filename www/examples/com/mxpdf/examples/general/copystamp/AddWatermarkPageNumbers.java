@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,18 +11,18 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.general.copystamp;
+package com.mxpdf.examples.general.copystamp;
 
 import java.io.FileOutputStream;
 import java.util.HashMap;
 
-import com.lowagie.text.Element;
-import com.lowagie.text.Image;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfStamper;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfStamper;
 
 /**
  * Reads the pages of an existing PDF file, adds pagenumbers and a watermark.

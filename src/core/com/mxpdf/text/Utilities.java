@@ -44,9 +44,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.io.File;
 import java.io.IOException;
@@ -58,7 +58,7 @@ import java.util.Hashtable;
 import java.util.Properties;
 import java.util.Set;
 
-import com.lowagie.text.pdf.PRTokeniser;
+import com.mxpdf.text.pdf.PRTokeniser;
 
 /**
  * A collection of convenience methods that were present in many different iText

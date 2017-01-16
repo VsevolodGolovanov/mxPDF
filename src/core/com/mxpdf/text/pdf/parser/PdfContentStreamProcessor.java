@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf.parser;
+package com.mxpdf.text.pdf.parser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,19 +52,19 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Stack;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.error_messages.MessageLocalization;
-import com.lowagie.text.pdf.CMapAwareDocumentFont;
-import com.lowagie.text.pdf.DocumentFont;
-import com.lowagie.text.pdf.PRIndirectReference;
-import com.lowagie.text.pdf.PRTokeniser;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfContentParser;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfLiteral;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfNumber;
-import com.lowagie.text.pdf.PdfString;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.CMapAwareDocumentFont;
+import com.mxpdf.text.pdf.DocumentFont;
+import com.mxpdf.text.pdf.PRIndirectReference;
+import com.mxpdf.text.pdf.PRTokeniser;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfContentParser;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfLiteral;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfNumber;
+import com.mxpdf.text.pdf.PdfString;
 
 /**
  * Processor for a PDF content Stream.

@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,30 +12,30 @@
  * itext-questions@lists.sourceforge.net
  */
 
-package com.lowagie.examples.forms.create;
+package com.mxpdf.examples.forms.create;
 
 
 import java.awt.Color;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.Image;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.Barcode;
-import com.lowagie.text.pdf.BarcodeEAN;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.pdf.Barcode;
+import com.mxpdf.text.pdf.BarcodeEAN;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfPTable;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Generates a StudentCard
- * @author blowagie
+
  */
 public class StudentCard {
     /**

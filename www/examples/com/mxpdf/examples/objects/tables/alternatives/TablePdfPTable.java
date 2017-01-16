@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,19 +11,18 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.objects.tables.alternatives;
+package com.mxpdf.examples.objects.tables.alternatives;
 
 import java.awt.Color;
 import java.io.FileOutputStream;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.Element;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.SimpleCell;
-import com.lowagie.text.SimpleTable;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.rtf.RtfWriter2;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.SimpleCell;
+import com.mxpdf.text.SimpleTable;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Example that is used to test the TableAttributes class.
@@ -42,7 +41,6 @@ public class TablePdfPTable {
         try {
             // creation of the different writers
             PdfWriter.getInstance(document, new FileOutputStream("tableattributes.pdf"));
-            RtfWriter2.getInstance(document, new FileOutputStream("tableattributes.rtf"));
             // open the document
             document.open();
             // add content

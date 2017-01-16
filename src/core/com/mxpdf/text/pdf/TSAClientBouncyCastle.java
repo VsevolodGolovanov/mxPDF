@@ -44,21 +44,21 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.*;
 import java.math.*;
 import java.net.*;
-import com.lowagie.text.error_messages.MessageLocalization;
 
 import org.bouncycastle.asn1.cmp.*;
 import org.bouncycastle.asn1.x509.*;
 import org.bouncycastle.tsp.*;
 
-import com.lowagie.text.pdf.codec.Base64;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.codec.Base64;
 
 /**
  * Time Stamp Authority Client interface implementation using Bouncy Castle
@@ -130,7 +130,7 @@ public class TSAClientBouncyCastle implements TSAClient {
      * @param imprint byte[] - data imprint to be time-stamped
      * @return byte[] - encoded, TSA signed data of the timeStampToken
      * @throws Exception - TSA request failed
-     * @see com.lowagie.text.pdf.TSAClient#getTimeStampToken(com.lowagie.text.pdf.PdfPKCS7, byte[])
+     * @see com.mxpdf.text.pdf.TSAClient#getTimeStampToken(com.mxpdf.text.pdf.PdfPKCS7, byte[])
      */
     public byte[] getTimeStampToken(PdfPKCS7 caller, byte[] imprint) throws Exception {
         return getTimeStampToken(imprint);

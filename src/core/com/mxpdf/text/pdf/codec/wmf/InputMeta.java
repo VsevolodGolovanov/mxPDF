@@ -44,16 +44,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.codec.wmf;
+package com.mxpdf.text.pdf.codec.wmf;
 
 import java.awt.Color;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.lowagie.text.Utilities;
+import com.mxpdf.text.Utilities;
 
 public class InputMeta {
     

@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.awt.Graphics2D;
 import java.awt.color.ICC_Profile;
@@ -57,28 +57,28 @@ import java.io.InputStream;
 import java.lang.reflect.Constructor;
 import java.net.MalformedURLException;
 import java.net.URL;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.PRIndirectReference;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfIndirectReference;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfNumber;
-import com.lowagie.text.pdf.PdfOCG;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfStream;
-import com.lowagie.text.pdf.PdfTemplate;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.pdf.RandomAccessFileOrArray;
-import com.lowagie.text.pdf.codec.BmpImage;
-import com.lowagie.text.pdf.codec.CCITTG4Encoder;
-import com.lowagie.text.pdf.codec.GifImage;
-import com.lowagie.text.pdf.codec.JBIG2Image;
-import com.lowagie.text.pdf.codec.PngImage;
-import com.lowagie.text.pdf.codec.TiffImage;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PRIndirectReference;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfIndirectReference;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfNumber;
+import com.mxpdf.text.pdf.PdfOCG;
+import com.mxpdf.text.pdf.PdfObject;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfStream;
+import com.mxpdf.text.pdf.PdfTemplate;
+import com.mxpdf.text.pdf.PdfWriter;
+import com.mxpdf.text.pdf.RandomAccessFileOrArray;
+import com.mxpdf.text.pdf.codec.BmpImage;
+import com.mxpdf.text.pdf.codec.CCITTG4Encoder;
+import com.mxpdf.text.pdf.codec.GifImage;
+import com.mxpdf.text.pdf.codec.JBIG2Image;
+import com.mxpdf.text.pdf.codec.PngImage;
+import com.mxpdf.text.pdf.codec.TiffImage;
 
 /**
  * An <CODE>Image</CODE> is the representation of a graphic element (JPEG, PNG
@@ -985,7 +985,7 @@ public abstract class Image extends Rectangle {
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {

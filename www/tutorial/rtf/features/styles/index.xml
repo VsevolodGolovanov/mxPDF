@@ -44,7 +44,7 @@
     	  one name. Additionally there are some styles that have special meaning, such as the
     	  default style and heading styles (see <site:tutorial chapter="/rtf/features/toc">Table of contents</site:tutorial> for an example).<br /><br />
     	  
-    	  The basic stylesheets are defined in <site:doc class="com.lowagie.text.rtf.style.RtfStylesheet">RtfStylesheet</site:doc>
+    	  The basic stylesheets are defined in <site:doc class="com.mxpdf.text.rtf.style.RtfStylesheet">RtfStylesheet</site:doc>
     	  There are four stylesheets defined by default:
     	  <ul>
     	    <li><b>STYLE_NORMAL</b>: The default text style</li>
@@ -52,7 +52,7 @@
     	  </ul><br />
     	  
     	  Using the paragraph stylesheets is very simple. Just set them as the font for the
-    	  <site:doc class="com.lowagie.text.Paragraph">Paragraph</site:doc> you wish to apply the style to.
+    	  <site:doc class="com.mxpdf.text.Paragraph">Paragraph</site:doc> you wish to apply the style to.
     	  
     	  <pre class="commandline">
 // Simply set the stylesheet you wish to use as the Font
@@ -73,7 +73,7 @@ document.add(new Paragraph("Just some text that is formatted " +
     	<div>
     	  While using the default stylesheets as they are can sometimes be sufficient, often
     	  it will be necessary to adapt them to the requirements. To do this simply use the
-    	  methods provided by the <site:doc class="com.lowagie.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
+    	  methods provided by the <site:doc class="com.mxpdf.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
     	  on the default styles provided. Consult the javadoc for which properties can be changed.<br /><br />
     	  
     	  One thing that is important is that all changes must be done before <span class="commandline">document.open()</span>
@@ -105,10 +105,10 @@ RtfParagraphStyle.STYLE_HEADING_2.setSize(12);
     	<site:sectiontitle>Extending the list of stylesheets</site:sectiontitle>
     	<div>
     	  In some cases you might want to add your own stylesheets to the document. This basically
-    	  comes down to creating your own <site:doc class="com.lowagie.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
-    	  object and then registering it with the <site:doc class="com.lowagie.text.rtf.style.RtfWriter2">RtfWriter2</site:doc>.<br /><br />
+    	  comes down to creating your own <site:doc class="com.mxpdf.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
+    	  object and then registering it with the <site:doc class="com.mxpdf.text.rtf.style.RtfWriter2">RtfWriter2</site:doc>.<br /><br />
     	  
-    	  There are two ways for creating an <site:doc class="com.lowagie.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
+    	  There are two ways for creating an <site:doc class="com.mxpdf.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
     	  
     	  <ul>
     	    <li><b>With inheritance:</b> use the <span class="commandline">RtfParagraphStyle(name, basedOnName)</span>
@@ -119,10 +119,10 @@ RtfParagraphStyle.STYLE_HEADING_2.setSize(12);
     	  </ul>
     	  
     	  In both cases it is important, that the name used to identify the new paragraph stylesheet is unique. After creating
-    	  the <site:doc class="com.lowagie.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc> set all the other
+    	  the <site:doc class="com.mxpdf.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc> set all the other
     	  properties you wish to have.<br /><br />
     	  
-    	  Finally you must register the new <site:doc class="com.lowagie.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
+    	  Finally you must register the new <site:doc class="com.mxpdf.text.rtf.style.RtfParagraphStyle">RtfParagraphStyle</site:doc>
     	  before calling <span class="commandline">document.open()</span>. Otherwise while the properties will
     	  be set, the stylesheet information won't be set correctly.
     	  

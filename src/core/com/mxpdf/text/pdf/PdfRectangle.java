@@ -44,12 +44,12 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
-import com.lowagie.text.Rectangle;
+import com.mxpdf.text.Rectangle;
 
 /**
  * <CODE>PdfRectangle</CODE> is the PDF Rectangle object.
@@ -61,7 +61,7 @@ import com.lowagie.text.Rectangle;
  * This object is described in the 'Portable Document Format Reference Manual version 1.3'
  * section 7.1 (page 183).
  *
- * @see		com.lowagie.text.Rectangle
+ * @see		com.mxpdf.text.Rectangle
  * @see		PdfArray
  */
 

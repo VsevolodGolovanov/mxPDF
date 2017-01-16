@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -68,19 +68,19 @@ import java.util.Stack;
 import java.security.Key;
 import java.security.MessageDigest;
 import java.security.cert.Certificate;
-import com.lowagie.text.error_messages.MessageLocalization;
-
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.exceptions.BadPasswordException;
-import com.lowagie.text.exceptions.InvalidPdfException;
-import com.lowagie.text.exceptions.UnsupportedPdfException;
-import com.lowagie.text.pdf.interfaces.PdfViewerPreferences;
-import com.lowagie.text.pdf.internal.PdfViewerPreferencesImp;
 
 import org.bouncycastle.cms.CMSEnvelopedData;
 import org.bouncycastle.cms.RecipientInformation;
+
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.exceptions.BadPasswordException;
+import com.mxpdf.text.exceptions.InvalidPdfException;
+import com.mxpdf.text.exceptions.UnsupportedPdfException;
+import com.mxpdf.text.pdf.interfaces.PdfViewerPreferences;
+import com.mxpdf.text.pdf.internal.PdfViewerPreferencesImp;
 
 /** Reads a PDF document.
  * @author Paulo Soares (psoares@consiste.pt)
@@ -590,7 +590,7 @@ public class PdfReader implements PdfViewerPreferences {
             o = documentIDs.getPdfObject(0);
             strings.remove(o);
             s = o.toString();
-            documentID = com.lowagie.text.DocWriter.getISOBytes(s);
+            documentID = com.mxpdf.text.DocWriter.getISOBytes(s);
             if (documentIDs.size() > 1)
                 strings.remove(documentIDs.getPdfObject(1));
         }
@@ -607,10 +607,10 @@ public class PdfReader implements PdfViewerPreferences {
         if (filter.equals(PdfName.STANDARD)) {
             s = enc.get(PdfName.U).toString();
             strings.remove(enc.get(PdfName.U));
-            uValue = com.lowagie.text.DocWriter.getISOBytes(s);
+            uValue = com.mxpdf.text.DocWriter.getISOBytes(s);
             s = enc.get(PdfName.O).toString();
             strings.remove(enc.get(PdfName.O));
-            oValue = com.lowagie.text.DocWriter.getISOBytes(s);
+            oValue = com.mxpdf.text.DocWriter.getISOBytes(s);
 
             o = enc.get(PdfName.P);
             if (!o.isNumber())

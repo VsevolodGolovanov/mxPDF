@@ -44,18 +44,18 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.events;
+package com.mxpdf.text.pdf.events;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfPCell;
-import com.lowagie.text.pdf.PdfPCellEvent;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfPCell;
+import com.mxpdf.text.pdf.PdfPCellEvent;
 
 /**
  * If you want to add more than one event to a cell,
@@ -78,7 +78,7 @@ public class PdfPCellEventForwarder implements PdfPCellEvent {
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.PdfPCellEvent#cellLayout(com.lowagie.text.pdf.PdfPCell, com.lowagie.text.Rectangle, com.lowagie.text.pdf.PdfContentByte[])
+	 * @see com.mxpdf.text.pdf.PdfPCellEvent#cellLayout(com.mxpdf.text.pdf.PdfPCell, com.mxpdf.text.Rectangle, com.mxpdf.text.pdf.PdfContentByte[])
 	 */
 	public void cellLayout(PdfPCell cell, Rectangle position, PdfContentByte[] canvases) {
 		PdfPCellEvent event;

@@ -42,15 +42,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text;
+package com.mxpdf.text;
 
 /**
  * 
  * A special-version of <CODE>LIST</CODE> which use zapfdingbats-numbers (1..10).
  * 
- * @see com.lowagie.text.List
+ * @see com.mxpdf.text.List
  * @author Michael Niedermair and Bruno Lowagie
  */
 

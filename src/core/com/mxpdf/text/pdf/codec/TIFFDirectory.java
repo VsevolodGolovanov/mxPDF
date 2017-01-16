@@ -43,16 +43,16 @@
  * use in the design, construction, operation or maintenance of any 
  * nuclear facility.
  */
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.RandomAccessFileOrArray;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.RandomAccessFileOrArray;
 
 /**
  * A class representing an Image File Directory (IFD) from a TIFF 6.0

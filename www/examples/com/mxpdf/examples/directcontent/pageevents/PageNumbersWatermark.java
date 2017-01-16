@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,28 +11,28 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.directcontent.pageevents;
+package com.mxpdf.examples.directcontent.pageevents;
 
 import java.awt.Color;
 import java.io.FileOutputStream;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.Element;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Font;
-import com.lowagie.text.Image;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfGState;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfPageEventHelper;
-import com.lowagie.text.pdf.PdfTemplate;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.PageSize;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfGState;
+import com.mxpdf.text.pdf.PdfPTable;
+import com.mxpdf.text.pdf.PdfPageEventHelper;
+import com.mxpdf.text.pdf.PdfTemplate;
+import com.mxpdf.text.pdf.PdfWriter;
 /**
  * Demonstrates the use of templates to add Watermarks and Pagenumbers.
  */
@@ -77,7 +77,7 @@ public class PageNumbersWatermark extends PdfPageEventHelper {
     }
     
     /**
-     * @see com.lowagie.text.pdf.PdfPageEventHelper#onOpenDocument(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document)
+     * @see com.mxpdf.text.pdf.PdfPageEventHelper#onOpenDocument(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document)
      */
     public void onOpenDocument(PdfWriter writer, Document document) {
         try {
@@ -110,7 +110,7 @@ public class PageNumbersWatermark extends PdfPageEventHelper {
     }    
     
     /**
-     * @see com.lowagie.text.pdf.PdfPageEventHelper#onEndPage(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document)
+     * @see com.mxpdf.text.pdf.PdfPageEventHelper#onEndPage(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document)
      */
     public void onEndPage(PdfWriter writer, Document document) {
         PdfContentByte cb = writer.getDirectContent();
@@ -166,7 +166,7 @@ public class PageNumbersWatermark extends PdfPageEventHelper {
     }
     
     /**
-     * @see com.lowagie.text.pdf.PdfPageEventHelper#onStartPage(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document)
+     * @see com.mxpdf.text.pdf.PdfPageEventHelper#onStartPage(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document)
      */
     public void onStartPage(PdfWriter writer, Document document) {
         if (writer.getPageNumber() < 3) {
@@ -182,7 +182,7 @@ public class PageNumbersWatermark extends PdfPageEventHelper {
     }
     
     /**
-     * @see com.lowagie.text.pdf.PdfPageEventHelper#onCloseDocument(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document)
+     * @see com.mxpdf.text.pdf.PdfPageEventHelper#onCloseDocument(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document)
      */
     public void onCloseDocument(PdfWriter writer, Document document) {
        tpl.beginText();

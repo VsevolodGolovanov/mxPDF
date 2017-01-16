@@ -44,14 +44,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 /**
  * Parses the page or template content.
  * @author Paulo Soares (psoares@consiste.pt)

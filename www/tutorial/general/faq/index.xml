@@ -75,22 +75,22 @@ to calculate the number of points:<ul>
 <div>
 It strikes me how many times this question is asked on the mailing-list.
 The method you need to create a new page isn't that cryptic:
-<site:doc class="com.lowagie.text.Document" target="newPage()">document.newPage()</site:doc>.
+<site:doc class="com.mxpdf.text.Document" target="newPage()">document.newPage()</site:doc>.
 Of course, there are some little caveats:
-<ul><li>If you are construction an Object such as <site:doc class="com.lowagie.text.Section">Section</site:doc>,
-you can't just invoke <site:doc class="com.lowagie.text.Document">newPage()</site:doc> on the document;
+<ul><li>If you are construction an Object such as <site:doc class="com.mxpdf.text.Section">Section</site:doc>,
+you can't just invoke <site:doc class="com.mxpdf.text.Document">newPage()</site:doc> on the document;
 you should tell the object, that you want to go to the next page.
-In this case, you should add a <site:doc class="com.lowagie.text.Chunk" target="NEXTPAGE">Chunk.NEXPAGE</site:doc>
+In this case, you should add a <site:doc class="com.mxpdf.text.Chunk" target="NEXTPAGE">Chunk.NEXPAGE</site:doc>
 to the object.</li>
 <li>If you invoke <span class="commandline">newPage</span>
 and the current page is blank, no new page will be added. You can insert blank pages if you
 add something 'invisible' to the blank page. In the example below, a
-<site:doc class="com.lowagie.text.Chunk" target="NEWLINE">Chunk.NEWLINE</site:doc> is added.
+<site:doc class="com.mxpdf.text.Chunk" target="NEWLINE">Chunk.NEWLINE</site:doc> is added.
 <pre class="commandline">document.newPage();
 document.add(Chunk.NEWLINE);
 document.newPage();</pre>
 Or you can tell the writer the page isn't empty (allthough it IS). This is done with the
-method <site:doc class="com.lowagie.text.pdf.PdfWriter" target="setPageEmpty(boolean)">setPageEmpty</site:doc>
+method <site:doc class="com.mxpdf.text.pdf.PdfWriter" target="setPageEmpty(boolean)">setPageEmpty</site:doc>
 <pre class="commandline">document.newPage();
 writer.setPageEmpty(false);
 document.newPage();</pre></li></ul>
@@ -110,7 +110,7 @@ You can always check the most recent releasenumber on the <a href="http://www.lo
 <site:image source="metadata.gif">Document Properties Window</site:image><br />
 Of course, if a post-processing tool was used, another product will be listed as
 PDF Producer. In that case, you can ask the library programmatically for its version
-with <site:doc class="com.lowagie.text.Document" target="getVersion()">Document.getVersion()</site:doc>
+with <site:doc class="com.mxpdf.text.Document" target="getVersion()">Document.getVersion()</site:doc>
 and send the output to the System.out or System.err.
 <site:source class="iTextVersion" />
 </div>
@@ -125,13 +125,13 @@ to which the file conforms. For a file conforming to PDF version 1.5, the
 header should be
 <pre class="commandline">%PDF−1.5</pre></blockquote>
 iText generated documents have version PDF-1.4 by default, but you can change
-the version with the method <site:doc class="com.lowagie.text.pdf.PdfWriter" target="setPdfVersion(char)">setPdfVersion</site:doc>.
+the version with the method <site:doc class="com.mxpdf.text.pdf.PdfWriter" target="setPdfVersion(char)">setPdfVersion</site:doc>.
 The parameter can be
-<site:doc class="com.lowagie.text.pdf.PdfWriter" target="VERSION_1_2">PdfWriter.VERSION_1_2</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfWriter" target="VERSION_1_3">PdfWriter.VERSION_1_3</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfWriter" target="VERSION_1_4">PdfWriter.VERSION_1_4</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfWriter" target="VERSION_1_5">PdfWriter.VERSION_1_5</site:doc> or
-<site:doc class="com.lowagie.text.pdf.PdfWriter" target="VERSION_1_6">PdfWriter.VERSION_1_6</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfWriter" target="VERSION_1_2">PdfWriter.VERSION_1_2</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfWriter" target="VERSION_1_3">PdfWriter.VERSION_1_3</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfWriter" target="VERSION_1_4">PdfWriter.VERSION_1_4</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfWriter" target="VERSION_1_5">PdfWriter.VERSION_1_5</site:doc> or
+<site:doc class="com.mxpdf.text.pdf.PdfWriter" target="VERSION_1_6">PdfWriter.VERSION_1_6</site:doc>.
 <pre class="commandline">writer.setPdfVersion(PdfWriter.VERSION_1_2);</pre>
 Remark: this only changes the header (iText doesn't keep the version in the catalog yet).
 If you change the version number to a lower version, you are responsible for

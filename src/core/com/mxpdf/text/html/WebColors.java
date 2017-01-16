@@ -44,22 +44,23 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html;
+package com.mxpdf.text.html;
 
 import java.awt.Color;
 import java.util.HashMap;
 import java.util.StringTokenizer;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * This class is a HashMap that contains the names of colors as a key and the
  * corresponding Color as value. (Source: Wikipedia
  * http://en.wikipedia.org/wiki/Web_colors )
  * 
- * @author blowagie
+
  */
 public class WebColors extends HashMap {
     

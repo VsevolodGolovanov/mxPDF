@@ -42,13 +42,13 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
- */
-package com.lowagie.text.pdf;
-import java.awt.Color;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Rectangle;
+ */
+package com.mxpdf.text.pdf;
+import java.awt.Color;
+
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /** This class takes 2 barcodes, an EAN/UPC and a supplemental
  * and creates a single barcode with both combined in the

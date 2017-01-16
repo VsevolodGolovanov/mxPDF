@@ -74,9 +74,9 @@
 		<site:sectiontitle>Device Color spaces</site:sectiontitle>
 <div>
 In the chapter on Graphics, we already discussed methods such as
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setRGBColorFill(int,%20int,%20int)">setRGBColorFill/Stroke</site:doc> (Red-Green-Blue),
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setCMYKColorFill(int,int,%20int,%20int)">setCMYKColorFill/Stroke</site:doc> (Cyan-Magenta-Yellow-Black) and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setGrayFill(float)">setGrayFill/Stroke</site:doc> (grayscale).
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setRGBColorFill(int,%20int,%20int)">setRGBColorFill/Stroke</site:doc> (Red-Green-Blue),
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setCMYKColorFill(int,int,%20int,%20int)">setCMYKColorFill/Stroke</site:doc> (Cyan-Magenta-Yellow-Black) and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setGrayFill(float)">setGrayFill/Stroke</site:doc> (grayscale).
 With those methods, you can change to color that is used to fill or stroke paths.
 Those methods also change the color space automatically to DeviceRGB, DeviceCMYK or DeviceGray.
 These are <i>device color spaces</i>; they directly specify colors or shades of gray
@@ -113,16 +113,16 @@ for a subtractive device. When such a space is the current color space, the curr
 color is a single-component value, called a <i>tint</i>, that controls the application
 of the given colorant or color components only.</blockquote>
 In iText, you can create SpotColors with the
-<site:doc class="com.lowagie.text.pdf.PdfSpotColor">PdfSpotColor</site:doc> class.
+<site:doc class="com.mxpdf.text.pdf.PdfSpotColor">PdfSpotColor</site:doc> class.
 You need to give a name to the color, a tint and an alternative color space value.
-For this last parameter, the class <site:doc class="com.lowagie.text.pdf.ExtendedColor">ExtendedColor</site:doc> was created.
+For this last parameter, the class <site:doc class="com.mxpdf.text.pdf.ExtendedColor">ExtendedColor</site:doc> was created.
 It extends java.awt.Color. If you want to create a PdfSpotColor with RGB as alternative color space,
-use java.awt.Color. If you want CMYK, use <site:doc class="com.lowagie.text.pdf.CMYKColor">CMYKColor</site:doc>
-which extends ExtendedColor. Use <site:doc class="com.lowagie.text.pdf.GrayColor">GrayColor</site:doc> if you want grayscale.<br />
+use java.awt.Color. If you want CMYK, use <site:doc class="com.mxpdf.text.pdf.CMYKColor">CMYKColor</site:doc>
+which extends ExtendedColor. Use <site:doc class="com.mxpdf.text.pdf.GrayColor">GrayColor</site:doc> if you want grayscale.<br />
 These PdfSpotColors can be used with the
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setColorFill(com.lowagie.text.pdf.PdfSpotColor,%20float)">PdfContentByte.setColorFill/Stroke</site:doc> methods.
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setColorFill(com.mxpdf.text.pdf.PdfSpotColor,%20float)">PdfContentByte.setColorFill/Stroke</site:doc> methods.
 If you want to use a PdfSpotColor for high level objects, you have to use the
-<site:doc class="com.lowagie.text.pdf.SpotColor">SpotColor</site:doc> class.
+<site:doc class="com.mxpdf.text.pdf.SpotColor">SpotColor</site:doc> class.
 <site:source class="SpotColors" />
 </div>
 	</site:section>
@@ -150,19 +150,19 @@ each graphical element it paints (a pattern cell can contain elements that are p
 An uncolored tiling pattern is a pattern that has no inherent color: the color must be
 specified separately whenever the pattern is used. The content stream describes
 a <i>stencil</i> through which the color is to be poured.<br />
-In iText, you create a <site:doc class="com.lowagie.text.pdf.PdfPatternPainter">PdfPatternPainter</site:doc> with one
+In iText, you create a <site:doc class="com.mxpdf.text.pdf.PdfPatternPainter">PdfPatternPainter</site:doc> with one
 of the differen createPattern methods in PdfContentByte. When you specify a default color, the pattern is automatically a 'stencil' pattern.
 As an uncolored tiling pattern has no color of its own, so you have to define a default color. This color may be null if you plan to define the color
 each time you invoke setPatternFill.<br />
-In short, these are the methods you are going to use to create a <site:doc class="com.lowagie.text.pdf.PdfPatternPainter">PdfPatternPainter</site:doc>:
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="createPattern(float,%20float)">createPattern(float, float)</site:doc> (colored pattern, just defining a width and a height, the horizontal and vertical intervals are equal to width and height),
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="createPattern(float,%20float,%20java.awt.Color)">createPattern(float, float, java.awt.Color)</site:doc> (uncolored pattern, defining a width and a height and the default color for the uncolored pattern),
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="createPattern(float,%20float,%20float,%20float)">createPattern(float, float, float, float)</site:doc> (colored pattern, defining a width, a height and the horizontal/vertical interval) and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="createPattern(float,%20float,%20float,%20float,%20java.awt.Color)">createPattern(float, float, float, float, java.awt.Color)</site:doc> (uncolored pattern).<br />
-Once you have a <site:doc class="com.lowagie.text.pdf.PdfPatternPainter">PdfPatternPainter</site:doc> object, you can use it in the different
-<site:doc class="com.lowagie.text.pdf.PdfWriter" target="setPatternFill(com.lowagie.text.pdf.PdfPatternPainter)">setPatternFill</site:doc>/<site:doc class="com.lowagie.text.pdf.PdfWriter" target="setPatternStroke(com.lowagie.text.pdf.PdfPatternPainter)">setPatternStroke</site:doc> methods.
-As was the case with spot colors, you can also use a class extending <site:doc class="com.lowagie.text.pdf.ExtendedColor">ExtendedColor</site:doc>
-to use a pattern as color for high level objects: <site:doc class="com.lowagie.text.pdf.PatternColor">PatternColor</site:doc>.
+In short, these are the methods you are going to use to create a <site:doc class="com.mxpdf.text.pdf.PdfPatternPainter">PdfPatternPainter</site:doc>:
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="createPattern(float,%20float)">createPattern(float, float)</site:doc> (colored pattern, just defining a width and a height, the horizontal and vertical intervals are equal to width and height),
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="createPattern(float,%20float,%20java.awt.Color)">createPattern(float, float, java.awt.Color)</site:doc> (uncolored pattern, defining a width and a height and the default color for the uncolored pattern),
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="createPattern(float,%20float,%20float,%20float)">createPattern(float, float, float, float)</site:doc> (colored pattern, defining a width, a height and the horizontal/vertical interval) and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="createPattern(float,%20float,%20float,%20float,%20java.awt.Color)">createPattern(float, float, float, float, java.awt.Color)</site:doc> (uncolored pattern).<br />
+Once you have a <site:doc class="com.mxpdf.text.pdf.PdfPatternPainter">PdfPatternPainter</site:doc> object, you can use it in the different
+<site:doc class="com.mxpdf.text.pdf.PdfWriter" target="setPatternFill(com.mxpdf.text.pdf.PdfPatternPainter)">setPatternFill</site:doc>/<site:doc class="com.mxpdf.text.pdf.PdfWriter" target="setPatternStroke(com.mxpdf.text.pdf.PdfPatternPainter)">setPatternStroke</site:doc> methods.
+As was the case with spot colors, you can also use a class extending <site:doc class="com.mxpdf.text.pdf.ExtendedColor">ExtendedColor</site:doc>
+to use a pattern as color for high level objects: <site:doc class="com.mxpdf.text.pdf.PatternColor">PatternColor</site:doc>.
 <site:source class="Pattern" />
 <site:source class="Patterns" />
 <div class="subtitle">Shading patterns</div>
@@ -171,18 +171,18 @@ See PDF Reference Manual version 1.6 section 4.6.3 (p272)
 to be painted, independent of the resolution of any particular output device and without
 specifying the number of steps in the color transition.</blockquote>
 There are different types of shading. Check the API of
-<site:doc class="com.lowagie.text.pdf.PdfShading">PdfShading</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfShading">PdfShading</site:doc>
 if you want to know how to construct a Shading object that can be used to paint a path
-with method <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="paintShading(com.lowagie.text.pdf.PdfShading)">paintShading(com.lowagie.text.pdf.PdfShading)</site:doc>
-(this paints the path, so you don't have to call <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="fill()">fill()</site:doc> or <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="stroke()">stroke()</site:doc>).
+with method <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="paintShading(com.mxpdf.text.pdf.PdfShading)">paintShading(com.mxpdf.text.pdf.PdfShading)</site:doc>
+(this paints the path, so you don't have to call <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="fill()">fill()</site:doc> or <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="stroke()">stroke()</site:doc>).
 <site:source class="Shading" />
-You can also create a <site:doc class="com.lowagie.text.pdf.PdfShadingPattern">PdfShadingPattern</site:doc>.
-This can be used to paint a path (<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="paintShading(com.lowagie.text.pdf.PdfShadingPattern)">paintShading(com.lowagie.text.pdf.PdfShadingPattern)</site:doc>),
+You can also create a <site:doc class="com.mxpdf.text.pdf.PdfShadingPattern">PdfShadingPattern</site:doc>.
+This can be used to paint a path (<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="paintShading(com.mxpdf.text.pdf.PdfShadingPattern)">paintShading(com.mxpdf.text.pdf.PdfShadingPattern)</site:doc>),
 but also to set a fill or stroke color:
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setShadingFill(com.lowagie.text.pdf.PdfShadingPattern)">setShadingFill(com.lowagie.text.pdf.PdfShadingPattern)</site:doc>/<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setShadingStroke(com.lowagie.text.pdf.PdfShadingPattern)">setShadingStroke(com.lowagie.text.pdf.PdfShadingPattern)</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setShadingFill(com.mxpdf.text.pdf.PdfShadingPattern)">setShadingFill(com.mxpdf.text.pdf.PdfShadingPattern)</site:doc>/<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setShadingStroke(com.mxpdf.text.pdf.PdfShadingPattern)">setShadingStroke(com.mxpdf.text.pdf.PdfShadingPattern)</site:doc>.
 <site:source class="ShadingPattern" />
-Again there's a class extending <site:doc class="com.lowagie.text.pdf.ExtendedColor">ExtendedColor</site:doc>
-to use a shading pattern as color for high level objects: <site:doc class="com.lowagie.text.pdf.ShadingColor">ShadingColor</site:doc>.
+Again there's a class extending <site:doc class="com.mxpdf.text.pdf.ExtendedColor">ExtendedColor</site:doc>
+to use a shading pattern as color for high level objects: <site:doc class="com.mxpdf.text.pdf.ShadingColor">ShadingColor</site:doc>.
 </div>
 	</site:section>
 	
@@ -211,11 +211,11 @@ In the fourth square, the circles in the group have an opacity of 0.5, so the co
 The group is added on top of the backdrop with an opacity of 1, but in a different <i>blend mode</i>.
 <site:source class="Transparency" />
 Chapter 7 in the PDF Reference Manual gives you all the different <i>blend modes</i> (in iText, you
-can set them by using the <site:doc class="com.lowagie.text.pdf.PdfGState" target="setBlendMode(com.lowagie.text.pdf.PdfName)">PdfGState.setBlendMode</site:doc>;
+can set them by using the <site:doc class="com.mxpdf.text.pdf.PdfGState" target="setBlendMode(com.mxpdf.text.pdf.PdfName)">PdfGState.setBlendMode</site:doc>;
 see also the chapter on the <site:tutorial chapter="/directcontent/graphics" section="parameters">Graphics State</site:tutorial>,
 where you will find a list of all the available blendmodes). Transparancy groups settings are set with
-<site:doc class="com.lowagie.text.pdf.PdfTransparencyGroup" target="setIsolated(boolean)">PdfTransparencyGroup.setIsolated</site:doc> (determining the initial backdrop against which its stack is composited) and
-<site:doc class="com.lowagie.text.pdf.PdfTransparencyGroup" target="setKnockout(boolean)">PdfTransparencyGroup.setKnockout</site:doc> (determining whether the objects within the stack are composited with one another or only with the group's backdrop.).
+<site:doc class="com.mxpdf.text.pdf.PdfTransparencyGroup" target="setIsolated(boolean)">PdfTransparencyGroup.setIsolated</site:doc> (determining the initial backdrop against which its stack is composited) and
+<site:doc class="com.mxpdf.text.pdf.PdfTransparencyGroup" target="setKnockout(boolean)">PdfTransparencyGroup.setKnockout</site:doc> (determining whether the objects within the stack are composited with one another or only with the group's backdrop.).
 <site:source class="Groups" />
 Another nice example of applying the Transparent Imaging Model, is the use of an Image as <i>soft mask</i>.
 <site:source class="SoftMask" />

@@ -44,13 +44,13 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
-import com.lowagie.text.Document;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Rectangle;
+package com.mxpdf.text.pdf;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Rectangle;
 
 /**
  * Helps the use of <CODE>PdfPageEvent</CODE> by implementing all the interface methods.

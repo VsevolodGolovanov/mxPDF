@@ -42,11 +42,11 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
- */
-package com.lowagie.text.pdf.parser;
 
-import com.lowagie.text.pdf.CMapAwareDocumentFont;
+ */
+package com.mxpdf.text.pdf.parser;
+
+import com.mxpdf.text.pdf.CMapAwareDocumentFont;
 
 /**
  * Keeps all the parameters of the graphics state.

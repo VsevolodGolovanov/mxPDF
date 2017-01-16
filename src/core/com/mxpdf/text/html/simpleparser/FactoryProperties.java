@@ -45,10 +45,10 @@
  * 
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html.simpleparser;
+package com.mxpdf.text.html.simpleparser;
 
 import java.awt.Color;
 import java.util.HashMap;
@@ -56,19 +56,19 @@ import java.util.Iterator;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Element;
-import com.lowagie.text.ElementTags;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.ListItem;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.html.Markup;
-import com.lowagie.text.html.HtmlTags;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.HyphenationAuto;
-import com.lowagie.text.pdf.HyphenationEvent;
-import com.lowagie.text.FontProvider;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ElementTags;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.FontProvider;
+import com.mxpdf.text.ListItem;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.html.HtmlTags;
+import com.mxpdf.text.html.Markup;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.HyphenationAuto;
+import com.mxpdf.text.pdf.HyphenationEvent;
 /**
  *
  * @author  psoares

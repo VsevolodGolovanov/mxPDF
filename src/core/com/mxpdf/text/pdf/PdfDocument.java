@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.awt.Color;
 import java.io.IOException;
@@ -58,34 +58,35 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Anchor;
-import com.lowagie.text.Annotation;
-import com.lowagie.text.BadElementException;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Font;
-import com.lowagie.text.HeaderFooter;
-import com.lowagie.text.Image;
-import com.lowagie.text.List;
-import com.lowagie.text.ListItem;
-import com.lowagie.text.MarkedObject;
-import com.lowagie.text.MarkedSection;
-import com.lowagie.text.Meta;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.Section;
-import com.lowagie.text.SimpleTable;
-import com.lowagie.text.Table;
-import com.lowagie.text.pdf.collection.PdfCollection;
-import com.lowagie.text.pdf.draw.DrawInterface;
-import com.lowagie.text.pdf.internal.PdfAnnotationsImp;
-import com.lowagie.text.pdf.internal.PdfViewerPreferencesImp;
+import com.mxpdf.text.Anchor;
+import com.mxpdf.text.Annotation;
+import com.mxpdf.text.BadElementException;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.HeaderFooter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.List;
+import com.mxpdf.text.ListItem;
+import com.mxpdf.text.MarkedObject;
+import com.mxpdf.text.MarkedSection;
+import com.mxpdf.text.Meta;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.Section;
+import com.mxpdf.text.SimpleTable;
+import com.mxpdf.text.Table;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.collection.PdfCollection;
+import com.mxpdf.text.pdf.draw.DrawInterface;
+import com.mxpdf.text.pdf.internal.PdfAnnotationsImp;
+import com.mxpdf.text.pdf.internal.PdfViewerPreferencesImp;
+
 import java.text.DecimalFormat;
 
 /**
@@ -96,8 +97,8 @@ import java.text.DecimalFormat;
  * and adds the Pdf representation of every <CODE>Element</CODE> that is
  * added to the <CODE>Document</CODE>.
  *
- * @see		com.lowagie.text.Document
- * @see		com.lowagie.text.DocListener
+ * @see		com.mxpdf.text.Document
+ * @see		com.mxpdf.text.DocListener
  * @see		PdfWriter
  * @since	2.0.8 (class was package-private before)
  */
@@ -1027,7 +1028,7 @@ public class PdfDocument extends Document {
 //	[L6] DocListener interface
 
     /**
-     * @see com.lowagie.text.DocListener#setMarginMirroring(boolean)
+     * @see com.mxpdf.text.DocListener#setMarginMirroring(boolean)
      */
     public boolean setMarginMirroring(boolean MarginMirroring) {
         if (writer != null && writer.isPaused()) {
@@ -1037,7 +1038,7 @@ public class PdfDocument extends Document {
     }
     
     /**
-     * @see com.lowagie.text.DocListener#setMarginMirroring(boolean)
+     * @see com.mxpdf.text.DocListener#setMarginMirroring(boolean)
      * @since	2.1.6
      */
     public boolean setMarginMirroringTopBottom(boolean MarginMirroringTopBottom) {
@@ -1984,12 +1985,12 @@ public class PdfDocument extends Document {
 
 	/** Contains the Viewer preferences of this PDF document. */
     protected PdfViewerPreferencesImp viewerPreferences = new PdfViewerPreferencesImp();
-    /** @see com.lowagie.text.pdf.interfaces.PdfViewerPreferences#setViewerPreferences(int) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfViewerPreferences#setViewerPreferences(int) */
     void setViewerPreferences(int preferences) {
         this.viewerPreferences.setViewerPreferences(preferences);
     }
 
-    /** @see com.lowagie.text.pdf.interfaces.PdfViewerPreferences#addViewerPreference(com.lowagie.text.pdf.PdfName, com.lowagie.text.pdf.PdfObject) */
+    /** @see com.mxpdf.text.pdf.interfaces.PdfViewerPreferences#addViewerPreference(com.mxpdf.text.pdf.PdfName, com.mxpdf.text.pdf.PdfObject) */
     void addViewerPreference(PdfName key, PdfObject value) {
     	this.viewerPreferences.addViewerPreference(key, value);
     }

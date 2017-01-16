@@ -44,20 +44,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.internal;
+package com.mxpdf.text.pdf.internal;
 
 import java.io.IOException;
 
-import com.lowagie.text.DocWriter;
-import com.lowagie.text.pdf.OutputStreamCounter;
-import com.lowagie.text.pdf.PdfDeveloperExtension;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.pdf.interfaces.PdfVersion;
+import com.mxpdf.text.DocWriter;
+import com.mxpdf.text.pdf.OutputStreamCounter;
+import com.mxpdf.text.pdf.PdfDeveloperExtension;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfWriter;
+import com.mxpdf.text.pdf.interfaces.PdfVersion;
 
 /**
  * Stores the PDF version information,
@@ -89,7 +89,7 @@ public class PdfVersionImp implements PdfVersion {
 	protected PdfDictionary extensions = null;
 	
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfVersion#setPdfVersion(char)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfVersion#setPdfVersion(char)
 	 */
 	public void setPdfVersion(char version) {
 		if (headerWasWritten || appendmode) {
@@ -101,7 +101,7 @@ public class PdfVersionImp implements PdfVersion {
 	}
 	
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfVersion#setAtLeastPdfVersion(char)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfVersion#setAtLeastPdfVersion(char)
 	 */
 	public void setAtLeastPdfVersion(char version) {
 		if (version > header_version) {
@@ -110,7 +110,7 @@ public class PdfVersionImp implements PdfVersion {
 	}
 	
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfVersion#setPdfVersion(com.lowagie.text.pdf.PdfName)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfVersion#setPdfVersion(com.mxpdf.text.pdf.PdfName)
 	 */
 	public void setPdfVersion(PdfName version) {
 		if (catalog_version == null || catalog_version.compareTo(version) < 0) {
@@ -183,7 +183,7 @@ public class PdfVersionImp implements PdfVersion {
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfVersion#addDeveloperExtension(com.lowagie.text.pdf.PdfDeveloperExtension)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfVersion#addDeveloperExtension(com.mxpdf.text.pdf.PdfDeveloperExtension)
 	 * @since	2.1.6
 	 */
 	public void addDeveloperExtension(PdfDeveloperExtension de) {

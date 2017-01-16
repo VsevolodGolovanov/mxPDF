@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -163,7 +163,7 @@ public class PdfDictionary extends PdfObject {
      * type of this <CODE>PdfDictionary</CODE>, if set.
      * 
      * @return the string representation of this <CODE>PdfDictionary</CODE>
-     * @see com.lowagie.text.pdf.PdfObject#toString()
+     * @see com.mxpdf.text.pdf.PdfObject#toString()
      */
     public String toString() {
         if (get(PdfName.TYPE) == null)

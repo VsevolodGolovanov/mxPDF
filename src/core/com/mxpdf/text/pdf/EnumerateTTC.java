@@ -45,16 +45,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.util.HashMap;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocumentException;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.error_messages.MessageLocalization;
 /** Enumerates all the fonts inside a True Type Collection.
  *
  * @author  Paulo Soares (psoares@consiste.pt)

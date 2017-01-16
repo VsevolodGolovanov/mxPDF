@@ -44,18 +44,18 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfPCell;
-import com.lowagie.text.pdf.PdfPCellEvent;
-import com.lowagie.text.pdf.PdfPTable;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfPCell;
+import com.mxpdf.text.pdf.PdfPCellEvent;
+import com.mxpdf.text.pdf.PdfPTable;
 
 /**
  * Rectangle that can be used for Cells.
@@ -247,7 +247,7 @@ public class SimpleCell extends Rectangle implements PdfPCellEvent, TextElementA
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.PdfPCellEvent#cellLayout(com.lowagie.text.pdf.PdfPCell, com.lowagie.text.Rectangle, com.lowagie.text.pdf.PdfContentByte[])
+	 * @see com.mxpdf.text.pdf.PdfPCellEvent#cellLayout(com.mxpdf.text.pdf.PdfPCell, com.mxpdf.text.Rectangle, com.mxpdf.text.pdf.PdfContentByte[])
 	 */
 	public void cellLayout(PdfPCell cell, Rectangle position, PdfContentByte[] canvases) {
 		float sp_left = spacing_left;
@@ -511,7 +511,7 @@ public class SimpleCell extends Rectangle implements PdfPCellEvent, TextElementA
 	}
 
 	/**
-	 * @see com.lowagie.text.TextElementArray#add(java.lang.Object)
+	 * @see com.mxpdf.text.TextElementArray#add(java.lang.Object)
 	 */
 	public boolean add(Object o) {
 		try {
@@ -526,7 +526,7 @@ public class SimpleCell extends Rectangle implements PdfPCellEvent, TextElementA
 		}
 	}
 	/**
-	 * @see com.lowagie.text.Element#type()
+	 * @see com.mxpdf.text.Element#type()
 	 */
 	public int type() {
 		return Element.CELL;

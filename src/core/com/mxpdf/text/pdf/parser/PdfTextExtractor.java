@@ -42,22 +42,22 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf.parser;
+package com.mxpdf.text.pdf.parser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ListIterator;
 
-import com.lowagie.text.pdf.PRIndirectReference;
-import com.lowagie.text.pdf.PRStream;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.RandomAccessFileOrArray;
+import com.mxpdf.text.pdf.PRIndirectReference;
+import com.mxpdf.text.pdf.PRStream;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfObject;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.RandomAccessFileOrArray;
 
 /**
  * Extracts text from a PDF file.

@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.xml;
+package com.mxpdf.text.xml;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -61,8 +61,8 @@ import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import com.lowagie.text.DocListener;
-import com.lowagie.text.ExceptionConverter;
+import com.mxpdf.text.DocListener;
+import com.mxpdf.text.ExceptionConverter;
 
 /**
  * This class can be used to parse an XML file.

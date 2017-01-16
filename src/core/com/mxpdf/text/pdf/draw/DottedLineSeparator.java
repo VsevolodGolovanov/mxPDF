@@ -44,12 +44,12 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.draw;
+package com.mxpdf.text.pdf.draw;
 
-import com.lowagie.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfContentByte;
 
 /**
  * Element that draws a dotted line from left to right.
@@ -63,7 +63,7 @@ public class DottedLineSeparator extends LineSeparator {
 	protected float gap = 5;
 	
 	/**
-	 * @see com.lowagie.text.pdf.draw.DrawInterface#draw(com.lowagie.text.pdf.PdfContentByte, float, float, float, float, float)
+	 * @see com.mxpdf.text.pdf.draw.DrawInterface#draw(com.mxpdf.text.pdf.PdfContentByte, float, float, float, float, float)
 	 */
 	public void draw(PdfContentByte canvas, float llx, float lly, float urx, float ury, float y) {
 		canvas.saveState();

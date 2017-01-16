@@ -44,26 +44,26 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.lowagie.text.Cell;
-import com.lowagie.text.Element;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.Row;
-import com.lowagie.text.Table;
+import com.mxpdf.text.Cell;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.Row;
+import com.mxpdf.text.Table;
 
 /**
  * <CODE>PdfTable</CODE> is an object that contains the graphics and text of a table.
  *
- * @see		com.lowagie.text.Table
- * @see		com.lowagie.text.Row
- * @see		com.lowagie.text.Cell
+ * @see		com.mxpdf.text.Table
+ * @see		com.mxpdf.text.Row
+ * @see		com.mxpdf.text.Cell
  * @see		PdfCell
  */
 
@@ -216,7 +216,7 @@ public class PdfTable extends Rectangle {
 		return cells.isEmpty() ? 0 : ((PdfCell)cells.get(cells.size()-1)).rownumber()+1; 
 	}
 
-	/** @see com.lowagie.text.Element#type() */
+	/** @see com.mxpdf.text.Element#type() */
 	public int type() {
 		return Element.TABLE;
 	}

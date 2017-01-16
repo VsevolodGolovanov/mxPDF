@@ -44,12 +44,11 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
-import com.lowagie.text.ExceptionConverter;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -73,7 +72,9 @@ import org.bouncycastle.ocsp.OCSPReq;
 import org.bouncycastle.ocsp.OCSPReqGenerator;
 import org.bouncycastle.ocsp.OCSPResp;
 import org.bouncycastle.ocsp.SingleResp;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * OcspClient implementation using BouncyCastle.
@@ -134,7 +135,7 @@ public class OcspClientBouncyCastle implements OcspClient {
     
     /**
      * @return 	a byte array
-     * @see com.lowagie.text.pdf.OcspClient#getEncoded()
+     * @see com.mxpdf.text.pdf.OcspClient#getEncoded()
      */
     public byte[] getEncoded() {
         try {

@@ -43,12 +43,12 @@
 		  Due to the limitations of the RTF format it is not possible to create more
 		  complex headers and footers using page events as can be done when generating
 		  PDF documents. To make it possible to create more complex headers and footers
-		  than with the basic <site:doc class="com.lowagie.text.HeaderFooter">HeaderFooter</site:doc>
+		  than with the basic <site:doc class="com.mxpdf.text.HeaderFooter">HeaderFooter</site:doc>
 		  the RTF package provides three extensions:
 		  
 		  <ul>
 		    <li><a href="#rtfhf">Create more complex headers/footer</a> by placing any
-		      <site:doc class="com.lowagie.text.Element">Element</site:doc> in the
+		      <site:doc class="com.mxpdf.text.Element">Element</site:doc> in the
 		      header or footer.</li>
 		    <li><a href="#rtfhfgroup">Create different headers/footers</a> on the first,
 		      left or right pages.</li>
@@ -64,11 +64,11 @@
 		<site:sectiontitle>Creating more complex headers and footers</site:sectiontitle>
 		<div>
 		  The first step is to create more complex headers and footers using the
-		  <site:doc class="com.lowagie.text.rtf.headerfooter.RtfHeaderFooter">RtfHeaderFooter</site:doc>.
+		  <site:doc class="com.mxpdf.text.rtf.headerfooter.RtfHeaderFooter">RtfHeaderFooter</site:doc>.
 		  The RtfHeaderFooter class provides two public constructors that take either
-		  a single <site:doc class="com.lowagie.text.Element">Element</site:doc> or an
+		  a single <site:doc class="com.mxpdf.text.Element">Element</site:doc> or an
 		  array of Elements. Using these constructors you can create a header with more
-		  than one <site:doc class="com.lowagie.text.Paragraph">Paragraph</site:doc>
+		  than one <site:doc class="com.mxpdf.text.Paragraph">Paragraph</site:doc>
 		  
 		  <pre class="commandline">
 // Create the Paragraphs that will be used in the header.
@@ -84,7 +84,7 @@ RtfHeaderFooter header = new RtfHeaderFooter(new Element[]{date, address});
 document.setHeader(header);
 		  </pre>
 		  
-		  another frequently used possibility is to use a <site:doc class="com.lowagie.text.Table">Table</site:doc>
+		  another frequently used possibility is to use a <site:doc class="com.mxpdf.text.Table">Table</site:doc>
 		  to create a header or footer with multiple columns
 		  
 		  <pre class="commandline">
@@ -114,7 +114,7 @@ document.setFooter(new RtfHeaderFooter(footer));
 		<div>
 		  In addition to creating more complex headers and footers it is also possible to
 		  define multiple headers or footers that are displayed on different pages.
-		  This approach uses the <site:doc class="com.lowagie.text.rtf.headerfooter.RtfHeaderFooterGroup">RtfHeaderFooterGroup</site:doc>
+		  This approach uses the <site:doc class="com.mxpdf.text.rtf.headerfooter.RtfHeaderFooterGroup">RtfHeaderFooterGroup</site:doc>
 		  and allows for the following positions of headers or footers
 		  
 		  <ul>
@@ -155,8 +155,8 @@ header.setHeaderFooter(new RtfHeaderFooter(date), RtfHeaderFooter.DISPLAY_RIGHT_
           This is not necessary if you want it to appear on all pages, then you can use
           DISPLAY_ALL_PAGES.<br /><br />
           
-          As the example shows you can combine the <site:doc class="com.lowagie.text.rtf.headerfooter.RtfHeaderFooterGroup">RtfHeaderFooterGroup</site:doc>
-          with the <site:doc class="com.lowagie.text.rtf.headerfooter.RtfHeaderFooter">RtfHeaderFooter</site:doc> to
+          As the example shows you can combine the <site:doc class="com.mxpdf.text.rtf.headerfooter.RtfHeaderFooterGroup">RtfHeaderFooterGroup</site:doc>
+          with the <site:doc class="com.mxpdf.text.rtf.headerfooter.RtfHeaderFooter">RtfHeaderFooter</site:doc> to
           create complex headers or footers on different pages.
           
 		  <site:source class="MultipleHeaderFooter"/>
@@ -167,10 +167,10 @@ header.setHeaderFooter(new RtfHeaderFooter(date), RtfHeaderFooter.DISPLAY_RIGHT_
 		<site:sectiontitle>Different headers per chapter</site:sectiontitle>
 		<div>
 		  The third method for displaying different headers or footers is to use 
-		  <site:doc class="com.lowagie.text.Chapter">Chapter</site:doc>s and set
-		  different headers or footers per <site:doc class="com.lowagie.text.Chapter">Chapter</site:doc>.<br /><br />
+		  <site:doc class="com.mxpdf.text.Chapter">Chapter</site:doc>s and set
+		  different headers or footers per <site:doc class="com.mxpdf.text.Chapter">Chapter</site:doc>.<br /><br />
 		  
-		  The headers and footers for the first <site:doc class="com.lowagie.text.Chapter">Chapter</site:doc>
+		  The headers and footers for the first <site:doc class="com.mxpdf.text.Chapter">Chapter</site:doc>
 		  have to be set before the document is opened.
 		  
 		  <pre class="commandline">
@@ -187,7 +187,7 @@ document.setFooter(new HeaderFooter(new Phrase("This is page "), new Phrase(".")
 		  </pre>
 		  
 		  Then after adding each chapter optionally create and set the new headers or footers
-		  for the next <site:doc class="com.lowagie.text.Chapter">Chapter</site:doc>.
+		  for the next <site:doc class="com.mxpdf.text.Chapter">Chapter</site:doc>.
 		  
 		  <pre class="commandline">
 // After adding the first chapter set the header for the second chapter.
@@ -200,9 +200,9 @@ chapter2.add(new Paragraph("This is the content of chapter 2."));
 document.add(chapter2);
 		  </pre>
 		  
-		  This process is then repeated for each additional <site:doc class="com.lowagie.text.Chapter">Chapter</site:doc>
-		  to add. If you don't set a header or footer before adding a <site:doc class="com.lowagie.text.Chapter">Chapter</site:doc>
-		  then the header and footer from the previous <site:doc class="com.lowagie.text.Chapter">Chapter</site:doc>
+		  This process is then repeated for each additional <site:doc class="com.mxpdf.text.Chapter">Chapter</site:doc>
+		  to add. If you don't set a header or footer before adding a <site:doc class="com.mxpdf.text.Chapter">Chapter</site:doc>
+		  then the header and footer from the previous <site:doc class="com.mxpdf.text.Chapter">Chapter</site:doc>
 		  are used.
 
 		  <site:source class="ChapterHeaderFooter"/>

@@ -44,17 +44,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.xml;
+package com.mxpdf.text.xml;
 
 import java.util.HashMap;
 import java.util.Properties;
 
 import org.xml.sax.Attributes;
 
-import com.lowagie.text.DocListener;
+import com.mxpdf.text.DocListener;
 
 /**
  * The <CODE>Tags</CODE>-class maps several XHTML-tags to iText-objects.

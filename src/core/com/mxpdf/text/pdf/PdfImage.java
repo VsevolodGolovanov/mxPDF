@@ -44,18 +44,18 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Image;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * <CODE>PdfImage</CODE> is a <CODE>PdfStream</CODE> containing an image-<CODE>Dictionary</CODE> and -stream.

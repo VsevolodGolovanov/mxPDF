@@ -16,7 +16,7 @@
 
 /* $Id: HyphenationTree.java 3117 2008-01-31 05:53:22Z xlv $ */
  
-package com.lowagie.text.pdf.hyphenation;
+package com.mxpdf.text.pdf.hyphenation;
 
 import java.io.InputStream;
 import java.util.ArrayList;

@@ -42,27 +42,27 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf.events;
+package com.mxpdf.text.pdf.events;
 
 import java.io.IOException;
 import java.util.HashMap;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfFormField;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfPCell;
-import com.lowagie.text.pdf.PdfPCellEvent;
-import com.lowagie.text.pdf.PdfPageEventHelper;
-import com.lowagie.text.pdf.PdfRectangle;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.pdf.TextField;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfFormField;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfPCell;
+import com.mxpdf.text.pdf.PdfPCellEvent;
+import com.mxpdf.text.pdf.PdfPageEventHelper;
+import com.mxpdf.text.pdf.PdfRectangle;
+import com.mxpdf.text.pdf.PdfWriter;
+import com.mxpdf.text.pdf.TextField;
 
 /**
  * Class that can be used to position AcroForm fields.
@@ -147,7 +147,7 @@ public class FieldPositioningEvents extends PdfPageEventHelper implements PdfPCe
 		this.parent = parent;
 	}
 	/**
-	 * @see com.lowagie.text.pdf.PdfPageEvent#onGenericTag(com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document, com.lowagie.text.Rectangle, java.lang.String)
+	 * @see com.mxpdf.text.pdf.PdfPageEvent#onGenericTag(com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document, com.mxpdf.text.Rectangle, java.lang.String)
 	 */
 	public void onGenericTag(PdfWriter writer, Document document,
 			Rectangle rect, String text) {
@@ -172,7 +172,7 @@ public class FieldPositioningEvents extends PdfPageEventHelper implements PdfPCe
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.PdfPCellEvent#cellLayout(com.lowagie.text.pdf.PdfPCell, com.lowagie.text.Rectangle, com.lowagie.text.pdf.PdfContentByte[])
+	 * @see com.mxpdf.text.pdf.PdfPCellEvent#cellLayout(com.mxpdf.text.pdf.PdfPCell, com.mxpdf.text.Rectangle, com.mxpdf.text.pdf.PdfContentByte[])
 	 */
 	public void cellLayout(PdfPCell cell, Rectangle rect, PdfContentByte[] canvases) {
 		if (cellField == null || (fieldWriter == null && parent == null)) throw new IllegalArgumentException(MessageLocalization.getComposedMessage("you.have.used.the.wrong.constructor.for.this.fieldpositioningevents.class"));

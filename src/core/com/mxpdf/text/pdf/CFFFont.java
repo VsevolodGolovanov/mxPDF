@@ -66,12 +66,12 @@
  * future time.
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 
-import com.lowagie.text.ExceptionConverter;
+import com.mxpdf.text.ExceptionConverter;
 
 public class CFFFont {
     

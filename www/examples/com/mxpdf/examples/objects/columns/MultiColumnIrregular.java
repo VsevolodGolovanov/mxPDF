@@ -3,7 +3,7 @@
  * 
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  * 
  * This code is distributed in the hope that it will be useful, but WITHOUT ANY
  * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
@@ -11,20 +11,20 @@
  * 
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.objects.columns;
+package com.mxpdf.examples.objects.columns;
 
 import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.MultiColumnText;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.pdf.MultiColumnText;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * An example using MultiColumnText with irregular columns.

@@ -34,18 +34,18 @@
     <site:section name="pagenumbering">
     	<site:sectiontitle>Page Numbering</site:sectiontitle>
     	<div>
-    	  Since RTF is rendered by the viewer and not on creation, the <site:doc class="com.lowagie.text.rtf.RtfWriter2">RtfWriter2</site:doc>
-    	  cannot calculate which page is currently being written. The <site:doc class="com.lowagie.text.rtf.field.RtfPageNumber">RtfPageNumber</site:doc>
+    	  Since RTF is rendered by the viewer and not on creation, the <site:doc class="com.mxpdf.text.rtf.RtfWriter2">RtfWriter2</site:doc>
+    	  cannot calculate which page is currently being written. The <site:doc class="com.mxpdf.text.rtf.field.RtfPageNumber">RtfPageNumber</site:doc>
     	  provides the functionality to overcome this with one limitation:
     	  
     	  <ul>
     	    <li>It can only be used within the header or footer. In the main document it will not update correctly.</li>
     	  </ul><br />
     	  
-    	  The <site:doc class="com.lowagie.text.rtf.field.RtfPageNumber">RtfPageNumber</site:doc> should not be used alone,
-    	  but always wrapped in for example a <site:doc class="com.lowagie.text.Paragraph">Paragraph</site:doc> or
-    	  <site:doc class="com.lowagie.text.Table">Table</site:doc> (see the example in the <site:tutorial chapter="/rtf/extensions/hf">header/footers section</site:tutorial>).
-    	  This can then set as the header/footer via a <site:doc class="com.lowagie.text.rtf.hf.RtfHeaderFooter">RtfHeaderFooter</site:doc>.
+    	  The <site:doc class="com.mxpdf.text.rtf.field.RtfPageNumber">RtfPageNumber</site:doc> should not be used alone,
+    	  but always wrapped in for example a <site:doc class="com.mxpdf.text.Paragraph">Paragraph</site:doc> or
+    	  <site:doc class="com.mxpdf.text.Table">Table</site:doc> (see the example in the <site:tutorial chapter="/rtf/extensions/hf">header/footers section</site:tutorial>).
+    	  This can then set as the header/footer via a <site:doc class="com.mxpdf.text.rtf.hf.RtfHeaderFooter">RtfHeaderFooter</site:doc>.
     	  
     	  <pre class="commandline">
 // Create a new Paragraph for the footer
@@ -68,8 +68,8 @@ document.setFooter(footer);
     <site:section name="totalpagenumber">
     	<site:sectiontitle>Total Number of Pages</site:sectiontitle>
     	<div>
-    	  If the total number of pages should also be displayed, then a <site:doc class="com.lowagie.text.rtf.field.RtfTotalPageNumber">RtfTotalPageNumber</site:doc>
-    	  can be added to the <site:doc class="com.lowagie.text.Paragraph">Paragraph</site:doc>.
+    	  If the total number of pages should also be displayed, then a <site:doc class="com.mxpdf.text.rtf.field.RtfTotalPageNumber">RtfTotalPageNumber</site:doc>
+    	  can be added to the <site:doc class="com.mxpdf.text.Paragraph">Paragraph</site:doc>.
     	  
     	  <pre class="commandline">
 // Add the RtfTotalPageNumber to the Paragraph

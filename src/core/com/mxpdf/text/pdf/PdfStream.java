@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -55,11 +55,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocWriter;
-import com.lowagie.text.Document;
-import com.lowagie.text.ExceptionConverter;
+import com.mxpdf.text.DocWriter;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * <CODE>PdfStream</CODE> is the Pdf stream object.
@@ -283,7 +283,7 @@ public class PdfStream extends PdfDictionary {
     }
     
     /**
-     * @see com.lowagie.text.pdf.PdfDictionary#toPdf(com.lowagie.text.pdf.PdfWriter, java.io.OutputStream)
+     * @see com.mxpdf.text.pdf.PdfDictionary#toPdf(com.mxpdf.text.pdf.PdfWriter, java.io.OutputStream)
      */
     public void toPdf(PdfWriter writer, OutputStream os) throws IOException {
         if (inputStream != null && compressed)
@@ -377,7 +377,7 @@ public class PdfStream extends PdfDictionary {
     }
     
     /**
-     * @see com.lowagie.text.pdf.PdfObject#toString()
+     * @see com.mxpdf.text.pdf.PdfObject#toString()
      */
     public String toString() {
     	if (get(PdfName.TYPE) == null) return "Stream";

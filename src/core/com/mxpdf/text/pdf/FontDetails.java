@@ -44,16 +44,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Utilities;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Utilities;
 
 /**
  * Each font in the document will have an instance of this class

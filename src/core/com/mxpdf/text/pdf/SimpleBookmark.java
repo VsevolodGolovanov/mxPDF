@@ -42,10 +42,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -61,11 +61,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 import java.util.StringTokenizer;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.xml.simpleparser.IanaEncodings;
-import com.lowagie.text.xml.simpleparser.SimpleXMLDocHandler;
-import com.lowagie.text.xml.simpleparser.SimpleXMLParser;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.xml.simpleparser.IanaEncodings;
+import com.mxpdf.text.xml.simpleparser.SimpleXMLDocHandler;
+import com.mxpdf.text.xml.simpleparser.SimpleXMLParser;
 /**
  * Bookmark processing in a simple way. It has some limitations, mainly the only
  * action types supported are GoTo, GoToR, URI and Launch.

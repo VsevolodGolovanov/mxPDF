@@ -44,24 +44,24 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html;
+package com.mxpdf.text.html;
 
 import java.util.HashMap;
 import java.util.Properties;
 
 import org.xml.sax.Attributes;
 
-import com.lowagie.text.DocListener;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ElementTags;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.xml.SAXiTextHandler;
-import com.lowagie.text.xml.XmlPeer;
+import com.mxpdf.text.DocListener;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ElementTags;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.xml.SAXiTextHandler;
+import com.mxpdf.text.xml.XmlPeer;
 
 /**
  * The <CODE>Tags</CODE>-class maps several XHTML-tags to iText-objects.

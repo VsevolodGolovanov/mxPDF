@@ -1,8 +1,8 @@
-package com.lowagie.text.pdf.collection;
+package com.mxpdf.text.pdf.collection;
 
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfString;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfString;
 
 public class PdfCollection extends PdfDictionary {
 

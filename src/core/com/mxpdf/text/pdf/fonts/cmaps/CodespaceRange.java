@@ -28,7 +28,7 @@
  * http://www.fontbox.org
  *
  */
-package com.lowagie.text.pdf.fonts.cmaps;
+package com.mxpdf.text.pdf.fonts.cmaps;
 
 /**
  * This represents a single entry in the codespace range.

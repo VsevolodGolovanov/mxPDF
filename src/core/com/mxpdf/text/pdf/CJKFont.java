@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -56,9 +56,9 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Properties;
 import java.util.StringTokenizer;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocumentException;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * Creates a CJK font compatible with the fonts in the Adobe Asian font Pack.

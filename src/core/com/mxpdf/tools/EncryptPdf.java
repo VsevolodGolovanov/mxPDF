@@ -44,16 +44,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.tools;
+package com.mxpdf.tools;
 
 import java.io.FileOutputStream;
 import java.util.HashMap;
 
-import com.lowagie.text.pdf.PdfEncryptor;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.pdf.PdfEncryptor;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Encrypts a PDF document. It needs iText (http://www.lowagie.com/iText).

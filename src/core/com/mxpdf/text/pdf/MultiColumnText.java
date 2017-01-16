@@ -44,20 +44,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.ArrayList;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ElementListener;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ElementListener;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * Formats content into one or more columns bounded by a
@@ -251,7 +251,7 @@ public class MultiColumnText implements Element {
      * Note that you can only add a <CODE>Phrase</CODE>
      * or a <CODE>Chunk</CODE> if the columns are
      * not all simple.  This is an underlying restriction in
-     * {@link com.lowagie.text.pdf.ColumnText}
+     * {@link com.mxpdf.text.pdf.ColumnText}
      *
      * @param element element to add
      * @throws DocumentException if element can't be added
@@ -420,7 +420,7 @@ public class MultiColumnText implements Element {
     }
     
 	/**
-	 * @see com.lowagie.text.Element#isContent()
+	 * @see com.mxpdf.text.Element#isContent()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isContent() {
@@ -428,7 +428,7 @@ public class MultiColumnText implements Element {
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {

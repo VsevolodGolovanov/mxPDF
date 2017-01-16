@@ -42,7 +42,7 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  *
  * This code is based on a series of source files originally released
  * by SUN in the context of the JAI project. The original code was released 
@@ -87,7 +87,7 @@
  * nuclear facility.
  */
 
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 
 import java.awt.color.ICC_Profile;
 import java.io.ByteArrayInputStream;
@@ -98,21 +98,21 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.ImgRaw;
-import com.lowagie.text.Utilities;
-import com.lowagie.text.pdf.ByteBuffer;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfLiteral;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfNumber;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfString;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.ImgRaw;
+import com.mxpdf.text.Utilities;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.ByteBuffer;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfLiteral;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfNumber;
+import com.mxpdf.text.pdf.PdfObject;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfString;
 
 /** Reads a PNG image. All types of PNG can be read.
  * <p>

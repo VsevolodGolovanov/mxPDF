@@ -128,36 +128,36 @@ The Portable Document Format Reference Manual Version 1.6
 manipulate with the mouse. They include pushbuttons, check boxes, and radio
 buttons.</blockquote>
 You can create all these button fields with the methods
-<site:doc class="com.lowagie.text.pdf.PdfFormField" target="createPushButton(com.lowagie.text.pdf.PdfWriter)">PdfFormField.createPushButton(PdfWriter writer)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfFormField" target="createCheckBox(com.lowagie.text.pdf.PdfWriter)">PdfFormField.createCheckBox(PdfWriter writer)</site:doc> and/or
-<site:doc class="com.lowagie.text.pdf.PdfFormField" target="createRadioButton(com.lowagie.text.pdf.PdfWriter,%20boolean)">PdfFormField.getRadioButton(PdfWriter writer, boolean noToggleToOff)</site:doc>.
-You are going to create a <site:doc class="com.lowagie.text.pdf.PdfAppearance">PdfAppearance</site:doc> for every mouse operation:
+<site:doc class="com.mxpdf.text.pdf.PdfFormField" target="createPushButton(com.mxpdf.text.pdf.PdfWriter)">PdfFormField.createPushButton(PdfWriter writer)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfFormField" target="createCheckBox(com.mxpdf.text.pdf.PdfWriter)">PdfFormField.createCheckBox(PdfWriter writer)</site:doc> and/or
+<site:doc class="com.mxpdf.text.pdf.PdfFormField" target="createRadioButton(com.mxpdf.text.pdf.PdfWriter,%20boolean)">PdfFormField.getRadioButton(PdfWriter writer, boolean noToggleToOff)</site:doc>.
+You are going to create a <site:doc class="com.mxpdf.text.pdf.PdfAppearance">PdfAppearance</site:doc> for every mouse operation:
 <ul>
-<li><site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="APPEARANCE_NORMAL">PdfAnnotation.APPEARANCE_NORMAL:</site:doc> the normal appearance (no mouse action)</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="APPEARANCE_ROLLOVER">PdfAnnotation.APPEARANCE_ROLLOVER:</site:doc> the appearance when the mouse is pointed at the button (mouseover)</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="APPEARANCE_DOWN">PdfAnnotation.APPEARANCE_APPEARANCE_DOWN:</site:doc> the appearance when the button is pushed down</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="APPEARANCE_NORMAL">PdfAnnotation.APPEARANCE_NORMAL:</site:doc> the normal appearance (no mouse action)</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="APPEARANCE_ROLLOVER">PdfAnnotation.APPEARANCE_ROLLOVER:</site:doc> the appearance when the mouse is pointed at the button (mouseover)</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="APPEARANCE_DOWN">PdfAnnotation.APPEARANCE_APPEARANCE_DOWN:</site:doc> the appearance when the button is pushed down</li>
 </ul>
 Remark: the syntax to create this appearance is the same as for
-<site:doc class="com.lowagie.text.pdf.PdfContentByte">PdfContentByte</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte">PdfContentByte</site:doc>
 as described in <site:tutorial chapter="/" section="part4">Part IV</site:tutorial> of the tutorial.
 To visualize the button, you will set its widget annotations with
-<site:doc class="com.lowagie.text.pdf.PdfFormField" target="setWidget(com.lowagie.text.Rectangle,%20com.lowagie.text.pdf.PdfName)">setWidget(Rectangle rect, PdfName highlight)</site:doc>. Parameter <span class="commandline">rect</span>
+<site:doc class="com.mxpdf.text.pdf.PdfFormField" target="setWidget(com.mxpdf.text.Rectangle,%20com.lowagie.text.pdf.PdfName)">setWidget(Rectangle rect, PdfName highlight)</site:doc>. Parameter <span class="commandline">rect</span>
 defines the position on the page, <span class="commandline">highlight</span> is one of the following values:
 <ul>
-<li><site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="HIGHLIGHT_NONE">PdfAnnotation.HIGHLIGHT_NONE:</site:doc> no highlighting.</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="HIGHLIGHT_INVERT">PdfAnnotation.HIGHLIGHT_INVERT:</site:doc> invert the contents of the highlighted field.</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="HIGHLIGHT_OUTLINE">PdfAnnotation.HIGHLIGHT_OUTLINE:</site:doc> invert the border of the field.</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="HIGHLIGHT_PUSH">PdfAnnotation.HIGHLIGHT_PUSH:</site:doc> Display the down appearance, if any.
+<li><site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="HIGHLIGHT_NONE">PdfAnnotation.HIGHLIGHT_NONE:</site:doc> no highlighting.</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="HIGHLIGHT_INVERT">PdfAnnotation.HIGHLIGHT_INVERT:</site:doc> invert the contents of the highlighted field.</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="HIGHLIGHT_OUTLINE">PdfAnnotation.HIGHLIGHT_OUTLINE:</site:doc> invert the border of the field.</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="HIGHLIGHT_PUSH">PdfAnnotation.HIGHLIGHT_PUSH:</site:doc> Display the down appearance, if any.
 If no down appearance is defined, offset the contents of the annotation rectangle to appear as if it were being
 pushed below the surface of the page.</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="HIGHLIGHT_TOGGLE">PdfAnnotation.HIGHLIGHT_TOGGLE:</site:doc> Same as PdfAnnotation.HIGHLIGHT_PUSH (which is preferred).</li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="HIGHLIGHT_TOGGLE">PdfAnnotation.HIGHLIGHT_TOGGLE:</site:doc> Same as PdfAnnotation.HIGHLIGHT_PUSH (which is preferred).</li>
 </ul>
 <site:source class="FormPushButton" />
 <site:source class="FormCheckbox" />
 <site:source class="FormRadioButton" />
 <div class="subtitle">Text Fields</div>
 <blockquote>Text fields are boxes or spaces in which the user can enter text from the keyboard.</blockquote>
-<site:doc class="com.lowagie.text.pdf.TextField">TextField</site:doc>
+<site:doc class="com.mxpdf.text.pdf.TextField">TextField</site:doc>
 <site:source class="FormTextField" />
 <site:source class="SimpleRegistrationForm" />
 <div class="subtitle">Choice</div>

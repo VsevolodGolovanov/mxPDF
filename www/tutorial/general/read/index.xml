@@ -45,7 +45,7 @@
 	</site:section>
 	<site:section name="reader">
 		<site:sectiontitle>the PdfReader object</site:sectiontitle>
-<div>With <site:doc class="com.lowagie.text.pdf.PdfReader">PdfReader</site:doc>, you can get
+<div>With <site:doc class="com.mxpdf.text.pdf.PdfReader">PdfReader</site:doc>, you can get
 all kinds of metadata from an existing PDF, you can read formfields and you can extract pages
 as if it were images for use in a new PDF document. 
 </div>

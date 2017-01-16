@@ -44,17 +44,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html;
+package com.mxpdf.text.html;
 
 import java.util.Properties;
 
 import org.xml.sax.Attributes;
 
-import com.lowagie.text.ElementTags;
-import com.lowagie.text.xml.XmlPeer;
+import com.mxpdf.text.ElementTags;
+import com.mxpdf.text.xml.XmlPeer;
 
 /**
  * This interface is implemented by the peer of all the iText objects.
@@ -89,7 +89,7 @@ public class HtmlPeer extends XmlPeer {
 	}
 
 	/**
-	 * @see com.lowagie.text.xml.XmlPeer#getAttributes(org.xml.sax.Attributes)
+	 * @see com.mxpdf.text.xml.XmlPeer#getAttributes(org.xml.sax.Attributes)
 	 */
 	public Properties getAttributes(Attributes attrs) {
 		Properties attributes = new Properties();

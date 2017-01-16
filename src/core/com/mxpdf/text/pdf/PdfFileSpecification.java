@@ -42,19 +42,19 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.collection.PdfCollectionItem;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.collection.PdfCollectionItem;
 /** Specifies a file or an URL. The file can be extern or embedded.
  *
  * @author Paulo Soares (psoares@consiste.pt)

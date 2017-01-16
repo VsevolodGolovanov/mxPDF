@@ -44,9 +44,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.EOFException;
 import java.io.File;
@@ -65,17 +65,17 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Font;
-import com.lowagie.text.Image;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * This class takes care of the cryptographic options and appearances that form a signature.
@@ -734,7 +734,7 @@ public class PdfSignatureAppearance {
      * Gets the filter used to sign the document.
      * @return the filter used to sign the document
      */    
-    public com.lowagie.text.pdf.PdfName getFilter() {
+    public com.mxpdf.text.pdf.PdfName getFilter() {
         return filter;
     }
     
@@ -767,7 +767,7 @@ public class PdfSignatureAppearance {
      * Gets the rectangle that represent the position and dimension of the signature in the page.
      * @return the rectangle that represent the position and dimension of the signature in the page
      */    
-    public com.lowagie.text.Rectangle getPageRect() {
+    public com.mxpdf.text.Rectangle getPageRect() {
         return pageRect;
     }
     
@@ -787,11 +787,11 @@ public class PdfSignatureAppearance {
         this.signDate = signDate;
     }
     
-    com.lowagie.text.pdf.ByteBuffer getSigout() {
+    com.mxpdf.text.pdf.ByteBuffer getSigout() {
         return sigout;
     }
     
-    void setSigout(com.lowagie.text.pdf.ByteBuffer sigout) {
+    void setSigout(com.mxpdf.text.pdf.ByteBuffer sigout) {
         this.sigout = sigout;
     }
     
@@ -1116,7 +1116,7 @@ public class PdfSignatureAppearance {
      * Gets the user made signature dictionary. This is the dictionary at the /V key.
      * @return the user made signature dictionary
      */    
-    public com.lowagie.text.pdf.PdfDictionary getCryptoDictionary() {
+    public com.mxpdf.text.pdf.PdfDictionary getCryptoDictionary() {
         return cryptoDictionary;
     }
     
@@ -1124,7 +1124,7 @@ public class PdfSignatureAppearance {
      * Sets a user made signature dictionary. This is the dictionary at the /V key.
      * @param cryptoDictionary a user made signature dictionary
      */    
-    public void setCryptoDictionary(com.lowagie.text.pdf.PdfDictionary cryptoDictionary) {
+    public void setCryptoDictionary(com.mxpdf.text.pdf.PdfDictionary cryptoDictionary) {
         this.cryptoDictionary = cryptoDictionary;
     }
     
@@ -1132,11 +1132,11 @@ public class PdfSignatureAppearance {
      * Gets the <CODE>PdfStamper</CODE> associated with this instance.
      * @return the <CODE>PdfStamper</CODE> associated with this instance
      */    
-    public com.lowagie.text.pdf.PdfStamper getStamper() {
+    public com.mxpdf.text.pdf.PdfStamper getStamper() {
         return stamper;
     }
     
-    void setStamper(com.lowagie.text.pdf.PdfStamper stamper) {
+    void setStamper(com.mxpdf.text.pdf.PdfStamper stamper) {
         this.stamper = stamper;
     }
     
@@ -1156,7 +1156,7 @@ public class PdfSignatureAppearance {
      * The main use is to insert external signatures.
      * @return the instance of the standard signature dictionary
      */    
-    public com.lowagie.text.pdf.PdfSigGenericPKCS getSigStandard() {
+    public com.mxpdf.text.pdf.PdfSigGenericPKCS getSigStandard() {
         return sigStandard;
     }
     

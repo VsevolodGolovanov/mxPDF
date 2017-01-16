@@ -86,17 +86,17 @@ f
 f</pre>
 The example above draws 4 little stars in 2 different grayscales in the lower left corner of your page.
 You could write all this syntax by hand, there's even some methods
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setLiteral(String)">PdfContentByte.setLiteral</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setLiteral(String)">PdfContentByte.setLiteral</site:doc>
 that allow you to do this in iText, but trust me: that's not an easy job. If you want to write a complete PDF file from scratch,
 you also need to know a lot about the byte position of every object.
 I have set compression to false in the first example, so you can read the PDF file with a plain text editor,
 just to convince you, you really shouldn't start writing PDFs manually.
 <site:source class="Literal" />
 The PDF syntax of the example can be generated using simple iText methods such as
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setGrayFill(float)">setGrayFill(float)</site:doc> (the lines ending with g),
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="moveTo(float,%20float)">moveTo(float, float)</site:doc> (the lines ending with m),
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="lineTo(float,%20float)">lineTo(float, float)</site:doc> (the lines ending with l)
-and <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="fill()">fill()</site:doc> (the f).<br />
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setGrayFill(float)">setGrayFill(float)</site:doc> (the lines ending with g),
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="moveTo(float,%20float)">moveTo(float, float)</site:doc> (the lines ending with m),
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="lineTo(float,%20float)">lineTo(float, float)</site:doc> (the lines ending with l)
+and <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="fill()">fill()</site:doc> (the f).<br />
 All these methods are described in this chapter.
 </div>
 	</site:section>
@@ -108,16 +108,16 @@ The graphics state is initialized at the beginning of each page.
 All parameters, such as current color (one for filling and one for stroking),
 current line width, current dash pattern,... have default values.
 When using iText, you can change most of these defaults with methods in class
-<site:doc class="com.lowagie.text.pdf.PdfContentByte">PdfContentByte</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte">PdfContentByte</site:doc>.
 Some of the parameters can only be changed with the
-<site:doc class="com.lowagie.text.pdf.PdfGState">PdfGState</site:doc> object,
-which is a special <site:doc class="com.lowagie.text.pdf.PdfDictionary">PdfDictionary</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfGState">PdfGState</site:doc> object,
+which is a special <site:doc class="com.mxpdf.text.pdf.PdfDictionary">PdfDictionary</site:doc>
 (the Graphics State dictionary).<br /><br />
 The Graphics State is stored in a stack. If you need to change the Graphics State,
 you can save the current state with
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="saveState()">PdfContentByte.saveState()</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="saveState()">PdfContentByte.saveState()</site:doc>
 and return to that state later on with
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="restoreState()">PdfContentByte.restoreState()</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="restoreState()">PdfContentByte.restoreState()</site:doc>.
 <site:source class="State" />
 In the example, we first draw a circle with a radius of 250pts and
 we see how the default fill-color is black.
@@ -153,7 +153,7 @@ Note that the saveState and restoreState must be balanced.
 An exception will be thrown if you try to restore a graphics state before
 you have called saveState.<br /><br />
 The next example shows you how to use the
-<site:doc class="com.lowagie.text.pdf.PdfGState">PdfGState</site:doc> object
+<site:doc class="com.mxpdf.text.pdf.PdfGState">PdfGState</site:doc> object
 to change the state.
 <site:source class="GState" />
 </div>
@@ -176,13 +176,13 @@ be explained elsewhere in this tutorial.</td>
 </tr>
 <tr>
 <td class="small" valign="top">clipping path</td>
-<td>Methods <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="clip()">clip()</site:doc>
-and <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="eoClip()">eoClip()</site:doc>
+<td>Methods <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="clip()">clip()</site:doc>
+and <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="eoClip()">eoClip()</site:doc>
 can be used to clip output.</td>
 </tr>
 <tr>
 <td class="small" valign="top">color space</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setDefaultColorspace(com.lowagie.text.pdf.PdfName,%20com.lowagie.text.pdf.PdfObject)">setDefaultColorspace(com.lowagie.text.pdf.PdfName, com.lowagie.text.pdf.PdfObject)</site:doc><br />
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setDefaultColorspace(com.mxpdf.text.pdf.PdfName,%20com.lowagie.text.pdf.PdfObject)">setDefaultColorspace(com.mxpdf.text.pdf.PdfName, com.mxpdf.text.pdf.PdfObject)</site:doc><br />
 Note that the different setColor methods change the colorspace automatically.
 Please go to the chapter on <site:tutorial chapter="/directcontent/colors">colors</site:tutorial> for more info and some examples.</td>
 </tr>
@@ -191,35 +191,35 @@ Please go to the chapter on <site:tutorial chapter="/directcontent/colors">color
 <td>
 <b>RGB colors (device dependent!):</b><br />
 These methods change the color space to DeviceRGB automatically:
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setRGBColorFill(int,%20int,%20int)">setRGBColorFill(int, int, int)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setRGBColorFillF(float,%20float,%20float)">setRGBColorFillF(float, float, float)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="resetRGBColorFill()">resetRGBColorFill()</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setRGBColorStroke(int,%20int,%20int)">setRGBColorStroke(int, int, int)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setRGBColorStrokeF(float,%20float,%20float)">setRGBColorStrokeF(float, float, float)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="resetRGBColorStroke()">resetRGBColorStroke()</site:doc><br />
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setRGBColorFill(int,%20int,%20int)">setRGBColorFill(int, int, int)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setRGBColorFillF(float,%20float,%20float)">setRGBColorFillF(float, float, float)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="resetRGBColorFill()">resetRGBColorFill()</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setRGBColorStroke(int,%20int,%20int)">setRGBColorStroke(int, int, int)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setRGBColorStrokeF(float,%20float,%20float)">setRGBColorStrokeF(float, float, float)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="resetRGBColorStroke()">resetRGBColorStroke()</site:doc><br />
 Methods that take integers as parameter, usually expect a value between 0x00 and 0xFF.
 Methods that take a float, expect a value between 0f and 1f. (default = black)<br />
 <b>CMYK colors (device dependent):</b><br />
 These methods change the color space to DeviceCMYK automatically:
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setCMYKColorFill(int,int,%20int,%20int)">setCMYKColorFill(int, int, int, int)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setCMYKColorFillF(float,%20float,%20float,%20float)">setCMYKColorFillF(float, float, float, float)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="resetCMYKColorFill()">resetCMYKColorFill()</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setCMYKColorStroke(int,%20int,%20int,%20int)">setCMYKColorStroke(int, int, int, int)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setCMYKColorStrokeF(float,%20float,%20float,%20float)">setCMYKColorStrokeF(float, float, float, float)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="resetCMYKColorStroke()">resetCMYKColorStroke()</site:doc><br />
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setCMYKColorFill(int,int,%20int,%20int)">setCMYKColorFill(int, int, int, int)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setCMYKColorFillF(float,%20float,%20float,%20float)">setCMYKColorFillF(float, float, float, float)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="resetCMYKColorFill()">resetCMYKColorFill()</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setCMYKColorStroke(int,%20int,%20int,%20int)">setCMYKColorStroke(int, int, int, int)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setCMYKColorStrokeF(float,%20float,%20float,%20float)">setCMYKColorStrokeF(float, float, float, float)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="resetCMYKColorStroke()">resetCMYKColorStroke()</site:doc><br />
 <b>Grayfill:</b><br />
 These methods change the color space to DeviceGray automatically (= the default):
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setGrayFill(float)">setGrayFill(float)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="resetGrayFill()">resetGrayFill()</site:doc>.<br />
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setGrayStroke(float)">setGrayStroke(float)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="resetGrayStroke()">resetGrayStroke()</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setGrayFill(float)">setGrayFill(float)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="resetGrayFill()">resetGrayFill()</site:doc>.<br />
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setGrayStroke(float)">setGrayStroke(float)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="resetGrayStroke()">resetGrayStroke()</site:doc>.
 float is a value between 0 (black) and 1 (white)<br />
 <b>Spotcolors (device independent):</b><br />
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setColorFill(com.lowagie.text.pdf.PdfSpotColor,%20float)">setColorFill(com.lowagie.text.pdf.PdfSpotColor, float)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setColorStroke(com.lowagie.text.pdf.PdfSpotColor,%20float)">setColorStroke(com.lowagie.text.pdf.PdfSpotColor, float)</site:doc><br />
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setColorFill(com.mxpdf.text.pdf.PdfSpotColor,%20float)">setColorFill(com.mxpdf.text.pdf.PdfSpotColor, float)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setColorStroke(com.mxpdf.text.pdf.PdfSpotColor,%20float)">setColorStroke(com.mxpdf.text.pdf.PdfSpotColor, float)</site:doc><br />
 <b>Extended Color:</b><br />
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setColorFill(java.awt.Color)">setColorFill(java.awt.Color)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setColorStroke(java.awt.Color)">setColorStroke(java.awt.Color)</site:doc><br />
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setColorFill(java.awt.Color)">setColorFill(java.awt.Color)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setColorStroke(java.awt.Color)">setColorStroke(java.awt.Color)</site:doc><br />
 Please go to the chapter on <site:tutorial chapter="/directcontent/colors">colors</site:tutorial> for more info and some examples.
 </td>
 </tr>
@@ -229,34 +229,34 @@ Please go to the chapter on <site:tutorial chapter="/directcontent/colors">color
 </tr>
 <tr>
 <td class="small" valign="top">line width</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setLineWidth(float)">setLineWidth(float)</site:doc><br />
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setLineWidth(float)">setLineWidth(float)</site:doc><br />
 The parameter represents the thickness of the line (default = 1).</td>
 </tr>
 <tr>
 <td class="small" valign="top">line cap</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setLineCap(int)">setLineCap(int)</site:doc><br />
-The parameter can be <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="LINE_CAP_BUTT">PdfContentByte.LINE_CAP_BUTT</site:doc> (default),
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="LINE_CAP_ROUND">PdfContentByte.LINE_CAP_ROUND</site:doc>
-or <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="LINE_CAP_PROJECTING_SQUARE">PdfContentByte.LINE_CAP_PROJECTING_SQUARE</site:doc>.</td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setLineCap(int)">setLineCap(int)</site:doc><br />
+The parameter can be <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="LINE_CAP_BUTT">PdfContentByte.LINE_CAP_BUTT</site:doc> (default),
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="LINE_CAP_ROUND">PdfContentByte.LINE_CAP_ROUND</site:doc>
+or <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="LINE_CAP_PROJECTING_SQUARE">PdfContentByte.LINE_CAP_PROJECTING_SQUARE</site:doc>.</td>
 </tr>
 <tr>
 <td class="small" valign="top">line join</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setLineJoin(int)">setLineJoin(int)</site:doc><br />
-The parameter can be <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="LINE_JOIN_MITER">PdfContentByte.LINE_JOIN_MITER</site:doc> (default),
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="LINE_JOIN_ROUND">PdfContentByte.LINE_JOIN_ROUND</site:doc>
-or <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="LINE_JOIN_BEVEL">PdfContentByte.LINE_JOIN_BEVEL</site:doc>.</td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setLineJoin(int)">setLineJoin(int)</site:doc><br />
+The parameter can be <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="LINE_JOIN_MITER">PdfContentByte.LINE_JOIN_MITER</site:doc> (default),
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="LINE_JOIN_ROUND">PdfContentByte.LINE_JOIN_ROUND</site:doc>
+or <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="LINE_JOIN_BEVEL">PdfContentByte.LINE_JOIN_BEVEL</site:doc>.</td>
 </tr>
 <tr>
 <td class="small" valign="top">miter limit</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setMiterLimit(float)">setMiterLimit(float)</site:doc><br />
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setMiterLimit(float)">setMiterLimit(float)</site:doc><br />
 The parameter is a limit for joining lines, when exceeded, the join is converted from a miter to a bevel.</td>
 </tr>
 <tr>
 <td class="small" valign="top">dash pattern</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setLineDash(float)">setLineDash(float)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setLineDash(float[],%20float)">setLineDash(float[], float)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setLineDash(float,%20float)">setLineDash(float, float)</site:doc> or
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setLineDash(float,%20float,%20float)">setLineDash(float, float, float)</site:doc>.<br />
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setLineDash(float)">setLineDash(float)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setLineDash(float[],%20float)">setLineDash(float[], float)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setLineDash(float,%20float)">setLineDash(float, float)</site:doc> or
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setLineDash(float,%20float,%20float)">setLineDash(float, float, float)</site:doc>.<br />
 The parameters describe a <i>dash pattern</i> (default = a solid line).</td>
 </tr>
 <tr>
@@ -269,34 +269,34 @@ The parameters describe a <i>dash pattern</i> (default = a solid line).</td>
 </tr>
 <tr>
 <td class="small" valign="top">blend mode</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfGState" target="setBlendMode(com.lowagie.text.pdf.PdfName)">setBlendMode(com.lowagie.text.pdf.PdfName)</site:doc><br />
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_NORMAL">PdfGState.BM_NORMAL</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_COMPATIBLE">PdfGState.BM_COMPATIBLE</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_MULTIPLY">PdfGState.BM_MULTIPLY</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_SCREEN">PdfGState.BM_SCREEN</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_OVERLAY">PdfGState.BM_OVERLAY</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_DARKEN">PdfGState.BM_DARKEN</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_LIGHTEN">PdfGState.BM_LIGHTEN</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_COLORDODGE">PdfGState.BM_COLORDODGE</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_COLORBURN">PdfGState.BM_COLORBURN</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_HARDLIGHT">PdfGState.BM_HARDLIGHT</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_SOFTLIGHT">PdfGState.BM_SOFTLIGHT</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_DIFFERENCE">PdfGState.BM_DIFFERENCE</site:doc> or
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="BM_EXCLUSION">PdfGState.BM_EXCLUSION</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfGState" target="setBlendMode(com.mxpdf.text.pdf.PdfName)">setBlendMode(com.mxpdf.text.pdf.PdfName)</site:doc><br />
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_NORMAL">PdfGState.BM_NORMAL</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_COMPATIBLE">PdfGState.BM_COMPATIBLE</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_MULTIPLY">PdfGState.BM_MULTIPLY</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_SCREEN">PdfGState.BM_SCREEN</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_OVERLAY">PdfGState.BM_OVERLAY</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_DARKEN">PdfGState.BM_DARKEN</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_LIGHTEN">PdfGState.BM_LIGHTEN</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_COLORDODGE">PdfGState.BM_COLORDODGE</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_COLORBURN">PdfGState.BM_COLORBURN</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_HARDLIGHT">PdfGState.BM_HARDLIGHT</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_SOFTLIGHT">PdfGState.BM_SOFTLIGHT</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_DIFFERENCE">PdfGState.BM_DIFFERENCE</site:doc> or
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="BM_EXCLUSION">PdfGState.BM_EXCLUSION</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">soft mask</td>
-<td><site:doc class="com.lowagie.text.Image" target="makeMask()">Image.makeMask()</site:doc>
-and <site:doc class="com.lowagie.text.Image" target="setImageMask(com.lowagie.text.Image)">Image.setImageMask(com.lowagie.text.Image)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.Image" target="makeMask()">Image.makeMask()</site:doc>
+and <site:doc class="com.mxpdf.text.Image" target="setImageMask(com.mxpdf.text.Image)">Image.setImageMask(com.mxpdf.text.Image)</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">alpha constant</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfGState" target="setFillOpacity(float)">setFillOpacity(float)</site:doc>
-and <site:doc class="com.lowagie.text.pdf.PdfGState" target="setStrokeOpacity(float)">setStrokeOpacity(float)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfGState" target="setFillOpacity(float)">setFillOpacity(float)</site:doc>
+and <site:doc class="com.mxpdf.text.pdf.PdfGState" target="setStrokeOpacity(float)">setStrokeOpacity(float)</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">alpha source</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfGState" target="setAlphaIsShape(boolean)">setAlphaIsShape(boolean)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfGState" target="setAlphaIsShape(boolean)">setAlphaIsShape(boolean)</site:doc></td>
 </tr>
 </table>
 <br /><br />
@@ -305,8 +305,8 @@ and <site:doc class="com.lowagie.text.pdf.PdfGState" target="setStrokeOpacity(fl
 <table border="1" width="100%">
 <tr>
 <td class="small" valign="top">overprint</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfGState" target="setOverPrintStroking(boolean)">setOverPrintStroking(boolean)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfGState" target="setOverPrintNonStroking(boolean)">setOverPrintNonStroking(boolean)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfGState" target="setOverPrintStroking(boolean)">setOverPrintStroking(boolean)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfGState" target="setOverPrintNonStroking(boolean)">setOverPrintNonStroking(boolean)</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">overprint mode</td>
@@ -330,7 +330,7 @@ and <site:doc class="com.lowagie.text.pdf.PdfGState" target="setStrokeOpacity(fl
 </tr>
 <tr>
 <td class="small" valign="top">flatness</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="setFlatness(float)">setFlatness(float)</site:doc><br />
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="setFlatness(float)">setFlatness(float)</site:doc><br />
 The parameter is a distance in device pixels.</td>
 </tr>
 <tr>
@@ -352,35 +352,35 @@ They are used to draw lines, define the shapes of filled areas,
 and specify boundaries for clipping other graphics.</blockquote>
 Table 4.9 in the reference manual gives you an overview of the path construction operators.
 In the following table, I sum up all these operators with their corresponding method in
-the iText class <site:doc class="com.lowagie.text.pdf.PdfContentByte">PdfContentByte</site:doc>.
+the iText class <site:doc class="com.mxpdf.text.pdf.PdfContentByte">PdfContentByte</site:doc>.
 <table border="1" width="100%">
 <tr>
 <td class="small" valign="top">m</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="moveTo(float,%20float)">moveTo(float, float)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="moveTo(float,%20float)">moveTo(float, float)</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">l</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="lineTo(float,%20float)">lineTo(float, float)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="lineTo(float,%20float)">lineTo(float, float)</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">c</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="curveTo(float,%20float,%20float,%20float,%20float,%20float)">curveTo(float, float, float, float, float float)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="curveTo(float,%20float,%20float,%20float,%20float,%20float)">curveTo(float, float, float, float, float float)</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">v</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="curveTo(float,%20float,%20float,%20float)">curveTo(float, float, float, float)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="curveTo(float,%20float,%20float,%20float)">curveTo(float, float, float, float)</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">y</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="curveFromTo(float,%20float,%20float,%20float)">curveFromTo(float, float, float, float)</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="curveFromTo(float,%20float,%20float,%20float)">curveFromTo(float, float, float, float)</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">h</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="closePath()">closePath()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="closePath()">closePath()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">re</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="rectangle(float,%20float,%20float,%20float)">rectangle(float, float, float, float)</site:doc>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="rectangle(float,%20float,%20float,%20float)">rectangle(float, float, float, float)</site:doc>
 </td>
 </tr>
 </table>
@@ -388,14 +388,14 @@ For more info on these methods (especially the curveTo-ones), please read the
 PDF Reference Manual section 4.4.1 or consult the API documentation.<br />
 For ease of use, some extra methods were added in iText:
 <ul>
-<li><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="circle(float,%20float,%20float)">circle(float, float, float)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="ellipse(float,%20float,%20float,%20float)">ellipse(float, float, float, float)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfContentByte" target="arc(float,%20float,%20float,%20float,%20float,%20float)">arc(float, float, float, float, float, float)</site:doc>
+<li><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="circle(float,%20float,%20float)">circle(float, float, float)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="ellipse(float,%20float,%20float,%20float)">ellipse(float, float, float, float)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="arc(float,%20float,%20float,%20float,%20float,%20float)">arc(float, float, float, float, float, float)</site:doc>
 allow you to draw some specific curves.</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="rectangle(com.lowagie.text.Rectangle)">rectangle(com.lowagie.text.Rectangle)</site:doc> not only draws
-the rectangle as is done with <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="rectangle(float,%20float,%20float,%20float)">rectangle(float, float, float, float)</site:doc>,
-but also fills it with colors and takes into account some other attributes of class <site:doc class="com.lowagie.text.Rectangle)">com.lowagie.text.Rectangle</site:doc>.<br />
-The same goes for <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="variableRectangle(com.lowagie.text.Rectangle)">variableRectangle(com.lowagie.text.Rectangle)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="rectangle(com.mxpdf.text.Rectangle)">rectangle(com.mxpdf.text.Rectangle)</site:doc> not only draws
+the rectangle as is done with <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="rectangle(float,%20float,%20float,%20float)">rectangle(float, float, float, float)</site:doc>,
+but also fills it with colors and takes into account some other attributes of class <site:doc class="com.mxpdf.text.Rectangle)">com.mxpdf.text.Rectangle</site:doc>.<br />
+The same goes for <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="variableRectangle(com.mxpdf.text.Rectangle)">variableRectangle(com.mxpdf.text.Rectangle)</site:doc></li>
 </ul>
 <br />
 <div class="subtitle">painting</div>
@@ -407,15 +407,15 @@ Again I will sum them up with their corresponding iText method.
 <table border="1" width="100%">
 <tr>
 <td class="small" valign="top">S</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="stroke()">stroke()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="stroke()">stroke()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">s</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="closePathStroke()">closePathStroke()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="closePathStroke()">closePathStroke()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">f</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="fill()">fill()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="fill()">fill()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">F</td>
@@ -423,27 +423,27 @@ Again I will sum them up with their corresponding iText method.
 </tr>
 <tr>
 <td class="small" valign="top">f*</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="eoFill()">eoFill()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="eoFill()">eoFill()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">B</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="fillStroke()">fillStroke()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="fillStroke()">fillStroke()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">B*</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="eoFillStroke()">eoFillStroke()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="eoFillStroke()">eoFillStroke()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">b</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="closePathFillStroke()">closePathFillStroke()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="closePathFillStroke()">closePathFillStroke()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">b*</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="closePathEoFillStroke()">closePathEoFillStroke()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="closePathEoFillStroke()">closePathEoFillStroke()</site:doc></td>
 </tr>
 <tr>
 <td class="small" valign="top">n</td>
-<td><site:doc class="com.lowagie.text.pdf.PdfContentByte" target="newPath()">newPath()</site:doc></td>
+<td><site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="newPath()">newPath()</site:doc></td>
 </tr>
 </table><br />
 <div class="subtitle">Using PdfContentByte</div>

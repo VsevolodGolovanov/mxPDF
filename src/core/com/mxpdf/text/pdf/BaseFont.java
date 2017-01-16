@@ -44,19 +44,19 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.StringTokenizer;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocumentException;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * Base class for the several font types supported
@@ -234,7 +234,7 @@ public abstract class BaseFont {
     public static final boolean NOT_CACHED = false;
     
     /** The path to the font resources. */    
-    public static final String RESOURCE_PATH = "com/lowagie/text/pdf/fonts/";
+    public static final String RESOURCE_PATH = "com/mxpdf/text/pdf/fonts/";
     /** The fake CID code that represents a newline. */    
     public static final char CID_NEWLINE = '\u7fff';
     

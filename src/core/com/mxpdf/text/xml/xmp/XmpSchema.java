@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.xml.xmp;
+package com.mxpdf.text.xml.xmp;
 
 import java.util.Enumeration;
 import java.util.Properties;

@@ -44,30 +44,30 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.internal;
+package com.mxpdf.text.pdf.internal;
 
 import java.awt.Color;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.ExtendedColor;
-import com.lowagie.text.pdf.PatternColor;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfGState;
-import com.lowagie.text.pdf.PdfImage;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfNumber;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfString;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.pdf.PdfXConformanceException;
-import com.lowagie.text.pdf.ShadingColor;
-import com.lowagie.text.pdf.SpotColor;
-import com.lowagie.text.pdf.interfaces.PdfXConformance;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.ExtendedColor;
+import com.mxpdf.text.pdf.PatternColor;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfGState;
+import com.mxpdf.text.pdf.PdfImage;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfNumber;
+import com.mxpdf.text.pdf.PdfObject;
+import com.mxpdf.text.pdf.PdfString;
+import com.mxpdf.text.pdf.PdfWriter;
+import com.mxpdf.text.pdf.PdfXConformanceException;
+import com.mxpdf.text.pdf.ShadingColor;
+import com.mxpdf.text.pdf.SpotColor;
+import com.mxpdf.text.pdf.interfaces.PdfXConformance;
 
 public class PdfXConformanceImp implements PdfXConformance {
 
@@ -92,14 +92,14 @@ public class PdfXConformanceImp implements PdfXConformance {
     protected int pdfxConformance = PdfWriter.PDFXNONE;
     
     /**
-     * @see com.lowagie.text.pdf.interfaces.PdfXConformance#setPDFXConformance(int)
+     * @see com.mxpdf.text.pdf.interfaces.PdfXConformance#setPDFXConformance(int)
      */
     public void setPDFXConformance(int pdfxConformance) {
         this.pdfxConformance = pdfxConformance;
     }
 
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfXConformance#getPDFXConformance()
+	 * @see com.mxpdf.text.pdf.interfaces.PdfXConformance#getPDFXConformance()
 	 */
 	public int getPDFXConformance() {
 		return pdfxConformance;

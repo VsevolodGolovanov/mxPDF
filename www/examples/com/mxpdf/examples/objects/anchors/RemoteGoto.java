@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,25 +12,25 @@
  * itext-questions@lists.sourceforge.net
  */
 
-package com.lowagie.examples.objects.anchors;
+package com.mxpdf.examples.objects.anchors;
 
 import java.awt.Color;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.FontFactory;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Creates 2 documents with links to eachother.
  * 
- * @author blowagie
+
  */
 
 public class RemoteGoto {

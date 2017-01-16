@@ -44,12 +44,12 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
- */
-package com.lowagie.text.pdf;
 
-import com.lowagie.text.pdf.crypto.AESCipher;
-import com.lowagie.text.pdf.crypto.ARCFOUREncryption;
+ */
+package com.mxpdf.text.pdf;
+
+import com.mxpdf.text.pdf.crypto.AESCipher;
+import com.mxpdf.text.pdf.crypto.ARCFOUREncryption;
 
 public class StandardDecryption {
     protected ARCFOUREncryption arcfour;

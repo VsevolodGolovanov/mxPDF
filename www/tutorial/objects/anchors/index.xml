@@ -100,7 +100,7 @@
 		<site:sectiontitle>Local Goto and Local Destination</site:sectiontitle>
 <div>
 Sometimes you need a link to allow the reader of your document to jump from one position (LocalGoto) in the text to another (LocalDestination).
-You can achieve this with two methods of class Chunk: <site:doc class="com.lowagie.text.Chunk" target="setLocalGoto(java.lang.String)">setLocalGoto</site:doc> and <site:doc class="com.lowagie.text.Chunk" target="setLocalDestination(java.lang.String)">setLocalDestination</site:doc>.
+You can achieve this with two methods of class Chunk: <site:doc class="com.mxpdf.text.Chunk" target="setLocalGoto(java.lang.String)">setLocalGoto</site:doc> and <site:doc class="com.mxpdf.text.Chunk" target="setLocalDestination(java.lang.String)">setLocalDestination</site:doc>.
 Both methods take 1 parameter: this is the unique name you want to give to the destination.
 <pre class="commandline">new Chunk("localgoto").setLocalGoto("test");
 new Chunk("localdestination").setLocalDestination("test");</pre>
@@ -118,8 +118,8 @@ As you will see later on in this chapter and in the chapter on <site:tutorial ch
 <div>
 If you have defined a local destination in a certain document (see <site:tutorial chapter="/objects/anchors" section="localgoto">above</site:tutorial>),
 you can jump to this destination from another document. This is done with the method
-<site:doc class="com.lowagie.text.Chunk" target="setRemoteGoto(java.lang.String,%20java.lang.String)">setRemoteGoto(String filename, String name)</site:doc>.
-You don't necessarily need a local destination in the other document. You can also jump to a certain page with<site:doc class="com.lowagie.text.Chunk" target="setRemoteGoto(java.lang.String,%20int)">setRemoteGoto(String filename, int page)</site:doc>.
+<site:doc class="com.mxpdf.text.Chunk" target="setRemoteGoto(java.lang.String,%20java.lang.String)">setRemoteGoto(String filename, String name)</site:doc>.
+You don't necessarily need a local destination in the other document. You can also jump to a certain page with<site:doc class="com.mxpdf.text.Chunk" target="setRemoteGoto(java.lang.String,%20int)">setRemoteGoto(String filename, int page)</site:doc>.
 <pre class="commandline">new Chunk("go to a destination in document B")
 	.setRemoteGoto("DocumentB.pdf", "test");
 new Chunk("go to page 3 in document B")
@@ -133,7 +133,7 @@ new Chunk("go to page 3 in document B")
 There as some alternative ways to add external links such as <span class="commandline">&lt;A HREF="http://www.lowagie.com/iText/"&gt;Bruno's site&lt;A&gt;</span>
 or internal links such as <span class="commandline">&lt;A NAME="top"&gt;top of the page&lt;A&gt;</span> and
 <span class="commandline">&lt;A HREF="#top"&gt;goto top&lt;A&gt;</span>.
-One of them is using the <site:doc class="com.lowagie.text.Anchor">Anchor object</site:doc>.
+One of them is using the <site:doc class="com.mxpdf.text.Anchor">Anchor object</site:doc>.
 This is a very simple class and the beauty of it is that it works, not only in PDF, but also in HTML and RTF.<br />
 This is the code to create an external link:
 <pre>Anchor anchor = new Anchor("website");
@@ -153,7 +153,7 @@ anchor.setReference("#link1");</pre>
 A PDF document can have a certain interactivity: you can create several 'actions',
 for instance to jump to another page or location,
 to start an other application, to invoke a JavaScript function,...
-In the next subsections, some actions that are supported in iText will be explained; see the javadocs (<site:doc class="com.lowagie.text.PdfAction">class PdfAction</site:doc>) for more types of actions.
+In the next subsections, some actions that are supported in iText will be explained; see the javadocs (<site:doc class="com.mxpdf.text.PdfAction">class PdfAction</site:doc>) for more types of actions.
 Note that many of the action can be constructed in two alternative ways: with the constructor or with a static method that calls the constructor.<br /><br />
 <div class="subtitle">Named Actions</div>
 There are 5 predefined named actions in iText:
@@ -193,14 +193,14 @@ If you want to jump to another document or URL, as yet another alternative way
 to do what we did in the previous sections, you can create a PdfAction
 using one of the following constructors:
 <ul>
-<li><site:doc class="com.lowagie.text.pdf.PdfAction" target="PdfAction(java.lang.String,%20java.lang.String)">PdfAction(String filename, String name)</site:doc></li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAction" target="PdfAction(java.lang.String,%20int)">PdfAction(String filename, int page)</site:doc></li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAction" target="PdfAction(java.net.URL)">PdfAction(URL url)</site:doc></li>
-<li><site:doc class="com.lowagie.text.pdf.PdfAction" target="PdfAction(java.lang.String)">PdfAction(String url)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAction" target="PdfAction(java.lang.String,%20java.lang.String)">PdfAction(String filename, String name)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAction" target="PdfAction(java.lang.String,%20int)">PdfAction(String filename, int page)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAction" target="PdfAction(java.net.URL)">PdfAction(URL url)</site:doc></li>
+<li><site:doc class="com.mxpdf.text.pdf.PdfAction" target="PdfAction(java.lang.String)">PdfAction(String url)</site:doc></li>
 </ul>
-<site:doc class="com.lowagie.text.pdf.PdfAction" target="gotoLocalPage(int,%20com.lowagie.text.pdf.PdfDestination,%20com.lowagie.text.pdf.PdfWriter)">PdfAction.gotoLocalPage(int page, PdfDestination dest, PdfWriter writer)</site:doc>,
-<site:doc class="com.lowagie.text.pdf.PdfAction" target="gotoLocalPage(java.lang.String,%20boolean)">PdfAction.gotoLocalPage(String dest, boolean isName)</site:doc> and
-<site:doc class="com.lowagie.text.pdf.PdfAction" target="gotoRemotePage(java.lang.String,%20java.lang.String,%20boolean,%20boolean)">PdfAction.gotoRemotePage(String filename, String dest, boolean isName, boolean newWindow)</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfAction" target="gotoLocalPage(int,%20com.lowagie.text.pdf.PdfDestination,%20com.lowagie.text.pdf.PdfWriter)">PdfAction.gotoLocalPage(int page, PdfDestination dest, PdfWriter writer)</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfAction" target="gotoLocalPage(java.lang.String,%20boolean)">PdfAction.gotoLocalPage(String dest, boolean isName)</site:doc> and
+<site:doc class="com.mxpdf.text.pdf.PdfAction" target="gotoRemotePage(java.lang.String,%20java.lang.String,%20boolean,%20boolean)">PdfAction.gotoRemotePage(String filename, String dest, boolean isName, boolean newWindow)</site:doc>
 are the alternative static methods to construct Goto actions.<br />
 <span class="commandline">PdfAction.gotoRemotePage("remote.pdf", "test", false, true)</span>
 creates an action that goes to the destination "test" in remote.pdf in a new window.<br />
@@ -208,24 +208,24 @@ creates an action that goes to the destination "test" in remote.pdf in a new win
 <site:source class="Actions" />
 <div class="subtitle">Open Actions</div>
 We've already used an 'Open Action' twice.
-In the previous example with the method <site:doc class="com.lowagie.text.pdf.PdfWriter" target="setOpenAction(com.lowagie.text.pdf.PdfAction)">setOpenAction(PdfAction action)</site:doc>
-and in an earlier example with the method <site:doc class="com.lowagie.text.pdf.PdfWriter" target="setOpenAction(java.lang.String)">setOpenAction(String name)</site:doc>:
+In the previous example with the method <site:doc class="com.mxpdf.text.pdf.PdfWriter" target="setOpenAction(com.mxpdf.text.pdf.PdfAction)">setOpenAction(PdfAction action)</site:doc>
+and in an earlier example with the method <site:doc class="com.mxpdf.text.pdf.PdfWriter" target="setOpenAction(java.lang.String)">setOpenAction(String name)</site:doc>:
 <site:source class="LocalDestination" />
 <div class="subtitle">Chained Actions</div>
 If you want to trigger two or more actions after eachother, you can chain them using
-<site:doc class="com.lowagie.text.pdf.PdfAction" target="next(com.lowagie.text.pdf.PdfAction)">next(PdfAction action)</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfAction" target="next(com.mxpdf.text.pdf.PdfAction)">next(PdfAction action)</site:doc>.
 <pre class="commandline">PdfAction action = PdfAction.javaScript("app.alert('Welcome');\r", writer);
 action.next(new PdfAction("http://www.lowagie.com/iText/"));</pre>
 <site:source class="ChainedActions" />
 <div class="subtitle">Launching an Application</div>
 You can open an application from a PDF file using a Launch Action.
 Be careful: this is a very platformdependent feature and it isn't very safe to use.
-Read the Javadocs on method <site:doc class="com.lowagie.text.pdf.PdfAction" target="PdfAction(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)">PdfAction(String application, String parameters, String operation, String defaultDir)</site:doc>
+Read the Javadocs on method <site:doc class="com.mxpdf.text.pdf.PdfAction" target="PdfAction(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)">PdfAction(String application, String parameters, String operation, String defaultDir)</site:doc>
 for more information concerning the parameters. In the example below, we launch NOTEPAD (only on Windows, change the param if WINROOT does not equal C://windows/).
 <pre class="commandline">new Chunk("Click to open NOTEPAD")
 	.setAction(new PdfAction("C://WINDOWS/notepad.exe", null, null, null));</pre>
 The alternative static method to construct this Action is
-<site:doc class="com.lowagie.text.pdf.PdfAction" target="createLaunch(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)">PdfAction.createLaunch(String application, String parameters, String operation, String defaultDir)</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfAction" target="createLaunch(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)">PdfAction.createLaunch(String application, String parameters, String operation, String defaultDir)</site:doc>
 <site:source class="OpenApplication" />
 </div>
 	</site:section>
@@ -233,7 +233,7 @@ The alternative static method to construct this Action is
 		<site:sectiontitle>Annotations</site:sectiontitle>
 <div>
 Yes, using Annotations is yet another alternative to jump to a specific local or remote destination.
-Lets take a look at some simple things you can do with the class <site:doc class="com.lowagie.text.Annotation">Annotation</site:doc>
+Lets take a look at some simple things you can do with the class <site:doc class="com.mxpdf.text.Annotation">Annotation</site:doc>
 <ul>
 
 <li>
@@ -279,10 +279,10 @@ Annotation annot = new Annotation(
 
 </ul>
 <site:source class="SimpleAnnotations" />
-As an alternative for using the <site:doc class="com.lowagie.text.Annotation" target="constructor_summary">Annotation constructors</site:doc>,
-you can use the constructor in <site:doc class="com.lowagie.text.pdf.PdfAnnotation" target="PdfAnnotation(com.lowagie.text.pdf.PdfWriter,%20float,%20float,%20float,%20float,%20com.lowagie.text.pdf.PdfAction)">class PdfAnnotation</site:doc>.
-As you can pass any action to this constructor, you have a more options than with class <site:doc class="com.lowagie.text.Annotation">Annotation</site:doc>.
-<site:doc class="com.lowagie.text.pdf.PdfAnnotation">PdfAnnotation</site:doc> also has lots of static methods that allow you to create specific annotations.
+As an alternative for using the <site:doc class="com.mxpdf.text.Annotation" target="constructor_summary">Annotation constructors</site:doc>,
+you can use the constructor in <site:doc class="com.mxpdf.text.pdf.PdfAnnotation" target="PdfAnnotation(com.mxpdf.text.pdf.PdfWriter,%20float,%20float,%20float,%20float,%20com.lowagie.text.pdf.PdfAction)">class PdfAnnotation</site:doc>.
+As you can pass any action to this constructor, you have a more options than with class <site:doc class="com.mxpdf.text.Annotation">Annotation</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfAnnotation">PdfAnnotation</site:doc> also has lots of static methods that allow you to create specific annotations.
 In the example below some more complex features are presented using the constructor and static methods
 of PdfAnnotation, but keep in mind that some of these features only work since PDF version 1.5.
 <site:source class="Annotations" />

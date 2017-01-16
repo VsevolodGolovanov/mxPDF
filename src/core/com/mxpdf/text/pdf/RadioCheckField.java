@@ -42,15 +42,15 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Rectangle;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Rectangle;
 
 /**
  * Creates a radio or a check field.

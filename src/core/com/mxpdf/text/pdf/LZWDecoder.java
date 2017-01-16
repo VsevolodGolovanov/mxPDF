@@ -43,12 +43,12 @@
  * use in the design, construction, operation or maintenance of any 
  * nuclear facility.
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.io.IOException;
 import java.io.OutputStream;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.ExceptionConverter;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.error_messages.MessageLocalization;
 /**
  * A class for performing LZW decoding.
  *

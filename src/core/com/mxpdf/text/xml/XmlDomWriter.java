@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lowagie.text.xml;
+package com.mxpdf.text.xml;
 
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;

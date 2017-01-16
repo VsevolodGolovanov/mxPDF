@@ -42,13 +42,13 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.util.HashMap;
 
-import com.lowagie.text.Rectangle;
+import com.mxpdf.text.Rectangle;
 
 /**
  * Implements the appearance stream to be used with form fields..

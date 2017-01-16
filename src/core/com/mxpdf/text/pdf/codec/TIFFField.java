@@ -43,7 +43,7 @@
  * use in the design, construction, operation or maintenance of any 
  * nuclear facility. 
  */
-package com.lowagie.text.pdf.codec;
+package com.mxpdf.text.pdf.codec;
 
 import java.io.Serializable;
 

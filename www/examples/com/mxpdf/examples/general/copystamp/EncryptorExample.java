@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,13 +11,13 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.general.copystamp;
+package com.mxpdf.examples.general.copystamp;
 
 import java.io.FileOutputStream;
 
-import com.lowagie.text.pdf.PdfEncryptor;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.pdf.PdfEncryptor;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Encrypts an existing PDF file.

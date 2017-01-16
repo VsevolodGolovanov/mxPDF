@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf.events;
+package com.mxpdf.text.pdf.events;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -54,11 +54,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.PdfPageEventHelper;
-import com.lowagie.text.pdf.PdfWriter;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.pdf.PdfPageEventHelper;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Class for an index.
@@ -75,9 +75,9 @@ public class IndexEvents extends PdfPageEventHelper {
     /**
      * All the text that is passed to this event, gets registered in the indexentry.
      * 
-     * @see com.lowagie.text.pdf.PdfPageEventHelper#onGenericTag(
-     *      com.lowagie.text.pdf.PdfWriter, com.lowagie.text.Document,
-     *      com.lowagie.text.Rectangle, java.lang.String)
+     * @see com.mxpdf.text.pdf.PdfPageEventHelper#onGenericTag(
+     *      com.mxpdf.text.pdf.PdfWriter, com.mxpdf.text.Document,
+     *      com.mxpdf.text.Rectangle, java.lang.String)
      */
     public void onGenericTag(PdfWriter writer, Document document,
             Rectangle rect, String text) {

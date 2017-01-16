@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
@@ -99,8 +99,6 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-
-import com.lowagie.text.pdf.internal.PolylineShape;
 import java.util.Locale;
 import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
@@ -108,6 +106,8 @@ import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
 import javax.imageio.plugins.jpeg.JPEGImageWriteParam;
 import javax.imageio.stream.ImageOutputStream;
+
+import com.mxpdf.text.pdf.internal.PolylineShape;
 
 public class PdfGraphics2D extends Graphics2D {
     
@@ -1446,9 +1446,9 @@ public class PdfGraphics2D extends Graphics2D {
         }
         
         try {
-            com.lowagie.text.Image image = null;
+            com.mxpdf.text.Image image = null;
             if(!convertImagesToJPEG){
-                image = com.lowagie.text.Image.getInstance(img, bgColor);
+                image = com.mxpdf.text.Image.getInstance(img, bgColor);
             }
             else{
                 BufferedImage scaled = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_RGB);
@@ -1469,11 +1469,11 @@ public class PdfGraphics2D extends Graphics2D {
 
                 scaled.flush();
                 scaled = null;
-                image = com.lowagie.text.Image.getInstance(baos.toByteArray());
+                image = com.mxpdf.text.Image.getInstance(baos.toByteArray());
                 
             }
             if (mask!=null) {
-                com.lowagie.text.Image msk = com.lowagie.text.Image.getInstance(mask, null, true);
+                com.mxpdf.text.Image msk = com.mxpdf.text.Image.getInstance(mask, null, true);
                 msk.makeMask();
                 msk.setInverted(true);
                 image.setImageMask(msk);
@@ -1565,7 +1565,7 @@ public class PdfGraphics2D extends Graphics2D {
                 TexturePaint tp = (TexturePaint)paint;
                 BufferedImage img = tp.getImage();
                 Rectangle2D rect = tp.getAnchorRect();
-                com.lowagie.text.Image image = com.lowagie.text.Image.getInstance(img, null);
+                com.mxpdf.text.Image image = com.mxpdf.text.Image.getInstance(img, null);
                 PdfPatternPainter pattern = cb.createPattern(image.getWidth(), image.getHeight());
                 AffineTransform inverse = this.normalizeMatrix();
                 inverse.translate(rect.getX(), rect.getY());
@@ -1609,7 +1609,7 @@ public class PdfGraphics2D extends Graphics2D {
                 }
                 g.dispose();
                 g = null;
-                com.lowagie.text.Image image = com.lowagie.text.Image.getInstance(img, null);
+                com.mxpdf.text.Image image = com.mxpdf.text.Image.getInstance(img, null);
                 PdfPatternPainter pattern = cb.createPattern(width, height);
                 image.setAbsolutePosition(0,0);
                 pattern.addImage(image);

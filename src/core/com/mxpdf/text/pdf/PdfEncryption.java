@@ -44,13 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
-
-import com.lowagie.text.pdf.crypto.ARCFOUREncryption;
-import com.lowagie.text.error_messages.MessageLocalization;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -58,7 +55,9 @@ import java.io.ByteArrayOutputStream;
 import java.security.MessageDigest;
 import java.security.cert.Certificate;
 
-import com.lowagie.text.ExceptionConverter;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.crypto.ARCFOUREncryption;
 
 /**
  * 

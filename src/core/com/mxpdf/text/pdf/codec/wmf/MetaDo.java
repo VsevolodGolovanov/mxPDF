@@ -45,10 +45,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.codec.wmf;
+package com.mxpdf.text.pdf.codec.wmf;
 import java.awt.Color;
 import java.awt.Point;
 import java.io.ByteArrayInputStream;
@@ -58,13 +58,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Image;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.codec.BmpImage;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.BaseFont;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.codec.BmpImage;
 
 public class MetaDo {
     

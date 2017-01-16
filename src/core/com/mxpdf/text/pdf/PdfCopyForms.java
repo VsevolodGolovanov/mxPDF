@@ -44,20 +44,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.security.cert.Certificate;
 import java.util.List;
 
-import com.lowagie.text.DocWriter;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.pdf.interfaces.PdfEncryptionSettings;
-import com.lowagie.text.pdf.interfaces.PdfViewerPreferences;
+import com.mxpdf.text.DocWriter;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.pdf.interfaces.PdfEncryptionSettings;
+import com.mxpdf.text.pdf.interfaces.PdfViewerPreferences;
 
 /**
  * Allows you to add one (or more) existing PDF document(s) to
@@ -213,28 +213,28 @@ public class PdfCopyForms
     }
 
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfEncryptionSettings#setEncryption(byte[], byte[], int, int)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfEncryptionSettings#setEncryption(byte[], byte[], int, int)
 	 */
 	public void setEncryption(byte[] userPassword, byte[] ownerPassword, int permissions, int encryptionType) throws DocumentException {
 		fc.setEncryption(userPassword, ownerPassword, permissions, encryptionType);
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfViewerPreferences#addViewerPreference(com.lowagie.text.pdf.PdfName, com.lowagie.text.pdf.PdfObject)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfViewerPreferences#addViewerPreference(com.mxpdf.text.pdf.PdfName, com.mxpdf.text.pdf.PdfObject)
 	 */
 	public void addViewerPreference(PdfName key, PdfObject value) {
 		fc.addViewerPreference(key, value);	
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfViewerPreferences#setViewerPreferences(int)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfViewerPreferences#setViewerPreferences(int)
 	 */
 	public void setViewerPreferences(int preferences) {
 		fc.setViewerPreferences(preferences);
 	}
 
 	/**
-	 * @see com.lowagie.text.pdf.interfaces.PdfEncryptionSettings#setEncryption(java.security.cert.Certificate[], int[], int)
+	 * @see com.mxpdf.text.pdf.interfaces.PdfEncryptionSettings#setEncryption(java.security.cert.Certificate[], int[], int)
 	 */
 	public void setEncryption(Certificate[] certs, int[] permissions, int encryptionType) throws DocumentException {
 		fc.setEncryption(certs, permissions, encryptionType);

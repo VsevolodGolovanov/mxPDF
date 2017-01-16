@@ -44,20 +44,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.internal;
+package com.mxpdf.text.pdf.internal;
 
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfBoolean;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfNumber;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.pdf.interfaces.PdfViewerPreferences;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfBoolean;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfNumber;
+import com.mxpdf.text.pdf.PdfObject;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfWriter;
+import com.mxpdf.text.pdf.interfaces.PdfViewerPreferences;
 
 /**
  * Stores the information concerning viewer preferences,

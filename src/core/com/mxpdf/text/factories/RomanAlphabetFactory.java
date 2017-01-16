@@ -44,12 +44,12 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.factories;
+package com.mxpdf.text.factories;
 
-import com.lowagie.text.error_messages.MessageLocalization;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * This class can produce String combinations representing a number.

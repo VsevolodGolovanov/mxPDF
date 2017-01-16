@@ -45,15 +45,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * A <CODE>Section</CODE> is a part of a <CODE>Document</CODE> containing
@@ -240,7 +241,7 @@ public class Section extends ArrayList implements TextElementArray, LargeElement
     }
 	
 	/**
-	 * @see com.lowagie.text.Element#isContent()
+	 * @see com.mxpdf.text.Element#isContent()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isContent() {
@@ -248,7 +249,7 @@ public class Section extends ArrayList implements TextElementArray, LargeElement
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {
@@ -710,7 +711,7 @@ public class Section extends ArrayList implements TextElementArray, LargeElement
 	
 	/**
 	 * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#flushContent()
+	 * @see com.mxpdf.text.LargeElement#flushContent()
 	 */
 	public void flushContent() {
 		setNotAddedYet(false);
@@ -734,7 +735,7 @@ public class Section extends ArrayList implements TextElementArray, LargeElement
 
 	/**
      * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#isComplete()
+	 * @see com.mxpdf.text.LargeElement#isComplete()
 	 */
 	public boolean isComplete() {
 		return complete;
@@ -742,7 +743,7 @@ public class Section extends ArrayList implements TextElementArray, LargeElement
 
 	/**
      * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#setComplete(boolean)
+	 * @see com.mxpdf.text.LargeElement#setComplete(boolean)
 	 */
 	public void setComplete(boolean complete) {
 		this.complete = complete;

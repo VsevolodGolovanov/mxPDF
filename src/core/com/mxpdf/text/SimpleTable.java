@@ -44,17 +44,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfPTableEvent;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfContentByte;
+import com.mxpdf.text.pdf.PdfPTable;
+import com.mxpdf.text.pdf.PdfPTableEvent;
 
 /**
  * Rectangle that can be used for Cells.
@@ -99,7 +99,7 @@ public class SimpleTable extends Rectangle implements PdfPTableEvent, TextElemen
 	
 	/**
 	 * Creates a Table object based on this TableAttributes object.
-	 * @return a com.lowagie.text.Table object
+	 * @return a com.mxpdf.text.Table object
 	 * @throws BadElementException
 	 */
 	public Table createTable() throws BadElementException {
@@ -169,7 +169,7 @@ public class SimpleTable extends Rectangle implements PdfPTableEvent, TextElemen
 	
 	/**
 	 * Creates a PdfPTable object based on this TableAttributes object.
-	 * @return a com.lowagie.text.pdf.PdfPTable object
+	 * @return a com.mxpdf.text.pdf.PdfPTable object
 	 * @throws DocumentException
 	 */
 	public PdfPTable createPdfPTable() throws DocumentException {
@@ -247,7 +247,7 @@ public class SimpleTable extends Rectangle implements PdfPTableEvent, TextElemen
 	}
 	
 	/**
-     * @see com.lowagie.text.pdf.PdfPTableEvent#tableLayout(com.lowagie.text.pdf.PdfPTable, float[][], float[], int, int, com.lowagie.text.pdf.PdfContentByte[])
+     * @see com.mxpdf.text.pdf.PdfPTableEvent#tableLayout(com.mxpdf.text.pdf.PdfPTable, float[][], float[], int, int, com.mxpdf.text.pdf.PdfContentByte[])
  	 */
 	public void tableLayout(PdfPTable table, float[][] widths, float[] heights, int headerRows, int rowStart, PdfContentByte[] canvases) {
 		float[] width = widths[0];
@@ -323,14 +323,14 @@ public class SimpleTable extends Rectangle implements PdfPTableEvent, TextElemen
 		this.widthpercentage = widthpercentage;
 	}
 	/**
-	 * @see com.lowagie.text.Element#type()
+	 * @see com.mxpdf.text.Element#type()
 	 */
 	public int type() {
 		return Element.TABLE;
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {
@@ -338,7 +338,7 @@ public class SimpleTable extends Rectangle implements PdfPTableEvent, TextElemen
 	}
 
 	/**
-	 * @see com.lowagie.text.TextElementArray#add(java.lang.Object)
+	 * @see com.mxpdf.text.TextElementArray#add(java.lang.Object)
 	 */
 	public boolean add(Object o) {
 		try {

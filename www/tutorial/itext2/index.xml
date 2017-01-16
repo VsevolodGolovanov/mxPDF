@@ -44,11 +44,11 @@ as smooth as possible, but you must understand that some
 problems are unavoidable. These are the problems you can expect:
 <div class="subtitle">Some classes have been moved</div>
 <ul>
-<li>SimpleXMLParser and related classes were moved to com.lowagie.text.xml.simpleparser.
+<li>SimpleXMLParser and related classes were moved to com.mxpdf.text.xml.simpleparser.
 Some lists that were inside SimpleXMLParser (entities and IANA encodings) were moved to separate classes outside HTMLWorker</li>
-<li>com.lowagie.text.Entities moved to com/lowagie/text/xml/simpleparser/EntitiesToSymbol</li>
-<li>com.lowagie.text.markup.MarkupTags moved to com.lowagie.text.html.Markup</li>
-<li>com.lowagie.text.markup.WebColors moved to com.lowagie.text.html.WebColors</li>
+<li>com.mxpdf.text.Entities moved to com/lowagie/text/xml/simpleparser/EntitiesToSymbol</li>
+<li>com.mxpdf.text.markup.MarkupTags moved to com.mxpdf.text.html.Markup</li>
+<li>com.mxpdf.text.markup.WebColors moved to com.mxpdf.text.html.WebColors</li>
 </ul>
 <div class="subtitle">Some classes have been removed</div>
 <ul>

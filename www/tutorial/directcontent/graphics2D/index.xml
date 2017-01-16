@@ -53,12 +53,12 @@ Maybe you really don't want to learn to use PDF Syntax, maybe you really don't
 want to learn a complete new API such as iText, maybe you just want to stick to
 what you know, in casu, the JAVA API of the JSDK. No problem. In that case, we
 have a class that exactly meets your needs:
-<site:doc class="com.lowagie.text.pdf.PdfGraphics2D">PdfGraphics2D</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfGraphics2D">PdfGraphics2D</site:doc>.
 This class extends java.awt.Graphics2D and overrides its methods so that they
 produce PDF syntax. Isn't that nice?
-(Before you ask: there's also a <site:doc class="com.lowagie.text.pdf.PdfPrinterGraphics2D">PdfGraphics2D</site:doc> object
+(Before you ask: there's also a <site:doc class="com.mxpdf.text.pdf.PdfPrinterGraphics2D">PdfGraphics2D</site:doc> object
 extending java.awt.print.PrinterGraphics.)<br />
-There are several <site:doc class="com.lowagie.text.pdf.PdfContentByte" target="createGraphics(float,%20float)">createGraphics</site:doc> methods
+There are several <site:doc class="com.mxpdf.text.pdf.PdfContentByte" target="createGraphics(float,%20float)">createGraphics</site:doc> methods
 in class PdfContentByte. In the example below, I copied the code of an example in SUN's Graphics2D tutorial literally.
 The Graphics2D object I used, was retrieved from a PdfTemplate:
 <pre class="commandline"> PdfContentByte cb = writer.getDirectContent();
@@ -79,7 +79,7 @@ java.awt.Graphics2D g2 =
 g2.setFont(font);
 g2.drawString(text, 100, 100);
 g2.dispose();</pre>
-DO NOT FORGET to call <site:doc class="com.lowagie.text.pdf.PdfGraphics2D" target="dispose()">PdfGraphics2D.dispose()</site:doc>!!!<br /><br />
+DO NOT FORGET to call <site:doc class="com.mxpdf.text.pdf.PdfGraphics2D" target="dispose()">PdfGraphics2D.dispose()</site:doc>!!!<br /><br />
 A good example of how iText can be plugged in into another library that makes extensive use
 of Graphics2D can be found at <a href="http://www.jfree.org/jfreechart/">JFree.org</a>.
 JFree.org is the home of JFreeChart, one of the most used libraries for creating Charts.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lowagie.text.pdf.hyphenation;
+package com.mxpdf.text.pdf.hyphenation;
 
 import java.io.Serializable;
 

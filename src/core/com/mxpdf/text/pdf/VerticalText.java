@@ -43,17 +43,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Iterator;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Element;
-import com.lowagie.text.Phrase;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /** Writes text vertically. Note that the naming is done according
  * to horizontal text although it refers to vertical text.

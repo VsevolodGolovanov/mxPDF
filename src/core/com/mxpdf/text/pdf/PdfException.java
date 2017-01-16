@@ -44,12 +44,12 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
-import com.lowagie.text.DocumentException;
+import com.mxpdf.text.DocumentException;
 
 /**
  * Signals that an unspecified problem while constructing a PDF document.

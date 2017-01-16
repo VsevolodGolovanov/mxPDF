@@ -131,21 +131,21 @@ copyrights that may rest on the font (in which case iText will throw an exceptio
 <site:source class="TrueType" />
 
 <div class="subtitle">Registering font files</div>
-Instead of creating a <site:doc class="com.lowagie.text.pdf.BaseFont">BaseFont</site:doc>
-and wrap it in a <site:doc class="com.lowagie.text.Font">Font</site:doc>,
-you could use <site:doc class="com.lowagie.text.FontFactory">FontFactory</site:doc>,
+Instead of creating a <site:doc class="com.mxpdf.text.pdf.BaseFont">BaseFont</site:doc>
+and wrap it in a <site:doc class="com.mxpdf.text.Font">Font</site:doc>,
+you could use <site:doc class="com.mxpdf.text.FontFactory">FontFactory</site:doc>,
 which is the most uniform way to get your font.
 Unfortunately FontFactory doesn't know where your font-files (ttf or other) are stored.
 So you have to register the fonts you want to use:
 <pre class="commandline">FontFactory.register("c:\\windows\\fonts\\comic.ttf");
 FontFactory.register("c:\\windows\\fonts\\msgothic.ttc");</pre>
 If you register a font file with 
-<site:doc class="com.lowagie.text.FontFactory" target="register(java.lang.String)">register(java.lang.String)</site:doc>,
+<site:doc class="com.mxpdf.text.FontFactory" target="register(java.lang.String)">register(java.lang.String)</site:doc>,
 you can get the font by its name.
 You can ask the FontFactory for a list with all the registered fonts with
-<site:doc class="com.lowagie.text.FontFactory" target="getRegisteredFonts()">getRegisteredFonts()</site:doc>.
+<site:doc class="com.mxpdf.text.FontFactory" target="getRegisteredFonts()">getRegisteredFonts()</site:doc>.
 If you want to use fontnames defined by yourself, just register them with an alias
-(<site:doc class="com.lowagie.text.FontFactory" target="register(java.lang.String,%20java.lang.String)">register(java.lang.String, java.lang.String)</site:doc>)
+(<site:doc class="com.mxpdf.text.FontFactory" target="register(java.lang.String,%20java.lang.String)">register(java.lang.String, java.lang.String)</site:doc>)
 and use that alias instead of the actual fontname.
 <site:source class="RegisterFont" />
 Note that all methods in class FontFactory are static. So if you have different applications in the same JVM,
@@ -159,9 +159,9 @@ which style automatically.
 <site:source class="FontFactoryStyles" />
 Of course it's still not very userfriendly having to point to the location of the font file on the disk everytime you need a new font.
 You could register all the fonts in a directory with
-<site:doc class="com.lowagie.text.FontFactory" target="registerDirectory(java.lang.String)">registerDirectory(java.lang.String)</site:doc>.
+<site:doc class="com.mxpdf.text.FontFactory" target="registerDirectory(java.lang.String)">registerDirectory(java.lang.String)</site:doc>.
 This way you don't have to look up the exact names of the normal, bold, italic or bolditalic font of a same family.
-It gets even easier if you use <site:doc class="com.lowagie.text.FontFactory" target="registerDirectories()">registerDirectories()</site:doc>.
+It gets even easier if you use <site:doc class="com.mxpdf.text.FontFactory" target="registerDirectories()">registerDirectories()</site:doc>.
 This method looks in some probable directories such as c:\windows\fonts, /usr/X/lib/X11/fonts/TrueType, /usr/X11R6/lib/X11/fonts/ttf, etc...
 This works on most Windows, Linux and Solaris systems. (If not, you will have to go and look for the font files yourself.)
 In the next example, you can see what fonts are available in the standard directories on my own computer:
@@ -171,7 +171,7 @@ In the next example, you can see what fonts are available in the standard direct
 A <i>True Type Collection</i> contains more than one font. As you can see in the example,
 we add a number after the TTC-file to indicate which of the fonts we want to use.
 If you want to know the names of the fonts in a certain TTC-file, you can use the
-method <site:doc class="com.lowagie.text.pdf.BaseFont" target="enumerateTTCNames(java.lang.String)">enumerateTTCNames(java.lang.String)</site:doc>.
+method <site:doc class="com.mxpdf.text.pdf.BaseFont" target="enumerateTTCNames(java.lang.String)">enumerateTTCNames(java.lang.String)</site:doc>.
 The file msgothic.ttc contains 3 fonts: (0) MS-Gothic, (1) MS-PGothic and (2) MS-UIGothic.
 In the example, we want to use MS-PGothic, so we add 1 to the path:
 <pre class="commandline">BaseFont.createFont(

@@ -44,22 +44,22 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  *
  * Some methods in this class were contributed by Geert Poels, Kris Jespers and
  * Steve Ogryzek. Check the CVS repository.
  */
 
-package com.lowagie.text;
+package com.mxpdf.text;
 
 import java.awt.Dimension;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Iterator;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.pdf.PdfPCell;
-import com.lowagie.text.pdf.PdfPTable;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfPCell;
+import com.mxpdf.text.pdf.PdfPTable;
 
 /**
  * A <CODE>Table</CODE> is a <CODE>Rectangle</CODE> that contains <CODE>Cell</CODE>s,
@@ -329,7 +329,7 @@ public class Table extends Rectangle implements LargeElement {
     }
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {
@@ -1446,7 +1446,7 @@ public class Table extends Rectangle implements LargeElement {
 	
 	/**
 	 * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#flushContent()
+	 * @see com.mxpdf.text.LargeElement#flushContent()
 	 */
 	public void flushContent() {		
 		this.setNotAddedYet(false);
@@ -1459,7 +1459,7 @@ public class Table extends Rectangle implements LargeElement {
 
 	/**
      * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#isComplete()
+	 * @see com.mxpdf.text.LargeElement#isComplete()
 	 */
 	public boolean isComplete() {
 		return complete;
@@ -1467,7 +1467,7 @@ public class Table extends Rectangle implements LargeElement {
 
 	/**
      * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#setComplete(boolean)
+	 * @see com.mxpdf.text.LargeElement#setComplete(boolean)
 	 */
 	public void setComplete(boolean complete) {
 		this.complete = complete;

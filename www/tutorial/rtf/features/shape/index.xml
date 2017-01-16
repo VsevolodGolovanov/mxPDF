@@ -58,17 +58,17 @@
     	  core properties are constants defined. For all further properties, please refer to
     	  the <a href="http://msdn2.microsoft.com/en-us/library/aa140277(office.10).aspx">RTF Specification 1.6</a>.<br /><br />
     	  
-    	  The basic class for creating drawing objects is the <site:doc class="com.lowagie.text.rtf.graphic.RtfShape">RtfShape</site:doc>.
-    	  It is made up out of an <site:doc class="com.lowagie.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc>,
-    	  that defines the position of the the drawing object on the page and a list of <site:doc class="com.lowagie.text.rtf.graphic.RtfShapeProperty">RtfShapeProperty</site:doc>s,
+    	  The basic class for creating drawing objects is the <site:doc class="com.mxpdf.text.rtf.graphic.RtfShape">RtfShape</site:doc>.
+    	  It is made up out of an <site:doc class="com.mxpdf.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc>,
+    	  that defines the position of the the drawing object on the page and a list of <site:doc class="com.mxpdf.text.rtf.graphic.RtfShapeProperty">RtfShapeProperty</site:doc>s,
     	  that specify all other properties that define the drawing object.<br /><br />
     	  
-    	  The constructor for the <site:doc class="com.lowagie.text.rtf.graphic.RtfShape">RtfShape</site:doc>
-    	  takes the type of shape and an <site:doc class="com.lowagie.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc>.
-    	  The <site:doc class="com.lowagie.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc> defines the
+    	  The constructor for the <site:doc class="com.mxpdf.text.rtf.graphic.RtfShape">RtfShape</site:doc>
+    	  takes the type of shape and an <site:doc class="com.mxpdf.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc>.
+    	  The <site:doc class="com.mxpdf.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc> defines the
     	  extent of the drawing object (Important: These extents are in in <b>Twips</b>) and also properties such as
     	  the z-order of the drawing object and whether the shape is above or below the main text.<br />
-    	  To this the <site:doc class="com.lowagie.text.rtf.graphic.RtfShapeProperty">RtfShapeProperty</site:doc> objects
+    	  To this the <site:doc class="com.mxpdf.text.rtf.graphic.RtfShapeProperty">RtfShapeProperty</site:doc> objects
     	  are added to define drawing object properties such as the line colour or fill colour.
     	  
     	  <pre class="commandline">
@@ -97,7 +97,7 @@ document.add(shape);
     	<site:sectiontitle>Anchoring the Drawing Object</site:sectiontitle>
     	<div>
     	  By default the drawing object is anchored to the page, so that the values in
-    	  the <site:doc class="com.lowagie.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc>
+    	  the <site:doc class="com.mxpdf.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc>
     	  are applied relative to the top, left corner of the page. Other anchorings that are possible are:
     	  
     	  <ul>
@@ -147,7 +147,7 @@ document.add(par);
     <site:section name="drawingwrap">
     	<site:sectiontitle>Text Wrapping and Z-Order</site:sectiontitle>
     	<div>
-    	  By default <site:doc class="com.lowagie.text.rtf.graphic.RtfShape">RtfShape</site:doc>s are
+    	  By default <site:doc class="com.mxpdf.text.rtf.graphic.RtfShape">RtfShape</site:doc>s are
     	  positioned above the text and the text does not wrap around them, but flow under them. Using
     	  the <span class="commandline">RtfShape.setWrapping</span>, <span class="commandline">RtfShapePosition.setBelowText</span>
     	  and <span class="commandline">RtfShapePosition.setZOrder</span> methods you can change these
@@ -225,10 +225,10 @@ shape.setShapeText("This text will appear in the drawing object.");
     <site:section name="drawingfreeform">
     	<site:sectiontitle>Freeform Objects</site:sectiontitle>
     	<div>
-    	  The <site:doc class="com.lowagie.text.rtf.graphic.RtfShape">RtfShape</site:doc> provides a number
+    	  The <site:doc class="com.mxpdf.text.rtf.graphic.RtfShape">RtfShape</site:doc> provides a number
     	  of predefined shapes, but sometimes it is useful to be able to draw something more flexible.<br /><br />
     	  
-    	  In this case the <site:doc class="com.lowagie.text.rtf.graphic.RtfShape">RtfShape</site:doc>
+    	  In this case the <site:doc class="com.mxpdf.text.rtf.graphic.RtfShape">RtfShape</site:doc>
     	  is created with the shape type <span class="commandline">SHAPE_FREEFORM</span>. In the second step
     	  the internal coordinate system is defined and finally the points of the shape are specified.
     	  For the internal coordinate system it is only necessary to specify the right and bottom values, as
@@ -236,7 +236,7 @@ shape.setShapeText("This text will appear in the drawing object.");
     	  object in Twips, but any values may be used and they will automatically be scaled to the size of the
     	  drawing object. The vertices of the drawing object are defined as an array of <span class="commandline">Point</span>
     	  objects. It is important to remember that the coordinates of the points are defined within the
-    	  internal coordinate system and not the external one defined in the <site:doc class="com.lowagie.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc>
+    	  internal coordinate system and not the external one defined in the <site:doc class="com.mxpdf.text.rtf.graphic.RtfShapePosition">RtfShapePosition</site:doc>
     	  constructor.
     	  
     	  <pre class="commandline">

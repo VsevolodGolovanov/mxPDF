@@ -45,14 +45,15 @@
  * 
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html.simpleparser;
+package com.mxpdf.text.html.simpleparser;
 
-import com.lowagie.text.ElementTags;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import com.mxpdf.text.ElementTags;
 
 public class ChainedProperties {
 

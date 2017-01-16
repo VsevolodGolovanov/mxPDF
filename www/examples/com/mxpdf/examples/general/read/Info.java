@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -11,12 +11,12 @@
  *
  * itext-questions@lists.sourceforge.net
  */
-package com.lowagie.examples.general.read;
+package com.mxpdf.examples.general.read;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
-import com.lowagie.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.PdfReader;
 
 /**
  * Getting information from a PDF file.

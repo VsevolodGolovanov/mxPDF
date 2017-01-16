@@ -44,7 +44,7 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 /********************************************************************
  *                                                                  *
@@ -138,14 +138,15 @@
  *  the removal of an exception in readString was restored on 9/16  *
  *                                                                  *
  ********************************************************************/
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * Converts a PFM file into an AFM file.

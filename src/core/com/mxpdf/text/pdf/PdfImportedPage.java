@@ -44,21 +44,21 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.io.IOException;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Image;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /** Represents an imported page.
  *
  * @author Paulo Soares (psoares@consiste.pt)
  */
-public class PdfImportedPage extends com.lowagie.text.pdf.PdfTemplate {
+public class PdfImportedPage extends com.mxpdf.text.pdf.PdfTemplate {
 
     PdfReaderInstance readerInstance;
     int pageNumber;

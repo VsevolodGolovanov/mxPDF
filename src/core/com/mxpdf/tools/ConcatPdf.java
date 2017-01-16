@@ -44,20 +44,20 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.tools;
+package com.mxpdf.tools;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.pdf.PdfCopy;
-import com.lowagie.text.pdf.PdfImportedPage;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.SimpleBookmark;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.pdf.PdfCopy;
+import com.mxpdf.text.pdf.PdfImportedPage;
+import com.mxpdf.text.pdf.PdfReader;
+import com.mxpdf.text.pdf.SimpleBookmark;
 
 /**
  * Tool that can be used to concatenate existing PDF files.

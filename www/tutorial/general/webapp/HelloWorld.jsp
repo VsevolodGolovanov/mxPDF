@@ -1,7 +1,7 @@
 <%@
 page import="java.io.*,
-			 com.lowagie.text.*,
-			 com.lowagie.text.pdf.*"
+			 com.mxpdf.text.*,
+			 com.mxpdf.text.pdf.*"
 %><%
 //
 // Template JSP file for iText

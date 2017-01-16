@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -81,7 +81,7 @@ public class PdfEFStream extends PdfStream {
 	}
 
     /**
-     * @see com.lowagie.text.pdf.PdfDictionary#toPdf(com.lowagie.text.pdf.PdfWriter, java.io.OutputStream)
+     * @see com.mxpdf.text.pdf.PdfDictionary#toPdf(com.mxpdf.text.pdf.PdfWriter, java.io.OutputStream)
      */
     public void toPdf(PdfWriter writer, OutputStream os) throws IOException {
         if (inputStream != null && compressed)

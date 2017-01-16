@@ -44,22 +44,22 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.ArrayList;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ElementListener;
-import com.lowagie.text.Image;
-import com.lowagie.text.LargeElement;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.events.PdfPTableEventForwarder;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ElementListener;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.LargeElement;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.events.PdfPTableEventForwarder;
 
 /**
  * This is a table that can be put at an absolute position but can also
@@ -618,7 +618,7 @@ public class PdfPTable implements LargeElement{
      * @param canvases an array of 4 <CODE>PdfContentByte</CODE> obtained from
      * <CODE>beginWrittingRows()</CODE>
      * @return the y coordinate position of the bottom of the last row
-     * @see #beginWritingRows(com.lowagie.text.pdf.PdfContentByte)
+     * @see #beginWritingRows(com.mxpdf.text.pdf.PdfContentByte)
      */    
     public float writeSelectedRows(int rowStart, int rowEnd, float xPos, float yPos, PdfContentByte[] canvases) {
         return writeSelectedRows(0, -1, rowStart, rowEnd, xPos, yPos, canvases);
@@ -642,7 +642,7 @@ public class PdfPTable implements LargeElement{
      * @param canvases an array of 4 <CODE>PdfContentByte</CODE> obtained from
      * <CODE>beginWritingRows()</CODE>
      * @return the y coordinate position of the bottom of the last row
-     * @see #beginWritingRows(com.lowagie.text.pdf.PdfContentByte)
+     * @see #beginWritingRows(com.mxpdf.text.pdf.PdfContentByte)
      */    
     public float writeSelectedRows(int colStart, int colEnd, int rowStart, int rowEnd, float xPos, float yPos, PdfContentByte[] canvases) {
         if (totalWidth <= 0)
@@ -1035,7 +1035,7 @@ public class PdfPTable implements LargeElement{
     }
     
 	/**
-	 * @see com.lowagie.text.Element#isContent()
+	 * @see com.mxpdf.text.Element#isContent()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isContent() {
@@ -1043,7 +1043,7 @@ public class PdfPTable implements LargeElement{
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {
@@ -1567,7 +1567,7 @@ public class PdfPTable implements LargeElement{
 	
 	/**
 	 * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#flushContent()
+	 * @see com.mxpdf.text.LargeElement#flushContent()
 	 */
 	public void flushContent() {
 		deleteBodyRows();
@@ -1576,7 +1576,7 @@ public class PdfPTable implements LargeElement{
 
 	/**
      * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#isComplete()
+	 * @see com.mxpdf.text.LargeElement#isComplete()
 	 */
 	public boolean isComplete() {
 		return complete;
@@ -1584,7 +1584,7 @@ public class PdfPTable implements LargeElement{
 
 	/**
      * @since	iText 2.0.8
-	 * @see com.lowagie.text.LargeElement#setComplete(boolean)
+	 * @see com.mxpdf.text.LargeElement#setComplete(boolean)
 	 */
 	public void setComplete(boolean complete) {
 		this.complete = complete;

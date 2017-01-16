@@ -31,11 +31,11 @@
 		  Similarly to the situation with headers and footers it is not possible to create
 		  advanced cell borders using page events in the RTF package.<br /><br />
 		  
-		  To overcome this the <site:doc class="com.lowagie.text.rtf.table.RtfCell">RtfCell</site:doc>
+		  To overcome this the <site:doc class="com.mxpdf.text.rtf.table.RtfCell">RtfCell</site:doc>
 		  class exists, which makes it possible to specify advanced borders. To do this
-		  create a <site:doc class="com.lowagie.text.rtf.table.RtfBorderGroup">RtfBorderGroup</site:doc>
-		  and specify the style for that <site:doc class="com.lowagie.text.rtf.table.RtfBorderGroup">RtfBorderGroup</site:doc>,
-		  then apply it to the <site:doc class="com.lowagie.text.rtf.table.RtfCell">RtfCell</site:doc>.
+		  create a <site:doc class="com.mxpdf.text.rtf.table.RtfBorderGroup">RtfBorderGroup</site:doc>
+		  and specify the style for that <site:doc class="com.mxpdf.text.rtf.table.RtfBorderGroup">RtfBorderGroup</site:doc>,
+		  then apply it to the <site:doc class="com.mxpdf.text.rtf.table.RtfCell">RtfCell</site:doc>.
 		  
 		  <pre class="commandline">
 // Create a simple RtfCell with a dotted border.
@@ -44,7 +44,7 @@ cellDotted.setBorders(new RtfBorderGroup(Rectangle.BOX,
         RtfBorder.BORDER_DOTTED, 1, new Color(0, 0, 0)));
 		  </pre>
 		  
-		  You can also create <site:doc class="com.lowagie.text.rtf.table.RtfCell">RtfCell</site:doc>s
+		  You can also create <site:doc class="com.mxpdf.text.rtf.table.RtfCell">RtfCell</site:doc>s
 		  that have a border on only one side
 		  
 		  <pre class="commandline">
@@ -54,7 +54,7 @@ bottomBorder.setBorders(new RtfBorderGroup(Rectangle.BOTTOM,
         RtfBorder.BORDER_SINGLE, 2, new Color(255, 0, 0)));
 		  </pre>
 		  
-		  or that have different borders on different sides of the <site:doc class="com.lowagie.text.rtf.table.RtfCell">RtfCell</site:doc>.
+		  or that have different borders on different sides of the <site:doc class="com.mxpdf.text.rtf.table.RtfCell">RtfCell</site:doc>.
 
           <pre class="commandline">
 // Create a simple RtfCell that has different borders
@@ -68,8 +68,8 @@ mixedBorders.addBorder(Rectangle.BOTTOM,
 mixedBorder.setBorders(mixedBorders);
           </pre>
           
-          Finally if you want a <site:doc class="com.lowagie.text.rtf.table.RtfCell">RtfCell</site:doc>
-          without any borders simply set an empty <site:doc class="com.lowagie.text.rtf.table.RtfBorderGroup">RtfBorderGroup</site:doc>.
+          Finally if you want a <site:doc class="com.mxpdf.text.rtf.table.RtfCell">RtfCell</site:doc>
+          without any borders simply set an empty <site:doc class="com.mxpdf.text.rtf.table.RtfBorderGroup">RtfBorderGroup</site:doc>.
           
           <pre class="commandline">
 // Create a simple RtfCell with no border.
@@ -78,7 +78,7 @@ cellNoBorder.setBorders(new RtfBorderGroup());
           </pre>
           
           For a full list of the border styles that are available, please check the javadoc
-          for the <site:doc class="com.lowagie.text.rtf.table.RtfBorder">RtfBorder</site:doc> class.
+          for the <site:doc class="com.mxpdf.text.rtf.table.RtfBorder">RtfBorder</site:doc> class.
 		  <site:source class="ExtendedTableCell"/>
 		</div>
 	</site:section>

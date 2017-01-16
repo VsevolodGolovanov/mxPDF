@@ -1,11 +1,11 @@
-package com.lowagie.text.pdf.collection;
+package com.mxpdf.text.pdf.collection;
 
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfBoolean;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.error_messages.MessageLocalization;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.PdfArray;
+import com.mxpdf.text.pdf.PdfBoolean;
+import com.mxpdf.text.pdf.PdfDictionary;
+import com.mxpdf.text.pdf.PdfName;
+import com.mxpdf.text.pdf.PdfObject;
 
 public class PdfCollectionSort extends PdfDictionary {
 	

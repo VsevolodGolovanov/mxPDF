@@ -28,18 +28,18 @@
  * http://www.fontbox.org
  *
  */
-package com.lowagie.text.pdf.fonts.cmaps;
+package com.mxpdf.text.pdf.fonts.cmaps;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.IOException;
 import java.io.PushbackInputStream;
-import com.lowagie.text.error_messages.MessageLocalization;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /**
  * This will parser a CMap stream.

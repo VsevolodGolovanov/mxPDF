@@ -44,21 +44,21 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.awt.Color;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Font;
-import com.lowagie.text.Image;
-import com.lowagie.text.SplitCharacter;
-import com.lowagie.text.Utilities;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Font;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.SplitCharacter;
+import com.mxpdf.text.Utilities;
 
 /**
  * A <CODE>PdfChunk</CODE> is the PDF translation of a <CODE>Chunk</CODE>.
@@ -67,8 +67,8 @@ import com.lowagie.text.Utilities;
  * <CODE>PdfFont</CODE> and <CODE>Color</CODE>.
  *
  * @see		PdfString
- * @see		com.lowagie.text.Chunk
- * @see		com.lowagie.text.Font
+ * @see		com.mxpdf.text.Chunk
+ * @see		com.mxpdf.text.Font
  */
 
 public class PdfChunk {

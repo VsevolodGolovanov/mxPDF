@@ -45,10 +45,10 @@
  * 
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf.hyphenation;
+package com.mxpdf.text.pdf.hyphenation;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -56,10 +56,10 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.html.HtmlTags;
-import com.lowagie.text.xml.simpleparser.SimpleXMLDocHandler;
-import com.lowagie.text.xml.simpleparser.SimpleXMLParser;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.html.HtmlTags;
+import com.mxpdf.text.xml.simpleparser.SimpleXMLDocHandler;
+import com.mxpdf.text.xml.simpleparser.SimpleXMLParser;
 
 /** Parses the xml hyphenation pattern.
  *

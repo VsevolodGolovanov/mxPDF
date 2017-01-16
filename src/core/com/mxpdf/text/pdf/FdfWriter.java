@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -54,7 +54,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import com.lowagie.text.DocWriter;
+import com.mxpdf.text.DocWriter;
 
 /** Writes an FDF form.
  * @author Paulo Soares (psoares@consiste.pt)

@@ -44,17 +44,17 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-import com.lowagie.text.pdf.fonts.FontsResourceAnchor;
+import com.mxpdf.text.pdf.fonts.FontsResourceAnchor;
 
 public class GlyphList {
     private static HashMap unicode2names = new HashMap();
@@ -65,7 +65,7 @@ public class GlyphList {
         try {
             is = BaseFont.getResourceStream(BaseFont.RESOURCE_PATH + "glyphlist.txt", new FontsResourceAnchor().getClass().getClassLoader());
             if (is == null) {
-                String msg = "glyphlist.txt not found as resource. (It must exist as resource in the package com.lowagie.text.pdf.fonts)";
+                String msg = "glyphlist.txt not found as resource. (It must exist as resource in the package com.mxpdf.text.pdf.fonts)";
                 throw new Exception(msg);
             }
             byte buf[] = new byte[1024];

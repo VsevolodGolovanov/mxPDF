@@ -43,16 +43,16 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
 
-import com.lowagie.text.DocumentException;
+import com.mxpdf.text.DocumentException;
 
 /** This class takes any PDF and returns exactly the same but
  * encrypted. All the content, links, outlines, etc, are kept.

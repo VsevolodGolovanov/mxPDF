@@ -42,19 +42,19 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.html.simpleparser;
+package com.mxpdf.text.html.simpleparser;
 
 import java.util.ArrayList;
 
-import com.lowagie.text.Element;
-import com.lowagie.text.ElementListener;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.TextElementArray;
-import com.lowagie.text.html.Markup;
-import com.lowagie.text.pdf.PdfPCell;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ElementListener;
+import com.mxpdf.text.Phrase;
+import com.mxpdf.text.TextElementArray;
+import com.mxpdf.text.html.Markup;
+import com.mxpdf.text.pdf.PdfPCell;
 /**
  *
  * @author  psoares
@@ -128,7 +128,7 @@ public class IncCell implements TextElementArray {
     }  
     
 	/**
-	 * @see com.lowagie.text.Element#isContent()
+	 * @see com.mxpdf.text.Element#isContent()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isContent() {
@@ -136,7 +136,7 @@ public class IncCell implements TextElementArray {
 	}
 
 	/**
-	 * @see com.lowagie.text.Element#isNestable()
+	 * @see com.mxpdf.text.Element#isNestable()
 	 * @since	iText 2.0.8
 	 */
 	public boolean isNestable() {

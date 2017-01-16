@@ -44,10 +44,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.exceptions;
+package com.mxpdf.text.exceptions;
 /**
  * Typed exception used when opening an existing PDF document.
  * Gets thrown when the document isn't a valid PDF document according to iText,

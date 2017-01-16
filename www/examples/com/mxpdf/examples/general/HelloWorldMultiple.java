@@ -3,7 +3,7 @@
  *
  * This code is part of the 'iText Tutorial'.
  * You can find the complete tutorial at the following address:
- * http://itextdocs.lowagie.com/tutorial/
+
  *
  * This code is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,24 +12,23 @@
  * itext-questions@lists.sourceforge.net
  */
 
-package com.lowagie.examples.general;
+package com.mxpdf.examples.general;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.lowagie.text.Anchor;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.html.HtmlWriter;
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.rtf.RtfWriter2;
+import com.mxpdf.text.Anchor;
+import com.mxpdf.text.Chunk;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Paragraph;
+import com.mxpdf.text.html.HtmlWriter;
+import com.mxpdf.text.pdf.PdfWriter;
 
 /**
  * Generates simple 'Hello World' PDF, RTF and HTML files.
  * 
- * @author blowagie
+
  */
 
 public class HelloWorldMultiple {
@@ -50,8 +49,6 @@ public class HelloWorldMultiple {
 			// we create 3 different writers that listen to the document
 			PdfWriter pdf = PdfWriter.getInstance(document,
 					new FileOutputStream("HelloWorldPdf.pdf"));
-			RtfWriter2 rtf = RtfWriter2.getInstance(document,
-					new FileOutputStream("HelloWorldRtf.rtf"));
 			HtmlWriter.getInstance(document,
 					new FileOutputStream("HelloWorldHtml.html"));
 
@@ -68,12 +65,10 @@ public class HelloWorldMultiple {
 			// we add the references, but only to the HTML page:
 			
 			pdf.pause();
-			rtf.pause();
 			document.add(pdfRef);
 			document.add(Chunk.NEWLINE);
 			document.add(rtfRef);
 			pdf.resume();
-			rtf.resume();
 			
 		} catch (DocumentException de) {
 			System.err.println(de.getMessage());

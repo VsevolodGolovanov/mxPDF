@@ -78,7 +78,7 @@
 <div>
 Every end user can change his viewerpreferences in Acrobat, but as producer of PDF documents,
 you can add some viewerpreferences to the document. This can be done with the method
-<site:doc class="com.lowagie.text.pdf.PdfWriter" target="setViewerPreferences(int)">setViewerPreferences()</site:doc>.
+<site:doc class="com.mxpdf.text.pdf.PdfWriter" target="setViewerPreferences(int)">setViewerPreferences()</site:doc>.
 The parameter can be composed by ORing some of the constants that are explained below:
 <pre class="commandline">writer1.setViewerPreferences(PdfWriter.PageLayoutTwoColumnLeft);
 writer2.setViewerPreferences(PdfWriter.HideMenubar
@@ -141,7 +141,7 @@ This is the list with viewerpreferences that are supported in iText:
 If you set the viewerpreferences to mode PageModeUseThumbs,
 you get a 'thumbnails' view of you document, showing a small version of every page.
 Under each thumbnail, you have a label.
-If you want to change the style of these page labels, you have to create a <site:doc class="com.lowagie.text.pdf.PdfPageLabels">PdfPageLabels object</site:doc>
+If you want to change the style of these page labels, you have to create a <site:doc class="com.mxpdf.text.pdf.PdfPageLabels">PdfPageLabels object</site:doc>
 and add a new style, content or pagenumber value, starting from a certain 'real' pagenumber.<br />
 These are the different styles you can use:
 <ul>
@@ -173,7 +173,7 @@ You can read all about these layers in the chapter on <site:tutorial chapter="di
 		<site:sectiontitle>Bookmarks</site:sectiontitle>
 <div>
 If you set the viewerpreferences to mode PageModeUseOutlines, you get an outline tree that can be used as a Table-Of-Content or as a list with bookmarks.
-To construct this outline tree, you need to get the rootoutline from the writer object. To this root, you can add, new <site:doc class="com.lowagie.text.pdf.PdfOutline">PdfOutline</site:doc> objects:
+To construct this outline tree, you need to get the rootoutline from the writer object. To this root, you can add, new <site:doc class="com.mxpdf.text.pdf.PdfOutline">PdfOutline</site:doc> objects:
 <pre class="commandline">PdfOutline root = writer.getDirectContent().getRootOutline();
 new PdfOutline(cb.getRootOutline(), someDestination, "a bookmark");</pre>
 In the <site:tutorial chapter="/objects/bookmarks" section="destinations">next section</site:tutorial>, you will learn how to create objects such as 'someDestination'.
@@ -186,19 +186,19 @@ In the example below, we use PageEvents to add an entry to the outline tree ever
 		<site:sectiontitle>Creating Destinations</site:sectiontitle>
 <div>
 In the chapter on <site:tutorial chapter="/objects/anchors" section="localgoto">Anchors</site:tutorial>,
-we already defined destinations, by giving a name to a Chunk object (<site:doc class="com.lowagie.text.Chunk" target="setLocalDestination(java.lang.String)">setLocalDestination</site:doc>).
+we already defined destinations, by giving a name to a Chunk object (<site:doc class="com.mxpdf.text.Chunk" target="setLocalDestination(java.lang.String)">setLocalDestination</site:doc>).
 The position on the page of this Chunk defined the destination.<br />
 In this section, we are going to create destinations of the types:
 Destination.XYZ, Destination.FIT, Destination.FITH, Destination.FITV, Destination.FITR, Destination.FITB, Destination.FITBH or Destination.FITBV,
 using one of the following constructors:
 <ul>
-<li><site:doc class="com.lowagie.text.pdf.PdfDestination" target="PdfDestination(int)">public PdfDestination(int type)</site:doc>
+<li><site:doc class="com.mxpdf.text.pdf.PdfDestination" target="PdfDestination(int)">public PdfDestination(int type)</site:doc>
 can be used for types FIT and FITB.
 <b>FIT</b> points to the current page, with its contents magnified just enough to fit the entire page within the window
 both horizontally and vertically.
 <b>FITB</b> does the same, but the contents are magnified just enough to fit
 its bounding box.</li>
-<li><site:doc class="com.lowagie.text.pdf.PdfDestination" target="PdfDestination(int,%20float)">public PdfDestination(int type, float parameter)</site:doc>
+<li><site:doc class="com.mxpdf.text.pdf.PdfDestination" target="PdfDestination(int,%20float)">public PdfDestination(int type, float parameter)</site:doc>
 can be used for types FITH, FITV, FITBH and FITBV.<br />
 If type equals <b>FITBV</b>, the height of the bounding box of a page will fit the window of the Reader.
 The parameter will specify the x coordinate of the left edge of the window.<br />
@@ -209,13 +209,13 @@ The parameter will specify the y coordinate of the top edge of the window.<br />
 If the type equals <b>FITH</b> the width of the entire page will fit the window and
 the parameter will specify the y coordinate of the top edge.<br />
 </li>
-<li><site:doc class="com.lowagie.text.pdf.PdfDestination" target="PdfDestination(int,%20float,%20float,%20float)">public PdfDestination(int type, float left, float top, float zoom)</site:doc>
+<li><site:doc class="com.mxpdf.text.pdf.PdfDestination" target="PdfDestination(int,%20float,%20float,%20float)">public PdfDestination(int type, float left, float top, float zoom)</site:doc>
 can be used for type <b>XYZ</b> with the coordinates (left, top) as the top-left corner of the destination window
 and the contents of the page magnified by the factor zoom.
 A negative value for any of the parameters left or top, or a zoom value of 0
 specifies that the current value of that parameter is to be retained unchanged.
 </li>
-<li><site:doc class="com.lowagie.text.pdf.PdfDestination" target="PdfDestination(int,%20float,%20float,%20float,%20float)">public PdfDestination(int type, float left, float bottom, float right, float top)</site:doc>
+<li><site:doc class="com.mxpdf.text.pdf.PdfDestination" target="PdfDestination(int,%20float,%20float,%20float,%20float)">public PdfDestination(int type, float left, float bottom, float right, float top)</site:doc>
 can be used for type <b>FITR</b> the destination will be a rectangle specified by the coordinates left, bottom, right, and top.
 If the required horizontal and vertical magnification factors are different,
 use the smaller of the two, centering the rectangle within the window in the other dimension.
@@ -237,9 +237,9 @@ PdfDestination d5 = new PdfDestination(PdfDestination.FIT);</pre>
 	<site:section name="outlineactions">
 		<site:sectiontitle>Outlines and Actions</site:sectiontitle>
 <div>
-In the previous examples we used the outline tree to jump to a certain <site:doc class="com.lowagie.text.pdf.PdfDestionation">PdfDestination</site:doc>,
-but we can also use a <site:doc class="com.lowagie.text.pdf.PdfOutline" target="constructor_summary">PdfOutline</site:doc> to trigger a
-<site:doc class="com.lowagie.text.pdf.PdfAction">PdfAction</site:doc> (see the chapter on <site:tutorial chapter="/objects/anchors" section="actions">Actions</site:tutorial>).
+In the previous examples we used the outline tree to jump to a certain <site:doc class="com.mxpdf.text.pdf.PdfDestionation">PdfDestination</site:doc>,
+but we can also use a <site:doc class="com.mxpdf.text.pdf.PdfOutline" target="constructor_summary">PdfOutline</site:doc> to trigger a
+<site:doc class="com.mxpdf.text.pdf.PdfAction">PdfAction</site:doc> (see the chapter on <site:tutorial chapter="/objects/anchors" section="actions">Actions</site:tutorial>).
 <pre class="commandline">PdfOutline root = writer.getDirectContent().getRootOutline();
 new PdfOutline(root,
 	new PdfAction("http://www.lowagie.com/iText"), "Bruno's iText site");
@@ -254,8 +254,8 @@ new PdfOutline(other,
 If all the examples above are overkill, if you only need a simple tree
 with some chapters and (sub)sections, you needn't define destinations and
 add them to a rootoutline or a parent outline. You can simply use the
-objects <site:doc class="com.lowagie.text.Chapter">Chapter</site:doc> 
-and <site:doc class="com.lowagie.text.Section">Section</site:doc>.
+objects <site:doc class="com.mxpdf.text.Chapter">Chapter</site:doc> 
+and <site:doc class="com.mxpdf.text.Section">Section</site:doc>.
 They build a tree and number titles automatically.
 <pre class="commandline">Paragraph cTitle = new Paragraph("This is chapter 1", chapterFont);
 Chapter chapter = new Chapter(cTitle, 1);
@@ -276,7 +276,7 @@ is kept in memory as long as you don't add the chapter to the doc.</li>
 </li>
 <li>Every chapter starts on a new page automatically. If you want to have
 a section within a chapter starting on a new page, you will have to use
-<site:doc class="com.lowagie.text.Chunk" target="NEXTPAGE">Chunk.NEXTPAGE</site:doc>.</li>
+<site:doc class="com.mxpdf.text.Chunk" target="NEXTPAGE">Chunk.NEXTPAGE</site:doc>.</li>
 </ul>
 <site:source class="ChapterSection" />
 </div>

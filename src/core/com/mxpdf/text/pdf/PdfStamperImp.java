@@ -42,9 +42,9 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -53,20 +53,20 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
-import com.lowagie.text.error_messages.MessageLocalization;
 
 import org.xml.sax.SAXException;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.exceptions.BadPasswordException;
-import com.lowagie.text.pdf.collection.PdfCollection;
-import com.lowagie.text.pdf.interfaces.PdfViewerPreferences;
-import com.lowagie.text.pdf.internal.PdfViewerPreferencesImp;
-import com.lowagie.text.xml.xmp.XmpReader;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.exceptions.BadPasswordException;
+import com.mxpdf.text.pdf.collection.PdfCollection;
+import com.mxpdf.text.pdf.interfaces.PdfViewerPreferences;
+import com.mxpdf.text.pdf.internal.PdfViewerPreferencesImp;
+import com.mxpdf.text.xml.xmp.XmpReader;
 
 class PdfStamperImp extends PdfWriter {
     HashMap readers2intrefs = new HashMap();
@@ -1066,7 +1066,7 @@ class PdfStamperImp extends PdfWriter {
 	}
 
     /**
-     * @see com.lowagie.text.pdf.PdfWriter#getPageReference(int)
+     * @see com.mxpdf.text.pdf.PdfWriter#getPageReference(int)
      */
     public PdfIndirectReference getPageReference(int page) {
         PdfIndirectReference ref = reader.getPageOrigRef(page);
@@ -1076,7 +1076,7 @@ class PdfStamperImp extends PdfWriter {
     }
 
     /**
-     * @see com.lowagie.text.pdf.PdfWriter#addAnnotation(com.lowagie.text.pdf.PdfAnnotation)
+     * @see com.mxpdf.text.pdf.PdfWriter#addAnnotation(com.mxpdf.text.pdf.PdfAnnotation)
      */
     public void addAnnotation(PdfAnnotation annot) {
         throw new RuntimeException(MessageLocalization.getComposedMessage("unsupported.in.this.context.use.pdfstamper.addannotation"));
@@ -1506,23 +1506,23 @@ class PdfStamperImp extends PdfWriter {
     }
 
     /**
-     * @see com.lowagie.text.pdf.PdfWriter#setOpenAction(com.lowagie.text.pdf.PdfAction)
+     * @see com.mxpdf.text.pdf.PdfWriter#setOpenAction(com.mxpdf.text.pdf.PdfAction)
      */
     public void setOpenAction(PdfAction action) {
         openAction = action;
     }
 
     /**
-     * @see com.lowagie.text.pdf.PdfWriter#setOpenAction(java.lang.String)
+     * @see com.mxpdf.text.pdf.PdfWriter#setOpenAction(java.lang.String)
      */
     public void setOpenAction(String name) {
         throw new UnsupportedOperationException(MessageLocalization.getComposedMessage("open.actions.by.name.are.not.supported"));
     }
 
     /**
-     * @see com.lowagie.text.pdf.PdfWriter#setThumbnail(com.lowagie.text.Image)
+     * @see com.mxpdf.text.pdf.PdfWriter#setThumbnail(com.mxpdf.text.Image)
      */
-    public void setThumbnail(com.lowagie.text.Image image) {
+    public void setThumbnail(com.mxpdf.text.Image image) {
         throw new UnsupportedOperationException(MessageLocalization.getComposedMessage("use.pdfstamper.setthumbnail"));
     }
 

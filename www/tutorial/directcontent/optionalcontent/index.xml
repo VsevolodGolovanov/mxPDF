@@ -72,15 +72,15 @@ Graphics that can be made visible/invisible dynamically are grouped in
 <i>optional content groups</i>. Content that belongs to a certain group is visible
 when the group is ON and invisible when the group is OFF.<br />
 In iText, we call such groups 'layers'. You can create a
-<site:doc class="com.lowagie.text.pdf.PdfLayer">PdfLayer</site:doc> object
-and when adding content to a <site:doc class="com.lowagie.text.pdf.PdfContentByte">PdfContentByte</site:doc>-object,
+<site:doc class="com.mxpdf.text.pdf.PdfLayer">PdfLayer</site:doc> object
+and when adding content to a <site:doc class="com.mxpdf.text.pdf.PdfContentByte">PdfContentByte</site:doc>-object,
 we are going to specify in which layer (= Content Group) the content should be shown (or hidden).
 <pre class="commandline">PdfContentByte cb = writer.getDirectContent();
 PdfLayer l = new PdfLayer("My Layer", writer);
 cb.beginLayer(l);
 // add content to 'My Layer' here
 cb.endLayer();</pre>
-You can combine different PdfLayers in a <site:doc class="com.lowagie.text.pdf.PdfLayerMembership">PdfLayerMembership</site:doc>:
+You can combine different PdfLayers in a <site:doc class="com.mxpdf.text.pdf.PdfLayerMembership">PdfLayerMembership</site:doc>:
 <pre class="commandline">PdfContentByte cb = writer.getDirectContent();
 PdfLayer l1 = new PdfLayer("Layer 1", writer);
 PdfLayer l2 = new PdfLayer("Layer 2", writer);
@@ -98,12 +98,12 @@ Remark that we have set the PDF version to 1.5 just after creating the writer (b
 and we have also set the Viewer Preferences to <span class="commandline">PageModeUseOC</span>.
 <pre class="commandline">writer.setPdfVersion(PdfWriter.VERSION_1_5);
 writer.setViewerPreferences(PdfWriter.PageModeUseOC);</pre>
-Every writer object has a <site:doc class="com.lowagie.text.pdf.PdfOCProperties">PdfOCProperties</site:doc> dictionary.
-You can get this dictonary with <site:doc class="com.lowagie.text.pdf.PdfWriter" target="getOCProperties()">getOCProperties()</site:doc>
+Every writer object has a <site:doc class="com.mxpdf.text.pdf.PdfOCProperties">PdfOCProperties</site:doc> dictionary.
+You can get this dictonary with <site:doc class="com.mxpdf.text.pdf.PdfWriter" target="getOCProperties()">getOCProperties()</site:doc>
 as is done in the example above.
 Dictionaries are objects that are used a lot in PDF (other specific PDF objects are PdfArray, PdfString, PdfNull, PdfName, PdfNumber,...).
 iText creates lots of these objects behind the scenes.
-If you want to use the <site:doc class="com.lowagie.text.pdf.PdfOCProperties">PdfOCProperties</site:doc> dictionary,
+If you want to use the <site:doc class="com.mxpdf.text.pdf.PdfOCProperties">PdfOCProperties</site:doc> dictionary,
 you have a chance to get a better understanding of the iText internals (this is an euphemism meaning it's rather complex stuff).
 The code below gets the OC Properties from the writer, creates an ORDER-array and adds the layers l1, l2 and l3 to this order array,
 with l2 and l3 inside a 'group of two':
@@ -126,18 +126,18 @@ You may find all this rather elaborate and complex.
 I'm sorry, I've been pulling your leg in order to show how iText works.
 There are far more simpler ways to order, group or nest OCGs:
 just use the methods
-<site:doc class="com.lowagie.text.pdf.PdfLayer" target="createTitle(java.lang.String,%20com.lowagie.text.pdf.PdfWriter)">PdfLayer.createTitle</site:doc>
-and <site:doc class="com.lowagie.text.pdf.PdfLayer" target="addChild(com.lowagie.text.pdf.PdfLayer)">PdfLayer.addChild</site:doc>,
+<site:doc class="com.mxpdf.text.pdf.PdfLayer" target="createTitle(java.lang.String,%20com.lowagie.text.pdf.PdfWriter)">PdfLayer.createTitle</site:doc>
+and <site:doc class="com.mxpdf.text.pdf.PdfLayer" target="addChild(com.mxpdf.text.pdf.PdfLayer)">PdfLayer.addChild</site:doc>,
 and iText will do all the difficult work for you.
 <site:source class="Automatic" />
 You might want to take a look at the other methods in class
-<site:doc class="com.lowagie.text.pdf.PdfLayer">PdfLayer</site:doc>:
-<site:doc class="com.lowagie.text.pdf.PdfLayer" target="setZoom(float,%20float)">PdfLayer.setZoom</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfLayer">PdfLayer</site:doc>:
+<site:doc class="com.mxpdf.text.pdf.PdfLayer" target="setZoom(float,%20float)">PdfLayer.setZoom</site:doc>
 might be handy if you are drawing a map: you can specify between which maximum and minimum zoom factor the content should be visible.
-<site:doc class="com.lowagie.text.pdf.PdfLayer" target="setPrint(java.lang.String,%20boolean)">PdfLayer.setPrint</site:doc>
+<site:doc class="com.mxpdf.text.pdf.PdfLayer" target="setPrint(java.lang.String,%20boolean)">PdfLayer.setPrint</site:doc>
 if you want to add content that is intended for use in printing.
-<site:doc class="com.lowagie.text.pdf.PdfLayer" target="">PdfLayer.setOn</site:doc> sets the initial visibility of the layer.
-<site:doc class="com.lowagie.text.pdf.PdfLayer" target="setOnPanel(boolean)">PdfLayer.setOnPanel</site:doc> sets the visibility of the layer in Acrobat's layer panel. If set to false the layer cannot be directly manipulated by the user.
+<site:doc class="com.mxpdf.text.pdf.PdfLayer" target="">PdfLayer.setOn</site:doc> sets the initial visibility of the layer.
+<site:doc class="com.mxpdf.text.pdf.PdfLayer" target="setOnPanel(boolean)">PdfLayer.setOnPanel</site:doc> sets the visibility of the layer in Acrobat's layer panel. If set to false the layer cannot be directly manipulated by the user.
 These methods are used in this example:
 <site:source class="Layers" />
 There are lots of other methods in class PdfLayer. But let's look at one final example:
@@ -153,7 +153,7 @@ state.add(l4);
 PdfAction action = PdfAction.setOCGstate(state, true);
 Chunk ck = new Chunk("Click here to toggle the layers").setAction(action);</pre>
 The different possibilities are "ON", "OFF" or "Toggle" (see also the API for
-<site:doc class="com.lowagie.text.pdf.PdfAction" target="setOCGstate(java.util.ArrayList,%20boolean)">PdfAction.setOCGstate</site:doc>).
+<site:doc class="com.mxpdf.text.pdf.PdfAction" target="setOCGstate(java.util.ArrayList,%20boolean)">PdfAction.setOCGstate</site:doc>).
 </div>
 	</site:section>
 	</site:chapter>

@@ -44,21 +44,21 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.StringTokenizer;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.pdf.fonts.FontsResourceAnchor;
+import com.mxpdf.text.Document;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.pdf.fonts.FontsResourceAnchor;
 
 /** Reads a Type1 font
  *
@@ -191,7 +191,7 @@ class Type1Font extends BaseFont
                     resourceAnchor = new FontsResourceAnchor();
                 is = getResourceStream(RESOURCE_PATH + afmFile + ".afm", resourceAnchor.getClass().getClassLoader());
                 if (is == null) {
-                    String msg = MessageLocalization.getComposedMessage("1.not.found.as.resource", afmFile);
+                    String msg = new String ("Adobe font mapping file " + afmFile + " could not be located as a resource");
                     System.err.println(msg);
                     throw new DocumentException(msg);
                 }

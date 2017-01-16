@@ -44,28 +44,28 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 import java.awt.Color;
 import java.awt.geom.AffineTransform;
 import java.awt.print.PrinterJob;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import com.lowagie.text.error_messages.MessageLocalization;
 
-import com.lowagie.text.Annotation;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Element;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.Image;
-import com.lowagie.text.ImgJBIG2;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.exceptions.IllegalPdfSyntaxException;
-import com.lowagie.text.pdf.internal.PdfAnnotationsImp;
-import com.lowagie.text.pdf.internal.PdfXConformanceImp;
+import com.mxpdf.text.Annotation;
+import com.mxpdf.text.DocumentException;
+import com.mxpdf.text.Element;
+import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.Image;
+import com.mxpdf.text.ImgJBIG2;
+import com.mxpdf.text.Rectangle;
+import com.mxpdf.text.error_messages.MessageLocalization;
+import com.mxpdf.text.exceptions.IllegalPdfSyntaxException;
+import com.mxpdf.text.pdf.internal.PdfAnnotationsImp;
+import com.mxpdf.text.pdf.internal.PdfXConformanceImp;
 
 /**
  * <CODE>PdfContentByte</CODE> is an object containing the user positioned
@@ -797,7 +797,7 @@ public class PdfContentByte {
 
     /**
      * Adds a variable width border to the current path.
-     * Only use if {@link com.lowagie.text.Rectangle#isUseVariableBorders() Rectangle.isUseVariableBorders}
+     * Only use if {@link com.mxpdf.text.Rectangle#isUseVariableBorders() Rectangle.isUseVariableBorders}
      * = true.
      * @param rect a <CODE>Rectangle</CODE>
      */

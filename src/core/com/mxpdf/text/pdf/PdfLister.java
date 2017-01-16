@@ -46,10 +46,10 @@
  *
  * If you didn't download this code from the following link, you should check if
  * you aren't using an obsolete version:
- * http://www.lowagie.com/iText/
+
  */
 
- package com.lowagie.text.pdf;
+ package com.mxpdf.text.pdf;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -74,7 +74,7 @@ public class PdfLister {
 
     /**
      * Visualizes a PDF object.
-     * @param object	a com.lowagie.text.pdf object
+     * @param object	a com.mxpdf.text.pdf object
      */
     public void listAnyObject(PdfObject object)
     {
@@ -95,7 +95,7 @@ public class PdfLister {
     }
     /**
      * Visualizes a PdfDictionary object.
-     * @param dictionary	a com.lowagie.text.pdf.PdfDictionary object
+     * @param dictionary	a com.mxpdf.text.pdf.PdfDictionary object
      */
     public void listDict(PdfDictionary dictionary)
     {
@@ -114,7 +114,7 @@ public class PdfLister {
 
     /**
      * Visualizes a PdfArray object.
-     * @param array	a com.lowagie.text.pdf.PdfArray object
+     * @param array	a com.mxpdf.text.pdf.PdfArray object
      */
     public void listArray(PdfArray array)
     {

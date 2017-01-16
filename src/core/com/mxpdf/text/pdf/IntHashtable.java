@@ -27,12 +27,13 @@
  * but rereleased by the original author under the ASF license (above).
  */
 
-package com.lowagie.text.pdf;
+package com.mxpdf.text.pdf;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import com.lowagie.text.error_messages.MessageLocalization;
+
+import com.mxpdf.text.error_messages.MessageLocalization;
 
 /***
  * <p>A hash map that uses primitive ints for the key rather than objects.</p>
