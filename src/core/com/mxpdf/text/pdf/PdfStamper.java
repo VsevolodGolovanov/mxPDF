@@ -85,7 +85,6 @@ public class PdfStamper
     protected PdfStamperImp stamper;
     private HashMap moreInfo;
     private boolean hasSignature;
-    private PdfSignatureAppearance sigApp;
 
     /** Starts the process of adding extra content to an existing PDF
      * document.
@@ -172,14 +171,6 @@ public class PdfStamper
     }
     
     /**
-     * Gets the signing instance. The appearances and other parameters can the be set.
-     * @return the signing instance
-     */    
-    public PdfSignatureAppearance getSignatureAppearance() {
-        return sigApp;
-    }
-
-    /**
      * Closes the document. No more content can be written after the
      * document is closed.
      * <p>
@@ -193,29 +184,11 @@ public class PdfStamper
             stamper.close(moreInfo);
             return;
         }
-        sigApp.preClose();
-        PdfSigGenericPKCS sig = sigApp.getSigStandard();
-        PdfLiteral lit = (PdfLiteral)sig.get(PdfName.CONTENTS);
-        int totalBuf = (lit.getPosLength() - 2) / 2;
         byte buf[] = new byte[8192];
-        int n;
-        InputStream inp = sigApp.getRangeStream();
-        try {
-            while ((n = inp.read(buf)) > 0) {
-                sig.getSigner().update(buf, 0, n);
-            }
-        }
-        catch (SignatureException se) {
-            throw new ExceptionConverter(se);
-        }
-        buf = new byte[totalBuf];
-        byte[] bsig = sig.getSignerContents();
-        System.arraycopy(bsig, 0, buf, 0, bsig.length);
         PdfString str = new PdfString(buf);
         str.setHexWriting(true);
         PdfDictionary dic = new PdfDictionary();
         dic.put(PdfName.CONTENTS, str);
-        sigApp.close(dic);
         stamper.reader.close();
     }
 
@@ -607,150 +580,6 @@ public class PdfStamper
         stamper.setTransition(transition, page);
     }
 
-    /**
-     * Applies a digital signature to a document, possibly as a new revision, making
-     * possible multiple signatures. The returned PdfStamper
-     * can be used normally as the signature is only applied when closing.
-     * <p>
-     * A possible use for adding a signature without invalidating an existing one is:
-     * <p>
-     * <pre>
-     * KeyStore ks = KeyStore.getInstance("pkcs12");
-     * ks.load(new FileInputStream("my_private_key.pfx"), "my_password".toCharArray());
-     * String alias = (String)ks.aliases().nextElement();
-     * PrivateKey key = (PrivateKey)ks.getKey(alias, "my_password".toCharArray());
-     * Certificate[] chain = ks.getCertificateChain(alias);
-     * PdfReader reader = new PdfReader("original.pdf");
-     * FileOutputStream fout = new FileOutputStream("signed.pdf");
-     * PdfStamper stp = PdfStamper.createSignature(reader, fout, '\0', new
-     * File("/temp"), true);
-     * PdfSignatureAppearance sap = stp.getSignatureAppearance();
-     * sap.setCrypto(key, chain, null, PdfSignatureAppearance.WINCER_SIGNED);
-     * sap.setReason("I'm the author");
-     * sap.setLocation("Lisbon");
-     * // comment next line to have an invisible signature
-     * sap.setVisibleSignature(new Rectangle(100, 100, 200, 200), 1, null);
-     * stp.close();
-     * </pre>
-     * @param reader the original document
-     * @param os the output stream or <CODE>null</CODE> to keep the document in the temporary file
-     * @param pdfVersion the new pdf version or '\0' to keep the same version as the original
-     * document
-     * @param tempFile location of the temporary file. If it's a directory a temporary file will be created there.
-     *     If it's a file it will be used directly. The file will be deleted on exit unless <CODE>os</CODE> is null.
-     *     In that case the document can be retrieved directly from the temporary file. If it's <CODE>null</CODE>
-     *     no temporary file will be created and memory will be used
-     * @param append if <CODE>true</CODE> the signature and all the other content will be added as a
-     * new revision thus not invalidating existing signatures
-     * @return a <CODE>PdfStamper</CODE>
-     * @throws DocumentException on error
-     * @throws IOException on error
-     */
-    public static PdfStamper createSignature(PdfReader reader, OutputStream os, char pdfVersion, File tempFile, boolean append) throws DocumentException, IOException {
-        PdfStamper stp;
-        if (tempFile == null) {
-            ByteBuffer bout = new ByteBuffer();
-            stp = new PdfStamper(reader, bout, pdfVersion, append);
-            stp.sigApp = new PdfSignatureAppearance(stp.stamper);
-            stp.sigApp.setSigout(bout);
-        }
-        else {
-            if (tempFile.isDirectory())
-                tempFile = File.createTempFile("pdf", null, tempFile);
-            FileOutputStream fout = new FileOutputStream(tempFile);
-            stp = new PdfStamper(reader, fout, pdfVersion, append);
-            stp.sigApp = new PdfSignatureAppearance(stp.stamper);
-            stp.sigApp.setTempFile(tempFile);
-        }
-        stp.sigApp.setOriginalout(os);
-        stp.sigApp.setStamper(stp);
-        stp.hasSignature = true;
-        PdfDictionary catalog = reader.getCatalog();
-        PdfDictionary acroForm = (PdfDictionary)PdfReader.getPdfObject(catalog.get(PdfName.ACROFORM), catalog);
-        if (acroForm != null) {
-            acroForm.remove(PdfName.NEEDAPPEARANCES);
-            stp.stamper.markUsed(acroForm);
-        }
-        return stp;
-    }
-
-    /**
-     * Applies a digital signature to a document. The returned PdfStamper
-     * can be used normally as the signature is only applied when closing.
-     * <p>
-     * Note that the pdf is created in memory.
-     * <p>
-     * A possible use is:
-     * <p>
-     * <pre>
-     * KeyStore ks = KeyStore.getInstance("pkcs12");
-     * ks.load(new FileInputStream("my_private_key.pfx"), "my_password".toCharArray());
-     * String alias = (String)ks.aliases().nextElement();
-     * PrivateKey key = (PrivateKey)ks.getKey(alias, "my_password".toCharArray());
-     * Certificate[] chain = ks.getCertificateChain(alias);
-     * PdfReader reader = new PdfReader("original.pdf");
-     * FileOutputStream fout = new FileOutputStream("signed.pdf");
-     * PdfStamper stp = PdfStamper.createSignature(reader, fout, '\0');
-     * PdfSignatureAppearance sap = stp.getSignatureAppearance();
-     * sap.setCrypto(key, chain, null, PdfSignatureAppearance.WINCER_SIGNED);
-     * sap.setReason("I'm the author");
-     * sap.setLocation("Lisbon");
-     * // comment next line to have an invisible signature
-     * sap.setVisibleSignature(new Rectangle(100, 100, 200, 200), 1, null);
-     * stp.close();
-     * </pre>
-     * @param reader the original document
-     * @param os the output stream
-     * @param pdfVersion the new pdf version or '\0' to keep the same version as the original
-     * document
-     * @throws DocumentException on error
-     * @throws IOException on error
-     * @return a <CODE>PdfStamper</CODE>
-     */
-    public static PdfStamper createSignature(PdfReader reader, OutputStream os, char pdfVersion) throws DocumentException, IOException {
-        return createSignature(reader, os, pdfVersion, null, false);
-    }
-    
-    /**
-     * Applies a digital signature to a document. The returned PdfStamper
-     * can be used normally as the signature is only applied when closing.
-     * <p>
-     * A possible use is:
-     * <p>
-     * <pre>
-     * KeyStore ks = KeyStore.getInstance("pkcs12");
-     * ks.load(new FileInputStream("my_private_key.pfx"), "my_password".toCharArray());
-     * String alias = (String)ks.aliases().nextElement();
-     * PrivateKey key = (PrivateKey)ks.getKey(alias, "my_password".toCharArray());
-     * Certificate[] chain = ks.getCertificateChain(alias);
-     * PdfReader reader = new PdfReader("original.pdf");
-     * FileOutputStream fout = new FileOutputStream("signed.pdf");
-     * PdfStamper stp = PdfStamper.createSignature(reader, fout, '\0', new File("/temp"));
-     * PdfSignatureAppearance sap = stp.getSignatureAppearance();
-     * sap.setCrypto(key, chain, null, PdfSignatureAppearance.WINCER_SIGNED);
-     * sap.setReason("I'm the author");
-     * sap.setLocation("Lisbon");
-     * // comment next line to have an invisible signature
-     * sap.setVisibleSignature(new Rectangle(100, 100, 200, 200), 1, null);
-     * stp.close();
-     * </pre>
-     * @param reader the original document
-     * @param os the output stream or <CODE>null</CODE> to keep the document in the temporary file
-     * @param pdfVersion the new pdf version or '\0' to keep the same version as the original
-     * document
-     * @param tempFile location of the temporary file. If it's a directory a temporary file will be created there.
-     *     If it's a file it will be used directly. The file will be deleted on exit unless <CODE>os</CODE> is null.
-     *     In that case the document can be retrieved directly from the temporary file. If it's <CODE>null</CODE>
-     *     no temporary file will be created and memory will be used
-     * @return a <CODE>PdfStamper</CODE>
-     * @throws DocumentException on error
-     * @throws IOException on error
-     */
-    public static PdfStamper createSignature(PdfReader reader, OutputStream os, char pdfVersion, File tempFile) throws DocumentException, IOException 
-    {
-        return createSignature(reader, os, pdfVersion, tempFile, false);
-    }
-    
     /**
      * Gets the PdfLayer objects in an existing document as a Map
      * with the names/titles of the layers as keys.

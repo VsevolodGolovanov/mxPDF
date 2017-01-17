@@ -48,18 +48,13 @@
  */
 package com.mxpdf.text.pdf;
 
-import com.mxpdf.text.pdf.crypto.AESCipher;
 import com.mxpdf.text.pdf.crypto.ARCFOUREncryption;
 
 public class StandardDecryption {
     protected ARCFOUREncryption arcfour;
-    protected AESCipher cipher;
     private byte[] key;
     private static final int AES_128 = 4;
     private boolean aes;
-    private boolean initiated;
-    private byte[] iv = new byte[16];
-    private int ivptr;
 
     /** Creates a new instance of StandardDecryption */
     public StandardDecryption(byte key[], int off, int len, int revision) {
@@ -74,37 +69,7 @@ public class StandardDecryption {
         }
     }
     
-    public byte[] update(byte[] b, int off, int len) {
-        if (aes) {
-            if (initiated)
-                return cipher.update(b, off, len);
-            else {
-                int left = Math.min(iv.length - ivptr, len);
-                System.arraycopy(b, off, iv, ivptr, left);
-                off += left;
-                len -= left;
-                ivptr += left;
-                if (ivptr == iv.length) {
-                    cipher = new AESCipher(false, key, iv);
-                    initiated = true;
-                    if (len > 0)
-                        return cipher.update(b, off, len);
-                }
-                return null;
-            }
-        }
-        else {
-            byte[] b2 = new byte[len];
-            arcfour.encryptARCFOUR(b, off, len, b2, 0);
-            return b2;
-        }
-    }
+    public byte[] update(byte[] b, int off, int len) {return null;}
     
-    public byte[] finish() {
-        if (aes) {
-            return cipher.doFinal();
-        }
-        else
-            return null;
-    }
+    public byte[] finish() {return null;}
 }
