@@ -2129,6 +2129,132 @@ public class AcroFields {
         return ((int[])sigNames.get(name))[0] == reader.getFileLength();
     }
 
+    /**
+     * Verifies a signature. An example usage is:
+     * <p>
+     * <pre>
+     * KeyStore kall = PdfPKCS7.loadCacertsKeyStore();
+     * PdfReader reader = new PdfReader("my_signed_doc.pdf");
+     * AcroFields af = reader.getAcroFields();
+     * ArrayList names = af.getSignatureNames();
+     * for (int k = 0; k &lt; names.size(); ++k) {
+     *    String name = (String)names.get(k);
+     *    System.out.println("Signature name: " + name);
+     *    System.out.println("Signature covers whole document: " + af.signatureCoversWholeDocument(name));
+     *    PdfPKCS7 pk = af.verifySignature(name);
+     *    Calendar cal = pk.getSignDate();
+     *    Certificate pkc[] = pk.getCertificates();
+     *    System.out.println("Subject: " + PdfPKCS7.getSubjectFields(pk.getSigningCertificate()));
+     *    System.out.println("Document modified: " + !pk.verify());
+     *    Object fails[] = PdfPKCS7.verifyCertificates(pkc, kall, null, cal);
+     *    if (fails == null)
+     *        System.out.println("Certificates verified against the KeyStore");
+     *    else
+     *        System.out.println("Certificate failed: " + fails[1]);
+     * }
+     * </pre>
+     * 
+     * @param name the signature field name
+     * @return a <CODE>PdfPKCS7</CODE> class to continue the verification
+     */
+    public PdfPKCS7 verifySignature(String name) {
+        return verifySignature(name, null);
+    }
+
+    /**
+     * Verifies a signature. An example usage is:
+     * <p>
+     * <pre>
+     * KeyStore kall = PdfPKCS7.loadCacertsKeyStore();
+     * PdfReader reader = new PdfReader("my_signed_doc.pdf");
+     * AcroFields af = reader.getAcroFields();
+     * ArrayList names = af.getSignatureNames();
+     * for (int k = 0; k &lt; names.size(); ++k) {
+     *    String name = (String)names.get(k);
+     *    System.out.println("Signature name: " + name);
+     *    System.out.println("Signature covers whole document: " + af.signatureCoversWholeDocument(name));
+     *    PdfPKCS7 pk = af.verifySignature(name);
+     *    Calendar cal = pk.getSignDate();
+     *    Certificate pkc[] = pk.getCertificates();
+     *    System.out.println("Subject: " + PdfPKCS7.getSubjectFields(pk.getSigningCertificate()));
+     *    System.out.println("Document modified: " + !pk.verify());
+     *    Object fails[] = PdfPKCS7.verifyCertificates(pkc, kall, null, cal);
+     *    if (fails == null)
+     *        System.out.println("Certificates verified against the KeyStore");
+     *    else
+     *        System.out.println("Certificate failed: " + fails[1]);
+     * }
+     * </pre>
+     * 
+     * @param name the signature field name
+     * @param provider the provider or <code>null</code> for the default provider
+     * @return a <CODE>PdfPKCS7</CODE> class to continue the verification
+     */
+    public PdfPKCS7 verifySignature(String name, String provider) {
+        PdfDictionary v = getSignatureDictionary(name);
+        if (v == null)
+            return null;
+        try {
+            PdfName sub = v.getAsName(PdfName.SUBFILTER);
+            PdfString contents = v.getAsString(PdfName.CONTENTS);
+            PdfPKCS7 pk = null;
+            if (sub.equals(PdfName.ADBE_X509_RSA_SHA1)) {
+                PdfString cert = v.getAsString(PdfName.CERT);
+                pk = new PdfPKCS7(contents.getOriginalBytes(), cert.getBytes(), provider);
+            }
+            else
+                pk = new PdfPKCS7(contents.getOriginalBytes(), provider);
+            updateByteRange(pk, v);
+            PdfString str = v.getAsString(PdfName.M);
+            if (str != null)
+                pk.setSignDate(PdfDate.decode(str.toString()));
+            PdfObject obj = PdfReader.getPdfObject(v.get(PdfName.NAME));
+            if (obj != null) {
+              if (obj.isString())
+                pk.setSignName(((PdfString)obj).toUnicodeString());
+              else if(obj.isName())
+                pk.setSignName(PdfName.decodeName(obj.toString()));
+            }
+            str = v.getAsString(PdfName.REASON);
+            if (str != null)
+                pk.setReason(str.toUnicodeString());
+            str = v.getAsString(PdfName.LOCATION);
+            if (str != null)
+                pk.setLocation(str.toUnicodeString());
+            return pk;
+        }
+        catch (Exception e) {
+            throw new ExceptionConverter(e);
+        }
+    }
+
+    private void updateByteRange(PdfPKCS7 pkcs7, PdfDictionary v) {
+        PdfArray b = v.getAsArray(PdfName.BYTERANGE);
+        RandomAccessFileOrArray rf = reader.getSafeFile();
+        try {
+            rf.reOpen();
+            byte buf[] = new byte[8192];
+            for (int k = 0; k < b.size(); ++k) {
+                int start = b.getAsNumber(k).intValue();
+                int length = b.getAsNumber(++k).intValue();
+                rf.seek(start);
+                while (length > 0) {
+                    int rd = rf.read(buf, 0, Math.min(length, buf.length));
+                    if (rd <= 0)
+                        break;
+                    length -= rd;
+                    pkcs7.update(buf, 0, rd);
+                }
+            }
+        }
+        catch (Exception e) {
+            throw new ExceptionConverter(e);
+        }
+        finally {
+            try{rf.close();}catch(Exception e){}
+        }
+    }
+
     private void markUsed(PdfObject obj) {
         if (!append)
             return;

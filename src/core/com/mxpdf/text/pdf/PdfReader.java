@@ -69,6 +69,9 @@ import java.security.Key;
 import java.security.MessageDigest;
 import java.security.cert.Certificate;
 
+import org.bouncycastle.cms.CMSEnvelopedData;
+import org.bouncycastle.cms.RecipientInformation;
+
 import com.mxpdf.text.ExceptionConverter;
 import com.mxpdf.text.PageSize;
 import com.mxpdf.text.Rectangle;
@@ -703,6 +706,33 @@ public class PdfReader implements PdfViewerPreferences {
                 break;
             default:
             	throw new UnsupportedPdfException(MessageLocalization.getComposedMessage("unknown.encryption.type.v.eq.1", rValue));
+            }
+            for (int i = 0; i<recipients.size(); i++) {
+                PdfObject recipient = recipients.getPdfObject(i);
+                strings.remove(recipient);
+
+                CMSEnvelopedData data = null;
+                try {
+                    data = new CMSEnvelopedData(recipient.getBytes());
+
+                    Iterator recipientCertificatesIt = data.getRecipientInfos().getRecipients().iterator();
+
+                    while (recipientCertificatesIt.hasNext()) {
+                        RecipientInformation recipientInfo = (RecipientInformation)recipientCertificatesIt.next();
+
+                        if (recipientInfo.getRID().match(certificate) && !foundRecipient) {
+                         envelopedData = recipientInfo.getContent(certificateKey, certificateKeyProvider);
+                         foundRecipient = true;
+                        }
+                    }
+                }
+                catch (Exception f) {
+                    throw new ExceptionConverter(f);
+                }
+            }
+
+            if(!foundRecipient || envelopedData == null) {
+                throw new UnsupportedPdfException(MessageLocalization.getComposedMessage("bad.certificate.and.key"));
             }
 
             MessageDigest md = null;
@@ -3495,6 +3525,38 @@ public class PdfReader implements PdfViewerPreferences {
         perms.remove(PdfName.UR3);
         if (perms.size() == 0)
             catalog.remove(PdfName.PERMS);
+    }
+
+    /**
+     * Gets the certification level for this document. The return values can be <code>PdfSignatureAppearance.NOT_CERTIFIED</code>,
+     * <code>PdfSignatureAppearance.CERTIFIED_NO_CHANGES_ALLOWED</code>,
+     * <code>PdfSignatureAppearance.CERTIFIED_FORM_FILLING</code> and
+     * <code>PdfSignatureAppearance.CERTIFIED_FORM_FILLING_AND_ANNOTATIONS</code>.
+     * <p>
+     * No signature validation is made, use the methods available for that in <CODE>AcroFields</CODE>.
+     * </p>
+     * @return gets the certification level for this document
+     */
+    public int getCertificationLevel() {
+        PdfDictionary dic = catalog.getAsDict(PdfName.PERMS);
+        if (dic == null)
+            return PdfSignatureAppearance.NOT_CERTIFIED;
+        dic = dic.getAsDict(PdfName.DOCMDP);
+        if (dic == null)
+            return PdfSignatureAppearance.NOT_CERTIFIED;
+        PdfArray arr = dic.getAsArray(PdfName.REFERENCE);
+        if (arr == null || arr.size() == 0)
+            return PdfSignatureAppearance.NOT_CERTIFIED;
+        dic = arr.getAsDict(0);
+        if (dic == null)
+            return PdfSignatureAppearance.NOT_CERTIFIED;
+        dic = dic.getAsDict(PdfName.TRANSFORMPARAMS);
+        if (dic == null)
+            return PdfSignatureAppearance.NOT_CERTIFIED;
+        PdfNumber p = dic.getAsNumber(PdfName.P);
+        if (p == null)
+            return PdfSignatureAppearance.NOT_CERTIFIED;
+        return p.intValue();
     }
 
     /**

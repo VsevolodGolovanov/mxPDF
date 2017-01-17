@@ -1,5 +1,5 @@
 /*
- * $Id: StandardDecryption.java 3117 2008-01-31 05:53:22Z xlv $
+ * $Id: AESCipher.java 3117 2008-01-31 05:53:22Z xlv $
  *
  * Copyright 2006 Paulo Soares
  *
@@ -46,65 +46,59 @@
  * you aren't using an obsolete version:
 
  */
-package com.mxpdf.text.pdf;
+package com.mxpdf.text.pdf.crypto;
 
-import com.mxpdf.text.pdf.crypto.AESCipher;
-import com.mxpdf.text.pdf.crypto.ARCFOUREncryption;
+import org.bouncycastle.crypto.BlockCipher;
+import org.bouncycastle.crypto.engines.AESFastEngine;
+import org.bouncycastle.crypto.modes.CBCBlockCipher;
+import org.bouncycastle.crypto.paddings.PaddedBufferedBlockCipher;
+import org.bouncycastle.crypto.params.KeyParameter;
+import org.bouncycastle.crypto.params.ParametersWithIV;
 
-public class StandardDecryption {
-    protected ARCFOUREncryption arcfour;
-    protected AESCipher cipher;
-    private byte[] key;
-    private static final int AES_128 = 4;
-    private boolean aes;
-    private boolean initiated;
-    private byte[] iv = new byte[16];
-    private int ivptr;
-
-    /** Creates a new instance of StandardDecryption */
-    public StandardDecryption(byte key[], int off, int len, int revision) {
-        aes = revision == AES_128;
-        if (aes) {
-            this.key = new byte[len];
-            System.arraycopy(key, off, this.key, 0, len);
-        }
-        else {
-            arcfour = new ARCFOUREncryption();
-            arcfour.prepareARCFOURKey(key, off, len);
-        }
+/**
+ * Creates an AES Cipher with CBC and padding PKCS5/7.
+ * @author Paulo Soares (psoares@consiste.pt)
+ */
+public class AESCipher {
+    private PaddedBufferedBlockCipher bp;
+    
+    /** Creates a new instance of AESCipher */
+    public AESCipher(boolean forEncryption, byte[] key, byte[] iv) {
+        BlockCipher aes = new AESFastEngine();
+        BlockCipher cbc = new CBCBlockCipher(aes);
+        bp = new PaddedBufferedBlockCipher(cbc);
+        KeyParameter kp = new KeyParameter(key);
+        ParametersWithIV piv = new ParametersWithIV(kp, iv);
+        bp.init(forEncryption, piv);
     }
     
-    public byte[] update(byte[] b, int off, int len) {
-        if (aes) {
-            if (initiated)
-                return cipher.update(b, off, len);
-            else {
-                int left = Math.min(iv.length - ivptr, len);
-                System.arraycopy(b, off, iv, ivptr, left);
-                off += left;
-                len -= left;
-                ivptr += left;
-                if (ivptr == iv.length) {
-                    cipher = new AESCipher(false, key, iv);
-                    initiated = true;
-                    if (len > 0)
-                        return cipher.update(b, off, len);
-                }
-                return null;
-            }
-        }
-        else {
-            byte[] b2 = new byte[len];
-            arcfour.encryptARCFOUR(b, off, len, b2, 0);
-            return b2;
-        }
+    public byte[] update(byte[] inp, int inpOff, int inpLen) {
+        int neededLen = bp.getUpdateOutputSize(inpLen);
+        byte[] outp = null;
+        if (neededLen > 0)
+            outp = new byte[neededLen];
+        else
+            neededLen = 0;
+        bp.processBytes(inp, inpOff, inpLen, outp, 0);
+        return outp;
     }
     
-    public byte[] finish() {
-        if (aes) {
-            return cipher.doFinal();
+    public byte[] doFinal() {
+        int neededLen = bp.getOutputSize(0);
+        byte[] outp = new byte[neededLen];
+        int n = 0;
+        try {
+            n = bp.doFinal(outp, 0);
+        } catch (Exception ex) {
+            return outp;
+        }
+        if (n != outp.length) {
+            byte[] outp2 = new byte[n];
+            System.arraycopy(outp, 0, outp2, 0, n);
+            return outp2;
         }
         else
-            return null;
+            return outp;
     }
+    
 }

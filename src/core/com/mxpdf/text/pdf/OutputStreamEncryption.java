@@ -51,6 +51,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 import com.mxpdf.text.ExceptionConverter;
+import com.mxpdf.text.pdf.crypto.AESCipher;
 import com.mxpdf.text.pdf.crypto.ARCFOUREncryption;
 import com.mxpdf.text.pdf.crypto.IVGenerator;
 
@@ -58,6 +59,7 @@ public class OutputStreamEncryption extends OutputStream {
     
     protected OutputStream out;
     protected ARCFOUREncryption arcfour;
+    protected AESCipher cipher;
     private byte[] sb = new byte[1];
     private static final int AES_128 = 4;
     private boolean aes;
@@ -72,6 +74,7 @@ public class OutputStreamEncryption extends OutputStream {
                 byte[] iv = IVGenerator.getIV();
                 byte[] nkey = new byte[len];
                 System.arraycopy(key, off, nkey, 0, len);
+                cipher = new AESCipher(true, nkey, iv);
                 write(iv);
             }
             else {
@@ -180,7 +183,37 @@ public class OutputStreamEncryption extends OutputStream {
      *             stream is closed.
      *
      */
-    public void write(byte[] b, int off, int len) throws IOException {}
+    public void write(byte[] b, int off, int len) throws IOException {
+        if (aes) {
+            byte[] b2 = cipher.update(b, off, len);
+            if (b2 == null || b2.length == 0)
+                return;
+            out.write(b2, 0, b2.length);
+        }
+        else {
+            byte[] b2 = new byte[Math.min(len, 4192)];
+            while (len > 0) {
+                int sz = Math.min(len, b2.length);
+                arcfour.encryptARCFOUR(b, off, sz, b2, 0);
+                out.write(b2, 0, sz);
+                len -= sz;
+                off += sz;
+            }
+        }
+    }
     
-    public void finish() throws IOException {}
+    public void finish() throws IOException {
+        if (!finished) {
+            finished = true;
+            if (aes) {
+                byte[] b;
+                try {
+                    b = cipher.doFinal();
+                } catch (Exception ex) {
+                    throw new ExceptionConverter(ex);
+                }
+                out.write(b, 0, b.length);
+            }
+        }
+    }
 }
