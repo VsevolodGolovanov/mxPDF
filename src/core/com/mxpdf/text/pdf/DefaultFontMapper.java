@@ -111,8 +111,6 @@ public class DefaultFontMapper implements FontMapper {
             String fontKey = null;
             String logicalName = font.getName();
 
-            System.out.println(logicalName);
-            
             if (logicalName.equalsIgnoreCase("DialogInput") || logicalName.equalsIgnoreCase("Monospaced") || logicalName.equalsIgnoreCase("Courier")) {
 
                 if (font.isItalic()) {
