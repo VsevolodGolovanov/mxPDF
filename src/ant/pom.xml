@@ -2,53 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.lowagie</groupId>
-	<artifactId>itext</artifactId>
+	<modelVersion>1.0.0</modelVersion>
+	<groupId>com.mxgraph</groupId>
+	<artifactId>mxPdf</artifactId>
 	<packaging>jar</packaging>
-	<name>iText, a Free Java-PDF library</name>
+	<name>mxPdf, a Free Java-PDF library</name>
 	<version>releasenumber</version>
-	<description>iText, a free Java-PDF library</description>
-	<url>http://www.lowagie.com/iText/</url>
-	<mailingLists>
-		<mailingList>
-			<name>iText Questions</name>
-			<subscribe>
-				http://lists.sourceforge.net/lists/listinfo/itext-questions
-			</subscribe>
-			<post>itext-questions@lists.sourceforge.net</post>
-			<archive>
-				http://news.gmane.org/gmane.comp.java.lib.itext.general
-			</archive>
-			<otherArchives>
-				<otherArchive>http://www.nabble.com/iText---General-f2701.html</otherArchive>
-				<otherArchive>http://www.junlu.com/2.html</otherArchive>
-				<otherArchive>http://sourceforge.net/mailarchive/forum.php?forum_id=3273</otherArchive>
-				<otherArchive>http://www.mail-archive.com/itext-questions%40lists.sourceforge.net/</otherArchive>
-			</otherArchives>
-		</mailingList>
-	</mailingLists>
+	<description>mxPdf, a free Java-PDF library</description>
+	<url>http://www.draw.io</url>
 	<developers>
 		<developer>
-			<id>blowagie</id>
-			<name>Bruno Lowagie</name>
-			<email>bruno@lowagie.com</email>
-			<url>http://www.lowagie.com</url>
-		</developer>
-		<developer>
-			<id>psoares33</id>
-			<name>Paulo Soares</name>
-			<email>psoares33@users.sourceforge.net</email>
-		</developer>
-		<developer>
-			<id>hallm</id>
-			<name>Mark Hall</name>
-			<email>hallm@users.sourceforge.net</email>
-		</developer>
-		<developer>
-			<id>xlv</id>
-			<name>Xavier Le Vourch</name>
-			<email>xlv@users.sourceforge.net</email>
+			<id>drawio</id>
+			<name>draw.io</name>
+			<email>email@draw.io</email>
+			<url>http://www.draw.io</url>
 		</developer>
 	</developers>
 	<licenses>
@@ -62,8 +29,8 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:svn:http://itext.svn.sourceforge.net/svnroot/itext</connection>
-		<url>http://itext.svn.sourceforge.net/viewvc/itext</url>
+		<connection>scm:git:git://github.com/jgraph/mxPDF.git</connection>
+		<url>https://github.com/jgraph/mxPDF</url>
 	</scm>
 	<dependencies>
 		<dependency>
@@ -87,15 +54,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>
-								com.lowagie.tools.ToolboxAvailable
-							</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
