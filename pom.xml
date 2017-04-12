@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mxgraph</groupId>
+	<artifactId>mxPDF</artifactId>
+	<version>1.0.1</version>
+	<packaging>jar</packaging>
+	
+	<name>mxPDF</name>
+	<description>Stripped down fork of 4.2.0 of legacy PDF library</description>
+	<url>https://github.com/jgraph/mxPDF</url>
+	
+	<licenses>
+		<license>
+			<name>The Mozilla Public License, Version 1.1</name>
+			<url>http://www.mozilla.org/MPL/MPL-1.1.html </url>
+		</license>
+	</licenses>
+	
+	<developers>
+    	<developer>
+			<name>JGraph</name>
+			<email>support@jgraph.com</email>
+			<organization>JGraph</organization>
+			<organizationUrl>http://www.jgraph.com</organizationUrl>
+		</developer>
+	</developers>
+	
+	<scm>
+		<connection>scm:git:git@github.com:jgraph/mxPDF.git</connection>
+		<developerConnection>scm:git:ssh://github.com:jgraph/mxPDF.git</developerConnection>
+		<url>http://github.com/jgraph/mxPDF/tree/master</url>
+	</scm>
+	
+	<build>
+		<extensions>
+			<extension>
+				<groupId>io.packagecloud.maven.wagon</groupId>
+				<artifactId>maven-packagecloud-wagon</artifactId>
+				<version>0.0.4</version>
+			</extension>
+		</extensions>
+	</build>
+	
+	<distributionManagement>
+		<repository>
+			<id>packagecloud-jgraph</id>
+			<url>
+				packagecloud+https://packagecloud.io/jgraph/mxPDF.git
+			</url>
+		</repository>
+		<snapshotRepository>
+			<id>packagecloud-jgraph</id>
+			<url>
+				packagecloud+https://packagecloud.io/jgraph/mxPDF.git
+			</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/bouncycastle/bcprov-jdk14 -->
+		<dependency>
+		    <groupId>bouncycastle</groupId>
+		    <artifactId>bcprov-jdk14</artifactId>
+		    <version>138</version>
+		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/bouncycastle/bcmail-jdk14 -->
+		<dependency>
+		    <groupId>bouncycastle</groupId>
+		    <artifactId>bcmail-jdk14</artifactId>
+		    <version>138</version>
+		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/bouncycastle/bctsp-jdk14 -->
+		<dependency>
+		    <groupId>bouncycastle</groupId>
+		    <artifactId>bctsp-jdk14</artifactId>
+		    <version>138</version>
+		</dependency>
+	</dependencies>
+</project>

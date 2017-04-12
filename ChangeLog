@@ -1,4 +1,8 @@
-20-JAN-2016: 1.0.0
+12-APR_2017: 1.0.1
+
+- Switches to Maven build
+
+20-JAN-2017: 1.0.0
 
 - First release
 - Adds font mappings to default fontmapper
