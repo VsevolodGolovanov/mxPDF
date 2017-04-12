@@ -48,13 +48,13 @@
 		<repository>
 			<id>packagecloud-jgraph</id>
 			<url>
-				packagecloud+https://packagecloud.io/jgraph/mxPDF.git
+				packagecloud+https://packagecloud.io/jgraph/mxPDF
 			</url>
 		</repository>
 		<snapshotRepository>
 			<id>packagecloud-jgraph</id>
 			<url>
-				packagecloud+https://packagecloud.io/jgraph/mxPDF.git
+				packagecloud+https://packagecloud.io/jgraph/mxPDF
 			</url>
 		</snapshotRepository>
 	</distributionManagement>
