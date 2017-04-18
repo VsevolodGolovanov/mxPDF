@@ -35,7 +35,7 @@
 
     <target name="compile" description="--> compiles the iText code">
         <mkdir dir="${itext.bin}" />
-        <javac source="${itext.jdk.core}" target="${itext.jdk.core}" srcdir="${itext.src}/core" destdir="${itext.bin}">
+        <javac source="${itext.jdk.core}" target="${itext.jdk.core}" srcdir="${itext.src}" destdir="${itext.bin}">
     	<classpath refid="itext.classpath"/>
     	</javac>
     </target>
@@ -47,16 +47,17 @@
     <target name="make.jar" depends="compile" description="--> makes a jarfile from the iText code">
         <mkdir dir="${itext.bin}/com/mxpdf/text/pdf/fonts" />
         <copy todir="${itext.bin}/com/mxpdf/text/pdf/fonts" overwrite="yes">
-            <fileset dir="${itext.src}/core/com/mxpdf/text/pdf/fonts">
+            <fileset dir="${itext.src}/com/mxpdf/text/pdf/fonts">
                 <include name="**/*.afm"/>
                 <include name="**/*.html"/>
             </fileset>
         </copy>
         <copy todir="${itext.bin}/com/mxpdf/text/" overwrite="yes">
-            <fileset dir="${itext.src}/core/com/mxpdf/text/">
+            <fileset dir="${itext.src}/com/mxpdf/text/">
                 <include name="**/*.txt"/>
             </fileset>
         </copy>
+        <copy file="../pom.xml" tofile="${itext.bin}/pom.xml"/>
         <jar jarfile="${itext.jar}" basedir="${itext.bin}">
          </jar>
     </target>

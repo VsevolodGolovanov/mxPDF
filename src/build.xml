@@ -33,10 +33,6 @@
     <!-- Make a new release after exporting the modules src/www from CVS  -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-	<target name="clean">
-		<ant antfile="ant/release.xml" inheritAll="false" target="clean" />
-	</target>
-	
 	<target name="release-1.4" description="--> builds a release after you have exported the src and www module from CVS">
 		<ant antfile="ant/compile.xml" inheritAll="false" target="jar" />
 		<ant antfile="ant/compile.xml" inheritAll="false" target="jar.rtf" />
