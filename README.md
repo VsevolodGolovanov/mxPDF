@@ -22,7 +22,7 @@ In ~/.m2/settings.xml either add or append
 
 Build the package using:
 
-`mvn package`
+`mvn clean javadoc:jar package`
 
 Deploy to Packagecloud using:
 
