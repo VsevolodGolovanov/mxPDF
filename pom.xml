@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mxgraph</groupId>
 	<artifactId>mxPDF</artifactId>
-	<version>1.0.2-TASK-92938</version>
+	<version>1.0.2-TASK-92938-rebuild</version>
 	<packaging>jar</packaging>
 	
 	<name>mxPDF</name>
